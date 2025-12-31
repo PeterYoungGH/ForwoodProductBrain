@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"1dd32f7170cd148e","x":-800,"y":-760,"width":400,"height":400,"color":"4","type":"file","file":"04-opportunities/01-business-outcomes/oculus-platform-launch-new-deals.md"},
+		{"id":"3473cd650f171b03","x":-1760,"y":-191,"width":400,"height":400,"color":"4","type":"file","file":"04-opportunities/01-business-outcomes/safety-plus-upgrade.md"},
+		{"id":"ca36e346865ecdf9","x":-1320,"y":-191,"width":400,"height":400,"color":"4","type":"file","file":"04-opportunities/01-business-outcomes/forward-one-sales-demos.md"},
+		{"id":"505b67e869ceae4f","x":1280,"y":-240,"width":400,"height":400,"type":"file","file":"04-opportunities/01-business-outcomes/Data-ai-innovation.md"},
+		{"id":"2ebc9e4c21b23bbe","x":720,"y":-191,"width":400,"height":400,"type":"file","file":"04-opportunities/01-business-outcomes/rio-tinto-first-line-assurance.md"},
+		{"id":"bcd93fae062636d0","x":-800,"y":-191,"width":400,"height":400,"color":"2","type":"file","file":"04-opportunities/01-business-outcomes/strategic-integration-plan.md"},
+		{"id":"415190c97a291295","x":-320,"y":-191,"width":400,"height":400,"type":"file","file":"04-opportunities/01-business-outcomes/crm-upgrade-pathway.md"},
+		{"id":"05c683af9d319512","x":200,"y":-191,"width":400,"height":400,"type":"file","file":"04-opportunities/01-business-outcomes/market-expansion-new-industries.md"}
+	],
+	"edges":[
+		{"id":"505c3d96646d7c46","fromNode":"1dd32f7170cd148e","fromSide":"bottom","toNode":"ca36e346865ecdf9","toSide":"top"},
+		{"id":"1caf8100bc5ecba4","fromNode":"1dd32f7170cd148e","fromSide":"bottom","toNode":"3473cd650f171b03","toSide":"top"},
+		{"id":"10a5fe2a9cdd45a0","fromNode":"1dd32f7170cd148e","fromSide":"bottom","toNode":"bcd93fae062636d0","toSide":"top"}
+	]
+}

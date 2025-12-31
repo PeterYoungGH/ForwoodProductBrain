@@ -1,0 +1,300 @@
+# Product Brain Workflow Rules
+
+## Workflow Stage Detection and Next Step Guidance
+
+When working with this codebase, always detect the current workflow stage and proactively suggest the next command to run. Guide the user through the feature idea flow from inbox to roadmap.
+
+## Stage Detection
+
+Detect the current stage by:
+1. **Checking kanban board position** (`⬛ Ideas Kanban.md` or `00-inbox/⬛ Inbox.md`)
+2. **Reviewing document status** (Active, Backlog, Proposed, etc.)
+3. **Checking document location** (which directory the document is in)
+4. **Reviewing decision history** (what decisions have been made)
+
+## Workflow Stages and Next Commands
+
+### Stage 1: Inbox Processing
+**Location:** `00-inbox/raw/` or Inbox kanban column
+**Detection:** Items in inbox that haven't been processed
+
+**Next Command (Step 1):**
+```
+pm.process-inbox-todo
+```
+
+**What to suggest:**
+- "I see you have items in the inbox. Would you like me to run **Step 1: `pm.process-inbox-todo`** to analyze and suggest integrations?"
+- "After processing, I'll present integration suggestions organized by risk level for your approval."
+
+**After processing:**
+- If HIGH/MEDIUM risk items created: "Items have been created. Review the decision history sections and make prioritization decisions."
+- If opportunities created: "Opportunities created. Next step: validate and prioritize them using the opportunity validation process."
+
+---
+
+### Stage 2: Discovery & Research
+**Location:** `03-discovery/research/` or Discovery kanban column
+**Detection:** Research documents that need insight extraction
+
+**Next Commands (Step 2-3):**
+```
+Step 2: pm.extract-insights
+Step 3: pm.synthesize-research (optional)
+```
+
+**What to suggest:**
+- "I see research documents. Would you like me to run **Step 2: `pm.extract-insights`** to extract key insights?"
+- "Or if you have multiple sources, run **Step 3: `pm.synthesize-research`** to combine them?"
+- "After extracting insights, next is **Step 4: `pm.identify-opportunities`** to create opportunities."
+
+**After insight extraction:**
+- "Insights extracted. Next step: Review insights and approve opportunity creation if research reveals customer needs."
+
+---
+
+### Stage 3: Opportunity Validation 🔴
+**Location:** `04-opportunities/03-opportunities/` or Opportunity Validation kanban column
+**Detection:** Opportunities in active/backlog that need prioritization
+
+**Next Command (Step 4):**
+```
+pm.identify-opportunities
+```
+Or use opportunity validation prompt
+
+**What to suggest:**
+- "I see opportunities that need validation. Would you like me to run **Step 4: `pm.identify-opportunities`** to validate them?"
+- "I'll calculate opportunity scores and suggest prioritization. **You'll need to decide:** Active vs Backlog vs Archive."
+- "This is a 🔴 human decision point (Step 4) - I can suggest, but you make the final call."
+
+**After validation:**
+- If moved to Active: "Opportunity is Active. Next step: Explore solutions using solution risk assessment."
+- If moved to Backlog: "Opportunity is in Backlog. It will be prioritized later."
+
+---
+
+### Stage 4: Solution Exploration
+**Location:** `04-opportunities/04-solutions/` or Solution Exploration kanban column
+**Detection:** Solutions that need risk assessment or selection
+
+**Next Command (Step 5):**
+```
+pm.apply-decision-framework
+```
+Use solution risk assessment prompt
+
+**What to suggest:**
+- "I see solutions that need assessment. Would you like me to run **Step 5: `pm.apply-decision-framework`** to assess the four product risks?"
+- "I'll assess risks (Value, Usability, Feasibility, Business Viability) and suggest which solution to pursue. **You'll need to decide:** Which solution(s) to select."
+- "After risk assessment (Step 5), next step is to design validation experiments."
+
+**After risk assessment:**
+- "Solution risks assessed. Next step: Design experiments to validate high-risk assumptions."
+
+---
+
+### Stage 5: Experimentation
+**Location:** `04-opportunities/05-experiments/` or Experimentation kanban column
+**Detection:** Experiments that need design or results analysis
+
+**Next Commands:**
+Use experiment design prompt or analyze results
+
+**What to suggest:**
+- "I see solutions ready for experimentation. Would you like me to design validation experiments?"
+- "Or if experiments are complete, I can analyze results and suggest go/no-go. **You'll need to decide:** Proceed, Iterate, or Abandon."
+- "This is a human decision point - I can analyze, but you make the final call."
+
+**After experiment:**
+- If Proceed: "Solution validated. Next step: Consider roadmap inclusion if strategic."
+- If Iterate: "Solution needs refinement. Next step: Update solution and run new experiment."
+- If Abandon: "Solution not viable. Next step: Archive and document learnings."
+
+---
+
+### Stage 6: Roadmap Inclusion 🔴
+**Location:** `02-initiatives/` or `01-strategy/roadmap/` or Roadmap Inclusion kanban column
+**Detection:** Validated solutions ready for roadmap
+
+**Next Commands:**
+Use innovation scoring template and roadmap placement
+
+**What to suggest:**
+- "I see validated solutions ready for roadmap. Would you like me to calculate innovation scores?"
+- "I'll suggest roadmap placement. **You'll need to decide:** Initiative creation and roadmap placement."
+- "This is a 🔴 HIGH RISK decision - you must approve initiative creation and roadmap updates."
+
+**After roadmap inclusion:**
+- "Solution is on roadmap. Next step: Track in Active column and monitor progress."
+
+---
+
+## Proactive Suggestions
+
+### Always Suggest Next Steps
+
+After completing any action, immediately suggest:
+1. **What was done** - Brief summary
+2. **Next command to run** - Specific command or prompt
+3. **What you need to decide** - If human decision required
+4. **Why it matters** - Context for the next step
+
+### Example Suggestions
+
+**After inbox processing:**
+```
+✅ Step 1 complete: Processed inbox items. Created 2 opportunities and 1 research document.
+
+📋 Next step (Step 2): Extract insights from research, then Step 4: Validate opportunities
+
+🔴 Human decision required (Step 4): Opportunity prioritization
+💡 Next command: Step 2: pm.extract-insights (if research exists)
+   Then Step 4: pm.identify-opportunities to validate opportunities
+```
+
+**After opportunity validation:**
+```
+✅ Step 4 complete: Opportunity validated and scored. Opportunity score: 54 (High priority).
+
+📋 Next step (Step 5): Explore solutions for this opportunity.
+
+💡 Next command: Step 5: pm.apply-decision-framework with solution risk assessment
+   I can assess four product risks and suggest which solution to pursue
+```
+
+**After solution selection:**
+```
+✅ Step 5 complete: Solution selected. Four product risks assessed.
+
+📋 Next step: Design experiments to validate high-risk assumptions.
+
+💡 Next action: Use experiment design prompt to create validation experiments
+   (No numbered command - use prompt from decision-facilitation)
+```
+
+## Command Suggestions by Context
+
+### When User Opens a Document
+
+**If opportunity document:**
+- "This opportunity needs validation. Run opportunity validation?"
+- "Check if it's ready for solution exploration?"
+
+**If solution document:**
+- "This solution needs risk assessment. Assess four product risks?"
+- "Check if it's ready for experimentation?"
+
+**If experiment document:**
+- "This experiment needs results analysis. Analyze results?"
+- "Check if go/no-go decision is needed?"
+
+### When User Moves Kanban Card
+
+**If moved to Opportunity Validation:**
+- "Card moved to Opportunity Validation. I can validate and calculate scores. You'll need to decide prioritization."
+
+**If moved to Solution Exploration:**
+- "Card moved to Solution Exploration. I can assess four product risks. You'll need to select which solution to pursue."
+
+**If moved to Roadmap Inclusion:**
+- "Card moved to Roadmap Inclusion. I can calculate innovation scores. You'll need to approve initiative creation and roadmap placement."
+
+## Decision Point Reminders
+
+### Always Remind at 🔴 Decision Points
+
+When reaching human decision points, clearly state:
+- **What decision is needed**
+- **Why it requires human judgment**
+- **What information is available** (scores, assessments, etc.)
+- **What the options are**
+- **What I recommend** (if applicable)
+
+### Example Reminder
+
+```
+🔴 HUMAN DECISION REQUIRED: Opportunity Prioritization
+
+The opportunity "Users Struggle to Find Features" has been validated:
+- Opportunity Score: 54 (High - Importance: 9, Satisfaction: 4)
+- Evidence: Strong (3 research sources)
+- Outcome Alignment: Supports "Improve Feature Adoption"
+
+Options:
+1. Move to Active - High priority, strong evidence
+2. Move to Backlog - Good opportunity but lower priority
+3. Archive - Not relevant at this time
+
+Recommendation: Move to Active (high score, strong evidence, strategic alignment)
+
+What would you like to do?
+```
+
+## Workflow Completion Checks
+
+### After Each Stage, Check:
+
+1. **Is the document complete?** (all required sections filled)
+2. **Are decisions logged?** (decision history section updated)
+3. **Is kanban updated?** (card in correct column)
+4. **What's the next stage?** (suggest next command)
+
+### If Incomplete, Suggest:
+
+- "This document is missing [section]. Should I help complete it?"
+- "This decision hasn't been logged. Should I create a decision log entry?"
+- "The kanban card hasn't been updated. Should I move it to the next stage?"
+
+## Kanban Board Monitoring
+
+### Regularly Check Kanban
+
+When user opens kanban board, suggest:
+- "I see [X] items in [Stage]. Would you like me to process them?"
+- "Item in 🔴 column needs your decision. Should I prepare the analysis?"
+- "Item has been in [Stage] for a while. Should we move it forward?"
+
+## Error Prevention
+
+### Warn Before Skipping Steps
+
+- "This opportunity hasn't been validated yet. Should I validate it first?"
+- "This solution hasn't been risk-assessed. Should I assess risks before selection?"
+- "This experiment hasn't been designed. Should I design it first?"
+
+### Suggest Missing Actions
+
+- "I notice this opportunity doesn't have a decision log. Should I create one?"
+- "This solution's risk assessment is incomplete. Should I complete it?"
+- "The kanban card doesn't match the document status. Should I update it?"
+
+## Integration with Decision Framework
+
+Always reference:
+- `07-reference/methodology/decision-framework.md` - For decision points
+- `07-reference/methodology/decision-log-format.md` - For decision logging
+- `07-reference/methodology/idea-kanban-guide.md` - For kanban workflow
+- Stage-specific DECISION-RULES.md files - For stage-specific rules
+
+## Command Reference
+
+Common commands to suggest (in order):
+- **Step 1:** `pm.process-inbox-todo` - Process inbox items
+- **Step 2:** `pm.extract-insights` - Extract insights from research
+- **Step 3:** `pm.synthesize-research` - Combine research sources (optional)
+- **Step 4:** `pm.identify-opportunities` - Create opportunities from insights
+- **Step 5:** `pm.apply-decision-framework` - Apply frameworks (risk assessment, prioritization)
+- Use prompts from `07-reference/prompts/decision-facilitation/` for specific decisions
+
+## Always Be Proactive
+
+Don't wait for the user to ask. When you detect:
+- A document that needs processing → Suggest the command
+- A decision point reached → Remind about human decision needed
+- A stage completed → Suggest next step
+- A kanban card moved → Offer to help with next stage
+- A missing piece → Suggest how to complete it
+
+Make workflow guidance natural and helpful, not intrusive.
+

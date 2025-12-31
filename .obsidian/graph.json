@@ -1,0 +1,51 @@
+{
+  "collapse-filter": false,
+  "search": "04-opportunities",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "03-opportunities",
+      "color": {
+        "a": 1,
+        "rgb": 5674470
+      }
+    },
+    {
+      "query": "04-solutions",
+      "color": {
+        "a": 1,
+        "rgb": 14069084
+      }
+    },
+    {
+      "query": "02-product-outcomes",
+      "color": {
+        "a": 1,
+        "rgb": 11392604
+      }
+    },
+    {
+      "query": "01-business-outcomes",
+      "color": {
+        "a": 1,
+        "rgb": 6084188
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": -0.3,
+  "nodeSizeMultiplier": 1.72216796875,
+  "lineSizeMultiplier": 2.561962890625,
+  "collapse-forces": false,
+  "centerStrength": 0.475260416666667,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.43365023372809547,
+  "close": false
+}
