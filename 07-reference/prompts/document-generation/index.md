@@ -52,6 +52,18 @@ Generates stakeholder feedback documents with:
 - Supporting research and framework references
 - Strategic context and alignment
 
+### Executive Summary Prompt
+**File**: `executive-summary-prompt.md`
+**Use When**: Creating executive summaries for ideas, opportunities, solutions, or other documents
+**Related Commands**: `pm.create-executive-summary`
+
+Generates executive summaries (one page or less) with:
+- Executive overview (What, Why, Impact)
+- Strategic alignment (Mission, Pillars, Outcomes)
+- Business impact and key risks
+- Framework-based analysis (Innovation Decision, Four Product Risks, Jobs to Be Done)
+- Clear recommendations and next steps
+
 ## Usage Pattern
 
 1. Identify document type needed (research, insight, opportunity, solution)

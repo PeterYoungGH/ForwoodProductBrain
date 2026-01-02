@@ -75,9 +75,9 @@ This command creates structured research documents that follow the research temp
 
 ## Related Commands
 
-- `process-inbox-todo` - Uses research document generation when creating research documents from inbox items
-- `synthesize-research` - Uses research document generation as part of synthesis
-- `extract-insights` - May use research documents to extract insights
+- `pm.process-inbox-todo` - Uses research document generation when creating research documents from inbox items
+- `pm.synthesize-research` - Uses research document generation as part of synthesis
+- `pm.extract-insights` - May use research documents to extract insights
 
 ## Related Methodology
 

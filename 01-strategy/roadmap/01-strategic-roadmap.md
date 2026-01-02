@@ -186,6 +186,7 @@ Embed intelligence and analytics to turn data into proactive action, predict inc
 What business outcomes are we driving toward over the next 2 years?
 
 - [Forwood One Platform Launch and New Customer Acquisition](../../04-opportunities/01-business-outcomes/oculus-platform-launch-new-deals.md)
+- [Forwood One Migration Success](../../04-opportunities/01-business-outcomes/forwood-one-migration-success.md)
 - [Safety Plus Upgrade](../../04-opportunities/01-business-outcomes/safety-plus-upgrade.md)
 - [CRM Upgrade Pathway](../../04-opportunities/01-business-outcomes/crm-upgrade-pathway.md)
 - [Risk and Compliance Platform Integration](../../04-opportunities/01-business-outcomes/risk-compliance-integration.md)
@@ -209,12 +210,15 @@ What business outcomes are we driving toward over the next 2 years?
 - Customer migration completion rate
 - Platform NPS score
 - User adoption and engagement rates
+- Migration success criteria achievement (platform readiness, zero operational disruption, client satisfaction)
 
 #### Year 2 Metrics
 - ARR growth
 - Market share in mining sector
 - Partner-driven revenue percentage
 - Customer retention and expansion rates
+- Commercial migration milestones (80% of Safety+ revenue by Q2 2026, 80% of Risk+/Compliance+ revenue by Q2 2027, 80% of CRM+ revenue by Q4 2027)
+- Post-migration performance (95% of client operational activity in Forwood One by end-2027)
 
 ## Strategic Risks & Mitigation
 

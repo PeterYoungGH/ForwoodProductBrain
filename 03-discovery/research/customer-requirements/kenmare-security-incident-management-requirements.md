@@ -150,6 +150,7 @@ Kenmare has outlined four key requirement categories:
 
 ## Related Documents
 
+- [Insights: Kenmare Security Incident Management Insights](../../../insights/2025-12-01-kenmare-security-incident-management-insights.md)
 - [Opportunity: Customers Want to Extend Existing Platform to Support Security Incident Management](../../../04-opportunities/03-opportunities/active/kenmare-extend-platform-security-incident-management.md)
 - [Solution: Forwood One Event Management for Security Incidents](../../../04-opportunities/04-solutions/proposed/forwood-one-event-management-security-incidents.md)
 - [Inbox Item: Kenmare Security Incident Management Requirements](../../../00-inbox/raw/2025-12-01-kenmare-security-incident-management-requirements-[PROCESSING].md)

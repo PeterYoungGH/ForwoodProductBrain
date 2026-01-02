@@ -71,9 +71,9 @@ This command creates structured insight documents that capture key learnings, ev
 
 ## Related Commands
 
-- `extract-insights` - Command dedicated to insight extraction
-- `process-inbox-todo` - Uses insight document generation when creating insight documents from inbox items
-- `synthesize-research` - May use insight document generation as part of synthesis
+- `pm.extract-insights` - Command dedicated to insight extraction
+- `pm.process-inbox-todo` - Uses insight document generation when creating insight documents from inbox items
+- `pm.synthesize-research` - May use insight document generation as part of synthesis
 
 ## Related Methodology
 

@@ -60,6 +60,13 @@ Overview of all business outcomes we're working toward.
 - **Status:** Active
 - **Link:** [Full document](./market-expansion-new-industries.md)
 
+### Forwood One Migration Success
+- **Description:** Achieve successful migration of all Safety+, CRM+, Risk+, and Compliance+ clients to Forwood One platform with zero operational disruption, high client satisfaction, and strong commercial outcomes
+- **Target:** Zero operational disruption, 4.2/5 client satisfaction, 80% revenue assigned to migration timelines by platform phase
+- **Current:** Planning phase
+- **Status:** Active
+- **Link:** [Full document](./forwood-one-migration-success.md)
+
 ## Archived Business Outcomes
 
 ### [Business Outcome Name]

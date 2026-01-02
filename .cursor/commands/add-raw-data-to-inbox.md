@@ -327,5 +327,5 @@ If you encounter issues:
 - The descriptive name helps identify content at a glance
 - The title/header with status helps identify the current processing status at a glance
 - Files in the raw folder are not automatically processed - they require explicit processing via the inbox processing workflow
-- When items are processed, the status in the title will be updated by the `process-inbox-todo` command to reflect the current kanban board column
+- When items are processed, the status in the title will be updated by the `pm.process-inbox-todo` command to reflect the current kanban board column
 

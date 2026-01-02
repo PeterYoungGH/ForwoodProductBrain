@@ -84,9 +84,9 @@ This command synthesizes information from multiple research sources, insights, o
 
 ## Related Commands
 
-- `synthesize-research` - Command for synthesizing market research
-- `extract-insights` - May use synthesis results to extract insights
-- `process-inbox-todo` - May use synthesis when processing multiple related items
+- `pm.synthesize-research` - Command for synthesizing market research
+- `pm.extract-insights` - May use synthesis results to extract insights
+- `pm.process-inbox-todo` - May use synthesis when processing multiple related items
 
 ## Related Methodology
 

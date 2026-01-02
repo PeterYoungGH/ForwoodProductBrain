@@ -6,10 +6,7 @@ kanban-plugin: board
 
 ## Inbox
 
-- [ ] [[2025-12-09-forwood-one-success-criteria-[INBOX]]]
-- [ ] [[2025-12-08-edp-and-hedno-exec-alignment-meeting-[INBOX]]]
-- [ ] [[2025-12-08-standard-screen-resolutions-platform-spec-[INBOX]]]
-- [ ] [[2025-12-06-unified-opportunity-system-canvas-[INBOX]]]
+- [ ] *[Add new ideas here]*
 
 
 ## To Do
@@ -19,6 +16,10 @@ kanban-plugin: board
 
 ## Processing
 
+- [ ] [[2025-12-09-forwood-one-success-criteria-[INBOX]]]
+- [ ] [[2025-12-08-edp-and-hedno-exec-alignment-meeting-[INBOX]]]
+- [ ] [[2025-12-08-standard-screen-resolutions-platform-spec-[INBOX]]]
+- [ ] [[2025-12-06-unified-opportunity-system-canvas-[INBOX]]]
 - [ ] [[2025-12-08-edp-pain-points-and-requests-[PROCESSING]]]
 - [ ] [[2025-12-17-edp-project-team-vision-framing-session-meeting-notes-[PROCESSING]]]
 - [ ] [[2025-12-17-forwood-one-migration-experience-framework-[PROCESSING]]]

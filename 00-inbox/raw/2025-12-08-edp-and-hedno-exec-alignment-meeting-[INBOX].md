@@ -240,3 +240,27 @@ Action Items
 
 Thanks,
 
+---
+
+## Processing Notes
+
+**Status:** Processing
+**Last Status Update:** 2025-12-08
+**Kanban Board:** [⬛ Inbox.md](../⬛ Inbox.md)
+
+### Processed Documents
+
+The following documents were created or updated from this inbox item:
+
+- [EDP and HEDNO Exec Alignment Meeting Research](../../03-discovery/research/user-research/edp-hedno-exec-alignment-meeting-2025-12.md) - Created research document
+- [EDP Stability and Performance Improvements Opportunity](../../04-opportunities/03-opportunities/backlog/edp-stability-performance-improvements.md) - Created opportunity
+- [Hedno Stability and Reliability Opportunity](../../04-opportunities/03-opportunities/backlog/hedno-stability-reliability.md) - Created opportunity
+- [Macquarie Portfolio Standardisation Opportunity](../../04-opportunities/03-opportunities/backlog/macquarie-portfolio-standardisation.md) - Created opportunity
+- [EDP and HEDNO Messaging Framework](../../05-communications/reference/edp-hedno-messaging-framework-2025-12.md) - Created communication reference
+
+### Integration Summary
+
+- Created research document capturing meeting notes and strategic insights
+- Created three opportunities for client-specific needs (EDP stability, Hedno reliability, Macquarie standardisation)
+- Created communication reference document with messaging framework for Sales and Customer Success teams
+- All opportunities placed in backlog for prioritization

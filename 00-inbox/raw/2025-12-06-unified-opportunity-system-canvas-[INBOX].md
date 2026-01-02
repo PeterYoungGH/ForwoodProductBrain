@@ -446,8 +446,27 @@ Potential next activities include:
 
 This canvas forms the foundational reference for all subsequent design and implementation work.
 
+---
 
+## Processing Notes
 
+**Status:** Processing
+**Last Status Update:** 2025-12-06
+**Kanban Board:** [⬛ Inbox.md](../⬛ Inbox.md)
+
+### Processed Documents
+
+The following documents were created or updated from this inbox item:
+
+- [Unified Opportunity System Canvas Methodology](../../07-reference/methodology/unified-opportunity-system-canvas.md) - Created methodology reference
+- [Unified Opportunity System Framework](../../01-strategy/strategic-focus/unified-opportunity-system-framework.md) - Created strategic framework document
+
+### Integration Summary
+
+- Created methodology reference document with complete unified opportunity system canvas
+- Created strategic framework document describing the system as a strategic capability
+- Documents provide foundational reference for designing Forwood's integrated ideation, insights, and innovation operating system
+- Framework supports future initiative creation if system is prioritized for implementation
 
 
 

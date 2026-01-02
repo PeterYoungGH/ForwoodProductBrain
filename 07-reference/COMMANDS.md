@@ -7,13 +7,56 @@
 
 | # | Command | When to Use | Your Involvement |
 |---|---------|-------------|------------------|
+| 0 | `pm.orchestrate-workflow` | **Orchestrator** - Run all commands in sequence | Make decisions at decision points |
 | 1 | `pm.process-inbox-todo` | Process new inbox items | Approve HIGH/MEDIUM risk integrations |
 | 2 | `pm.extract-insights` | Extract insights from research | Validate insights |
 | 3 | `pm.synthesize-research` | Combine multiple research sources (optional) | Review synthesis |
 | 4 | `pm.identify-opportunities` | Create opportunities from research | Approve opportunity creation |
 | 5 | `pm.apply-decision-framework` | Assess solutions or prioritize | Review and make final decisions |
+| 6 | `pm.create-executive-summary` | Create executive summaries for any document | Review and approve summary |
 
 ## Command Details
+
+### 0. pm.orchestrate-workflow
+
+**Purpose:** Orchestrator command that coordinates and executes all pm.xxx commands in sequence, respecting workflow rules and human decision points.
+
+**When to use:**
+- You want to process the entire workflow automatically
+- You have items at multiple stages and want to process them all
+- You want the system to detect what needs processing and execute it
+- You want to run the full workflow from inbox to solution assessment
+
+**Your involvement:**
+- Make decisions at human decision points (🔴)
+- Approve integrations when prompted (Step 1)
+- Prioritize opportunities (Step 4)
+- Select solutions (Step 5)
+
+**How it works:**
+1. Detects current workflow stage by analyzing knowledge base state
+2. Executes commands sequentially in the correct order
+3. Stops at human decision points and reports what needs your input
+4. Continues as far as possible within the rules
+5. Reports summary of what was completed and what needs decisions
+
+**Workflow sequence:**
+- **Step 1:** `pm.process-inbox-todo` (if items in To Do)
+- **Step 2:** `pm.extract-insights` (if research exists)
+- **Step 3:** `pm.synthesize-research` (optional, if multiple sources)
+- **Step 4:** `pm.identify-opportunities` (stops for your decision)
+- **Step 5:** `pm.apply-decision-framework` (stops for your decision)
+
+**Output:**
+- Summary of all stages detected
+- List of commands executed
+- Documents created/updated
+- Human decision points reached
+- Next steps guidance
+
+**Note:** You can run this command multiple times - it will pick up where it left off after you make decisions.
+
+---
 
 ### 1. pm.process-inbox-todo
 
@@ -120,9 +163,55 @@
 
 ---
 
+### 6. pm.create-executive-summary
+
+**Purpose:** Create executive summaries (one page or less) for ideas, opportunities, solutions, or other documents.
+
+**When to use:**
+- You need to present a document to executives
+- You want a concise summary for decision-making
+- You need to explain complex documents in executive-friendly language
+- You want framework-based analysis for executive review
+
+**Your involvement:**
+- Review executive summary for accuracy
+- Approve summary before sharing
+- Validate framework application
+
+**Output:**
+- Executive summary document (one page or less)
+- Framework-based analysis (Innovation Decision, Four Product Risks, Jobs to Be Done)
+- Strategic alignment and business impact
+- Clear recommendations and next steps
+
+**Frameworks used:**
+- Innovation Decision Framework (for innovation ideas)
+- Four Product Risks (for solutions)
+- Jobs to Be Done (for opportunities)
+- Strategic Pillars and Mission (for all documents)
+
+---
+
 ## Workflow Integration
 
-### Typical Workflow Order
+### Orchestrator Command (Recommended)
+
+**Run all commands in sequence:**
+```
+pm.orchestrate-workflow
+```
+→ Detects current workflow stage
+→ Executes all applicable commands in order
+→ Stops at human decision points
+→ Reports results and next steps
+
+**Use this when:** You want to process the entire workflow automatically from inbox through solution assessment.
+
+---
+
+### Manual Workflow Order
+
+If you prefer to run commands individually:
 
 **Step 1: Inbox Processing**
 ```

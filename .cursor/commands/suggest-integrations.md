@@ -69,7 +69,7 @@ Present all suggestions as numbered choices:
 
 ## Related Commands
 
-- `process-inbox-todo` - Uses integration suggestions as part of inbox processing
+- `pm.process-inbox-todo` - Uses integration suggestions as part of inbox processing
 - `analyze-inbox-content` - Provides content analysis results
 
 ## Related Methodology

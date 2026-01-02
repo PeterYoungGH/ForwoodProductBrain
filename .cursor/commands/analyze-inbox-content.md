@@ -65,7 +65,7 @@ Present the analysis to the user in a structured format:
 
 ## Related Commands
 
-- `process-inbox-todo` - Uses content analysis as part of inbox processing
+- `pm.process-inbox-todo` - Uses content analysis as part of inbox processing
 - `suggest-integrations` - Uses content analysis results to suggest integrations
 
 ## Related Methodology
