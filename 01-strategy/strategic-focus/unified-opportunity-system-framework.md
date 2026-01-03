@@ -125,3 +125,4 @@ Ensures sales, customer success, and support insights contribute equally alongsi
 - [Unified Opportunity System Canvas Methodology](../../07-reference/methodology/unified-opportunity-system-canvas.md)
 - [Inbox Item: Unified Opportunity System Canvas](../../../00-inbox/raw/2025-12-06-unified-opportunity-system-canvas-[INBOX].md)
 
+

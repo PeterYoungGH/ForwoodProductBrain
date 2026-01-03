@@ -88,3 +88,4 @@
 - [Decision Log Format](../methodology/decision-log-format.md) - Full format specification
 - [Decision History Section Template](./decision-history-section-template.md) - Template for decision history sections
 
+

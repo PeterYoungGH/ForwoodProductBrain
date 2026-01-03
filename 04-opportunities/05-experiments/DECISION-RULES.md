@@ -297,3 +297,4 @@ Related frameworks:
 - [Decision Framework](../../07-reference/methodology/decision-framework.md) - Overall decision framework
 - [Decision Log Format](../../07-reference/methodology/decision-log-format.md) - Decision logging format
 
+

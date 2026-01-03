@@ -277,6 +277,15 @@ Always reference:
 - `07-reference/methodology/idea-kanban-guide.md` - For kanban workflow
 - Stage-specific DECISION-RULES.md files - For stage-specific rules
 
+## Kanban Card Naming Standard
+
+**REQUIRED:** All kanban cards MUST use Obsidian's pipe syntax `[[link|display text]]` for readable card titles:
+- Extract display text from document title (check `# Title` in document)
+- Keep display text under 50 characters, use title case
+- Remove path prefixes and file extensions from display text
+- Example: `[[04-opportunities/04-solutions/active/accident-learning-system.md|Accident Learning System]]`
+- This makes cards much easier to read in the kanban view
+
 ## Command Reference
 
 Common commands to suggest (in order):

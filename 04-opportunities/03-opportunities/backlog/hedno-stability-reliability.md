@@ -2,7 +2,7 @@
 
 **Status:** Backlog  
 **Created:** 2025-12-08  
-**Last Updated:** 2025-12-08  
+**Last Updated:** 2025-12-17  
 **Priority:** High
 
 ## Overview
@@ -72,6 +72,26 @@ Key insights that led to identifying this opportunity:
 - Begin shifting mindset from bespoke requests to future configurability
 - Acknowledge legacy issues in Safety+ without undermining trust
 - Migration timeline: mid-2026 is the safest headline, but messaging needs flexibility
+
+## Decision History
+
+### Prioritization Decision - 2025-12-17
+
+**Decision:** Keep in Backlog
+
+**Decision Maker:** Human
+
+**Rationale:** 
+- Opportunity Score: 63 (Very High priority - Importance: 9/10, Satisfaction: 3/10)
+- Strong evidence from research sources, customer feedback, and workforce rejection
+- Critical customer (Hedno) with deep sensitivity to breakages and workforce rejection
+- Decision to keep in backlog for now, likely due to resource constraints or timing considerations
+
+**Supporting Evidence:**
+- Links to "Forwood One Migration Success" business outcome
+- Links to "Platform Readiness Metrics" product outcome
+- Evidence from EDP and HEDNO Exec Alignment Meeting Research
+- Customer feedback highlighting stability and reliability concerns
 
 ## Related Documents
 

@@ -2,7 +2,7 @@
 
 **Status:** Backlog  
 **Created:** 2025-12-08  
-**Last Updated:** 2025-12-08  
+**Last Updated:** 2025-12-17  
 **Priority:** Medium
 
 ## Overview
@@ -72,6 +72,26 @@ Key insights that led to identifying this opportunity:
 - Frame standardisation as a key objective without implying directives
 - Position Forwood One as the platform to achieve standardisation
 - Support multi-client impact and industry standardisation goals
+
+## Decision History
+
+### Prioritization Decision - 2025-12-17
+
+**Decision:** Keep in Backlog
+
+**Decision Maker:** Human
+
+**Rationale:** 
+- Opportunity Score: 35 (Medium priority - Importance: 7/10, Satisfaction: 5/10)
+- Medium evidence strength (research-based, strategic opportunity)
+- Strategic positioning opportunity for Macquarie portfolio alignment
+- Decision to keep in backlog aligns with medium priority score and strategic (non-urgent) nature
+
+**Supporting Evidence:**
+- Links to "Forwood One Migration Success" business outcome
+- Links to "Platform Readiness Metrics" product outcome
+- Evidence from EDP and HEDNO Exec Alignment Meeting Research
+- Both EDP and Hedno operate under Macquarie portfolio
 
 ## Related Documents
 

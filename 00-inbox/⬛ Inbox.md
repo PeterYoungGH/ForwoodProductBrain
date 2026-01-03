@@ -11,11 +11,12 @@ kanban-plugin: board
 
 ## To Do
 
-- [ ] PLG - lead gen via a live demo of Forwood One on our website
+- [ ] *[Add new ideas here]*
 
 
 ## Processing
 
+- [ ] [[2025-12-17-plg-lead-gen-live-demo-forwood-one-website-[PROCESSING]]]
 - [ ] [[2025-12-09-forwood-one-success-criteria-[INBOX]]]
 - [ ] [[2025-12-08-edp-and-hedno-exec-alignment-meeting-[INBOX]]]
 - [ ] [[2025-12-08-standard-screen-resolutions-platform-spec-[INBOX]]]

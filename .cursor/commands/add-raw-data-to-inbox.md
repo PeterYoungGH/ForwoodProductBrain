@@ -142,14 +142,15 @@ The content can be provided in several ways:
    - Locate the "## Inbox" section
 
 2. **Determine link format**
-   - Use wiki-style link format: `[[filename-without-extension]]`
-   - Example: For file `2025-01-15-meeting-notes-[INBOX].md`, use `[[2025-01-15-meeting-notes-[INBOX]]]`
+   - Use wiki-style link format with pipe syntax for readable display: `[[filename-without-extension|Display Text]]`
+   - Example: For file `2025-01-15-meeting-notes-[INBOX].md`, use `[[2025-01-15-meeting-notes-[INBOX]|Meeting Notes]]`
    - Include the status suffix in the link to match the filename
-   - This matches the existing format used in the kanban board
+   - Extract display text from the document title or create a short, readable name
+   - Display text should be under 50 characters and use title case
 
 3. **Add item to Inbox column**
    - Add a new checkbox item to the "## Inbox" section
-   - Format: `- [ ] [[YYYY-MM-DD-descriptive-name-[INBOX]]]`
+   - Format: `- [ ] [[YYYY-MM-DD-descriptive-name-[INBOX]|Short Readable Title]]`
    - Place the new item at the top of the Inbox list (after the "## Inbox" header)
    - Preserve all existing items in the Inbox column
    - Maintain proper markdown formatting and indentation
@@ -262,7 +263,7 @@ If you encounter issues:
    - Prepare content with title: `# Meeting Notes - Inbox\n\n[original content]`
    - Create file: `00-inbox/raw/2025-01-15-meeting-notes-[INBOX].md`
 6. Read kanban board: `00-inbox/⬛ Inbox.md`
-7. Add or update `- [ ] [[2025-01-15-meeting-notes-[INBOX]]]` in "Inbox" column
+7. Add or update `- [ ] [[2025-01-15-meeting-notes-[INBOX]|Meeting Notes]]` in "Inbox" column (using pipe syntax for readable display)
 8. Save updated kanban board
 9. Confirm: "Created/updated `2025-01-15-meeting-notes-[INBOX].md` in `00-inbox/raw/` with title 'Meeting Notes - Inbox' and added to Inbox kanban column"
 
@@ -277,7 +278,7 @@ If you encounter issues:
 4. Prepare content with title: `# Strategy Document - Inbox\n\n[original content with heading preserved]`
 5. Save content to `00-inbox/raw/2025-01-15-strategy-document-[INBOX].md`
 6. Read kanban board: `00-inbox/⬛ Inbox.md`
-7. Add `- [ ] [[2025-01-15-strategy-document-[INBOX]]]` to "Inbox" column
+7. Add `- [ ] [[2025-01-15-strategy-document-[INBOX]|Strategy Document]]` to "Inbox" column (using pipe syntax)
 8. Save updated kanban board
 9. Confirm: "Created `2025-01-15-strategy-document-[INBOX].md` in `00-inbox/raw/` with title 'Strategy Document - Inbox' and added to Inbox kanban column"
 
@@ -293,7 +294,7 @@ If you encounter issues:
 5. Prepare content with title: `# Document - Inbox\n\n[original content]`
 6. Save content to `00-inbox/raw/2025-01-15-document-[INBOX].md`
 7. Read kanban board: `00-inbox/⬛ Inbox.md`
-8. Add `- [ ] [[2025-01-15-document-[INBOX]]]` to "Inbox" column
+8. Add `- [ ] [[2025-01-15-document-[INBOX]|Document]]` to "Inbox" column (using pipe syntax)
 9. Save updated kanban board
 10. Confirm: "Created `2025-01-15-document-[INBOX].md` in `00-inbox/raw/` from `path/to/document.md` with title 'Document - Inbox' and added to Inbox kanban column"
 

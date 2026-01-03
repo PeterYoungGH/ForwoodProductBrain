@@ -2,7 +2,7 @@
 
 **Status:** Backlog  
 **Created:** 2025-12-08  
-**Last Updated:** 2025-12-08  
+**Last Updated:** 2025-12-17  
 **Priority:** High
 
 ## Overview
@@ -69,6 +69,26 @@ Key insights that led to identifying this opportunity:
 - Messaging must avoid maturity model framing that implies otherwise
 - Historic over-promising has damaged credibility
 - Focus on configurability and stability as core improvements
+
+## Decision History
+
+### Prioritization Decision - 2025-12-17
+
+**Decision:** Keep in Backlog
+
+**Decision Maker:** Human
+
+**Rationale:** 
+- Opportunity Score: 54 (High priority - Importance: 9/10, Satisfaction: 4/10)
+- Strong evidence from multiple research sources and customer feedback
+- Critical customer (EDP) with recent fatality and performance perception issues
+- Decision to keep in backlog for now, likely due to resource constraints or timing considerations
+
+**Supporting Evidence:**
+- Links to "Forwood One Migration Success" business outcome
+- Links to "Platform Readiness Metrics" product outcome
+- Evidence from EDP and HEDNO Exec Alignment Meeting Research
+- Evidence from EDP Pain Points and Requests Research
 
 ## Related Documents
 

@@ -441,3 +441,4 @@ This decision framework integrates with:
 - [Jobs to Be Done Framework](./jobs-to-be-done-framework.md) - Opportunity scoring
 - [Opportunity Solution Tree Guide](./opportunity-solution-tree-guide.md) - OST framework overview
 
+

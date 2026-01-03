@@ -78,7 +78,9 @@ For each file in the raw folder:
 
 1. **Update wiki-style links**
    - If files were renamed, update the kanban board references
-   - Replace old `[[filename]]` with new `[[new-filename]]`
+   - Replace old `[[filename]]` or `[[filename|display text]]` with new `[[new-filename|display text]]`
+   - **Preserve pipe syntax:** If card uses `[[link|display text]]`, keep the display text when updating
+   - **Add pipe syntax if missing:** If card uses `[[link]]` only, add readable display text using pipe syntax
    - Preserve all other kanban board structure
 
 2. **Update regular markdown links**

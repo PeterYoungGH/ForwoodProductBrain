@@ -40,6 +40,8 @@ Update the kanban board for the following:
 
 4. **Update Card Content**
    - Ensure card title is correct
+   - Use pipe syntax `[[link|display text]]` for readable card titles (REQUIRED)
+   - Display text should be short, descriptive, and readable (under 50 characters)
    - Update card description if needed
    - Verify links are correct
 
@@ -76,9 +78,28 @@ Provide update plan in this format:
 ### Verification
 - [ ] Card updated correctly
 - [ ] Links verified
+- [ ] Display text readable (pipe syntax used)
 - [ ] Metadata accurate
 - [ ] Movement appropriate
 ```
+
+## Card Naming Standard
+
+**REQUIRED:** All kanban cards MUST use Obsidian's pipe syntax for readable display text:
+
+```markdown
+- [ ] [[full/path/to/document.md|Short Readable Title]] - Status information
+```
+
+**Display Text Guidelines:**
+- Extract title from document (check `# Title` in document)
+- Use shortened, descriptive name (under 50 characters)
+- Remove path prefixes and file extensions
+- Use title case for readability
+- Examples:
+  - `[[04-opportunities/04-solutions/active/accident-learning-system.md|Accident Learning System]]`
+  - `[[04-opportunities/03-opportunities/active/enterprise-compliance-first-features.md|Enterprise Compliance-First Features]]`
+  - `[[00-inbox/raw/2025-12-17-forwood-one-migration-experience-framework-[INBOX]|Forwood One Migration Experience Framework]]`
 
 ## Decision Authority
 
@@ -114,4 +135,5 @@ Provide update plan in this format:
 - [Idea Kanban Guide](../../../methodology/idea-kanban-guide.md)
 - [Decision Framework](../../../methodology/decision-framework.md)
 - [Decision Log Format](../../../methodology/decision-log-format.md)
+
 

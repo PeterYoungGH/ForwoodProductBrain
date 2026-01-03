@@ -125,3 +125,4 @@ This command generates concise executive summaries that distill complex product 
 - [Jobs to Be Done Framework](../../07-reference/methodology/jobs-to-be-done-framework.md) - For opportunity scoring
 - [Decision Framework](../../07-reference/methodology/decision-framework.md) - Overall decision framework
 
+

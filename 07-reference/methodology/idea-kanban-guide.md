@@ -137,15 +137,27 @@ The kanban uses a hybrid approach combining flow stages with status indicators:
 ### Card Content
 
 Each card should show:
-- **Title:** Idea/opportunity/solution name
+- **Title:** Idea/opportunity/solution name (using readable display text)
 - **Last Decision:** Most recent decision made (e.g., "Approved", "Needs Review", "Moved to Active")
 - **Decision Date:** When last decision was made
 - **Decision Maker:** Human name or "Agent"
 
+**Card Format Standard:**
+
+All kanban cards MUST use Obsidian's pipe syntax `[[link|display text]]` to show short, readable titles instead of full file paths. This makes cards much easier to read in the kanban view.
+
 **Card Format Example:**
 ```markdown
-- [ ] [[opportunity-name]] - Last Decision: Move to Active (2025-12-17, John Smith)
+- [ ] [[04-opportunities/03-opportunities/active/enterprise-compliance-first-features.md|Enterprise Compliance-First Features]] - Active opportunity
+- [ ] [[04-opportunities/04-solutions/active/accident-learning-system.md|Accident Learning System]] - Risk assessed 2025-12-17, approved to continue
 ```
+
+**Display Text Guidelines:**
+- Use the document title or a shortened, descriptive name
+- Keep display text under 50 characters when possible
+- Remove path prefixes and file extensions from display text
+- Use title case for readability
+- Abbreviate long names if needed (e.g., "URL Schema for Forwood One" instead of full path)
 
 ## Card Metadata
 
@@ -278,6 +290,7 @@ Cards should link to their source documents and include:
    - Keep card links to documents current
    - Verify links work correctly
    - Update links when documents move
+   - Use pipe syntax `[[link|display text]]` for readable card titles
 
 5. **Track Decisions**
    - Log all decisions in documents
@@ -325,4 +338,5 @@ Cards should link to their source documents and include:
 - [Decision Framework](./decision-framework.md) - Overall decision framework
 - [Decision Log Format](./decision-log-format.md) - Decision logging format
 - [Kanban Update Prompt](../prompts/decision-facilitation/kanban-update-prompt.md) - Agent prompt for updating kanban
+
 

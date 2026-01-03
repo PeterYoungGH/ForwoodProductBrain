@@ -107,3 +107,4 @@ Each prompt specifies:
 - [Decision Log Format](../../methodology/decision-log-format.md) - Decision logging format
 - [Idea Kanban Guide](../../methodology/idea-kanban-guide.md) - Kanban usage guide
 
+

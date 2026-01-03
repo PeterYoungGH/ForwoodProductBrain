@@ -234,3 +234,4 @@ See `07-reference/templates/decision-history-section-template.md` for a template
 - [Decision Log Template](../templates/decision-log-template.md) - Template for decision log entries
 - [Decision History Section Template](../templates/decision-history-section-template.md) - Template for decision history sections
 
+

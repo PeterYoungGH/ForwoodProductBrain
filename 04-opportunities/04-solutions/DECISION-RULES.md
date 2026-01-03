@@ -294,3 +294,4 @@ Related frameworks:
 - [Decision Log Format](../../07-reference/methodology/decision-log-format.md) - Decision logging format
 - [Four Product Risks Framework](../../07-reference/methodology/four-product-risks-framework.md) - Risk assessment framework
 
+

@@ -61,6 +61,7 @@ This research captures growth loop strategies and mechanisms across AI, data, pr
 
 **Distribution & Growth Loops (General):**
 - **Interactive Demos** – Engaging demos drive conversion
+- **Website-Based Interactive Demos** – Live demos embedded on website enable product-led growth and lead generation (see: [PLG Website Demo Strategy](../../05-communications/reference/plg-website-demo-strategy-2025-12.md))
 - **Create a proper upsell path via feature-set** – Clear upgrade pathway based on feature needs
 - **Product = marketing channel** – Product usage drives awareness
 - **Prefer loops over funnels** – Self-reinforcing cycles vs. one-way funnels

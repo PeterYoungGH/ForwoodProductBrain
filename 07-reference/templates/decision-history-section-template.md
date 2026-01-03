@@ -123,3 +123,4 @@ Add this section to documents after the main content, before "Related Documents"
 - [Decision Log Format](../methodology/decision-log-format.md) - Full format specification
 - [Decision Log Template](./decision-log-template.md) - Template for individual decision log entries
 
+

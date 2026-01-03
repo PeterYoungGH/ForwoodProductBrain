@@ -6,12 +6,13 @@
 
 This command acts as an orchestrator that:
 1. Detects the current workflow stage by analyzing the knowledge base state and kanban boards
-2. Executes pm.xxx commands sequentially in the correct order
-3. Respects established rules and risk levels
-4. Stops at human decision points and reports what needs user input
-5. Updates kanban boards to reflect workflow progress
-6. Continues as far as possible within the rules
-7. Provides progress reporting and workflow state visualization
+2. Validates and updates dates to ensure accuracy before execution
+3. Executes pm.xxx commands sequentially in the correct order
+4. Respects established rules and risk levels
+5. Stops at human decision points and reports what needs user input
+6. Updates kanban boards to reflect workflow progress
+7. Continues as far as possible within the rules
+8. Provides progress reporting and workflow state visualization
 
 ## Workflow Stages and Command Sequence
 
@@ -143,11 +144,68 @@ The orchestrator analyzes the knowledge base and kanban boards to determine what
   - Solutions missing roadmap placement
   - Check for initiative creation needs
 
-### Step 2: Execute Commands Sequentially
+### Step 2: Validate and Update Dates
+
+Before executing any commands, the orchestrator validates and updates dates to ensure accuracy:
+
+#### 2.0 Date Validation and Update
+
+**Purpose:** Ensure all dates in documents reflect actual execution time, not stale dates from previous runs or manual edits.
+
+**Process:**
+
+1. **Get Current Date:**
+   - Use current date in format: `YYYY-MM-DD`
+   - This is the execution date for all operations in this run
+
+2. **For Each Item Detected for Processing:**
+   - **Check Document Dates:**
+     - Read document metadata (if exists)
+     - Check "Last Updated" date
+     - Check "Created" date (should not be updated if document exists)
+     - Check decision history dates
+     - Check processing notes dates
+   
+   - **Validate Dates:**
+     - If "Last Updated" date is missing or in the future: Update to current date
+     - If decision history dates are missing or in the future: Flag for update when decisions are logged
+     - If processing notes dates are missing or in the future: Update to current date
+     - If dates are in the past but document was just modified: Update "Last Updated" to current date
+   
+   - **Update Dates:**
+     - Update "Last Updated" date to current date if document will be modified
+     - Set "Last Updated" date to current date for new documents
+     - Ensure decision log entries will use current date when created
+     - Update processing notes with current date
+
+3. **Date Update Rules:**
+   - **Never update "Created" date** for existing documents
+   - **Always update "Last Updated"** when document is modified
+   - **Use current date** for all new decision log entries
+   - **Use current date** for all processing notes
+   - **Use current date** for kanban card metadata updates
+   - **Preserve original dates** in decision history (don't change historical dates)
+
+4. **Date Format:**
+   - Use consistent format: `YYYY-MM-DD` (e.g., `2025-12-17`)
+   - Use same format in all documents and kanban metadata
+
+5. **Report Date Updates:**
+   - Log any date corrections made
+   - Report if dates were updated during validation
+   - Note any date inconsistencies found
+
+**After Date Validation:**
+- All documents have accurate dates
+- All new operations will use current date
+- Historical dates are preserved
+- Continue to command execution
+
+### Step 3: Execute Commands Sequentially
 
 The orchestrator executes commands in order, stopping at human decision points and updating kanban boards:
 
-#### 2.1 Execute Step 1: Inbox Processing
+#### 3.1 Execute Step 1: Inbox Processing
 
 **If Stage 1 detected (items in To Do or Inbox kanban column):**
 
@@ -161,7 +219,7 @@ The orchestrator executes commands in order, stopping at human decision points a
 
 2. **Update Kanban Board:**
    - Move processed items from "📥 Inbox" to "🔍 Discovery" or appropriate column
-   - Update card metadata with processing date
+   - Update card metadata with current date (processing date)
    - Link cards to created documents
 
 3. **After completion:**
@@ -172,7 +230,7 @@ The orchestrator executes commands in order, stopping at human decision points a
 - Skip Step 1
 - Continue to Step 2
 
-#### 2.2 Execute Step 2: Insight Extraction
+#### 3.2 Execute Step 2: Insight Extraction
 
 **If Stage 2 detected (research without insights or in Discovery kanban column):**
 
@@ -181,10 +239,12 @@ The orchestrator executes commands in order, stopping at human decision points a
      - Follow the full command execution steps from `pm.extract-insights.md`
      - Extract insights from research
      - Create insight documents in `03-discovery/insights/`
+     - **Set dates:** Use current date for "Created" and "Last Updated" fields
    - Continue to next stage detection after completion
 
 2. **Update Kanban Board:**
    - Update cards in "🔍 Discovery" column with insight extraction status
+   - Update card metadata with current date
    - Link cards to created insight documents
    - Move cards to "💡 Opportunity Validation 🔴" if opportunities created
 
@@ -196,7 +256,7 @@ The orchestrator executes commands in order, stopping at human decision points a
 - Skip Step 2
 - Continue to Step 3 or Step 4
 
-#### 2.3 Execute Step 3: Research Synthesis (Optional)
+#### 3.3 Execute Step 3: Research Synthesis (Optional)
 
 **If Stage 3 detected (multiple related research sources):**
 
@@ -205,10 +265,12 @@ The orchestrator executes commands in order, stopping at human decision points a
      - Follow the full command execution steps from `pm.synthesize-research.md`
      - Synthesize multiple sources
      - Create synthesis document
+     - **Set dates:** Use current date for "Created" and "Last Updated" fields
    - Continue to next stage detection after completion
 
 2. **Update Kanban Board:**
    - Update cards in "🔍 Discovery" column with synthesis status
+   - Update card metadata with current date
    - Link cards to synthesis documents
 
 3. **After completion:**
@@ -219,7 +281,7 @@ The orchestrator executes commands in order, stopping at human decision points a
 - Skip Step 3
 - Continue to Step 4
 
-#### 2.4 Execute Step 4: Opportunity Validation
+#### 3.4 Execute Step 4: Opportunity Validation
 
 **If Stage 4 detected (insights without opportunities OR opportunities needing validation OR in Opportunity Validation kanban column):**
 
@@ -228,10 +290,12 @@ The orchestrator executes commands in order, stopping at human decision points a
      - Follow the full command execution steps from `pm.identify-opportunities.md`
      - Create opportunities from insights
      - Calculate opportunity scores
+     - **Set dates:** Use current date for "Created" and "Last Updated" fields
    - For opportunities needing validation:
      - Validate opportunity format
      - Calculate/update opportunity scores
      - Suggest prioritization
+     - **Update dates:** Update "Last Updated" to current date
    
 2. **STOP and REPORT:**
    - **🔴 HUMAN DECISION REQUIRED**
@@ -241,14 +305,15 @@ The orchestrator executes commands in order, stopping at human decision points a
    - **Do NOT proceed** until user makes prioritization decisions
 
 3. **After user decisions:**
-   - Update opportunity documents with decisions
+   - **Update dates:** Use current date for all decision log entries
+   - Update opportunity documents with decisions (using current date)
    - Move opportunities to appropriate directories (active/backlog/archive)
    - **Update Kanban Board:**
      - Move cards from "💡 Opportunity Validation 🔴" to:
        - "🎯 Solution Exploration" if moved to Active
        - "✅ Active" if moved to Active (if solutions exist)
        - Keep in validation if moved to Backlog
-     - Update card metadata with decision and date
+     - Update card metadata with decision and current date
      - Link cards to opportunity documents
    - Continue to Step 5 if solutions exist
 
@@ -256,7 +321,7 @@ The orchestrator executes commands in order, stopping at human decision points a
 - Skip Step 4
 - Continue to Step 5
 
-#### 2.5 Execute Step 5: Solution Exploration
+#### 3.5 Execute Step 5: Solution Exploration
 
 **If Stage 5 detected (solutions needing risk assessment OR in Solution Exploration kanban column):**
 
@@ -275,14 +340,15 @@ The orchestrator executes commands in order, stopping at human decision points a
    - **Do NOT proceed** until user makes selection decisions
 
 3. **After user decisions:**
-   - Update solution documents with decisions
+   - **Update dates:** Use current date for all decision log entries
+   - Update solution documents with decisions (using current date)
    - Move solutions to appropriate directories (active/archive)
    - **Update Kanban Board:**
      - Move cards from "🎯 Solution Exploration" to:
        - "🧪 Experimentation" if solution selected and needs validation
        - "✅ Active" if solution selected and ready for implementation
        - Archive if solution not selected
-     - Update card metadata with decision and date
+     - Update card metadata with decision and current date
      - Link cards to solution documents
    - Continue to Step 6 if experiments needed, or Step 7 if ready for roadmap
 
@@ -290,7 +356,7 @@ The orchestrator executes commands in order, stopping at human decision points a
 - Skip Step 5
 - Continue to Step 6 or Step 7
 
-#### 2.6 Execute Step 6: Experimentation
+#### 3.6 Execute Step 6: Experimentation
 
 **If Stage 6 detected (experiments needing design/results OR in Experimentation kanban column):**
 
@@ -308,9 +374,10 @@ The orchestrator executes commands in order, stopping at human decision points a
      - Design experiment method
      - Estimate resource requirements
    - **Create:** Experiment documents in `04-opportunities/05-experiments/planned/` or `active/`
+     - **Set dates:** Use current date for "Created" and "Last Updated" fields
    - **Update Kanban Board:**
      - Move cards to "🧪 Experimentation" if not already there
-     - Update card metadata with experiment design status
+     - Update card metadata with experiment design status and current date
 
 3. **For Experiments Needing Results Analysis:**
    - **Read:** Experiment documents with results
@@ -326,14 +393,15 @@ The orchestrator executes commands in order, stopping at human decision points a
    - **Do NOT proceed** until user makes go/no-go decisions
 
 5. **After user decisions:**
-   - Update experiment documents with decisions
-   - Update solution documents with validation status
+   - **Update dates:** Use current date for all decision log entries
+   - Update experiment documents with decisions (using current date)
+   - Update solution documents with validation status (using current date)
    - **Update Kanban Board:**
      - Move cards from "🧪 Experimentation" to:
        - "📋 Roadmap Inclusion 🔴" if decision is "Proceed" and strategic
        - "🎯 Solution Exploration" if decision is "Iterate"
        - Archive if decision is "Abandon"
-     - Update card metadata with decision and date
+     - Update card metadata with decision and current date
      - Link cards to experiment documents
    - Continue to Step 7 if decision is "Proceed" and ready for roadmap
 
@@ -341,7 +409,7 @@ The orchestrator executes commands in order, stopping at human decision points a
 - Skip Step 6
 - Continue to Step 7
 
-#### 2.7 Execute Step 7: Roadmap Inclusion
+#### 3.7 Execute Step 7: Roadmap Inclusion
 
 **If Stage 7 detected (validated solutions ready for roadmap OR in Roadmap Inclusion kanban column):**
 
@@ -382,20 +450,24 @@ The orchestrator executes commands in order, stopping at human decision points a
    - **Do NOT proceed** until user makes initiative and roadmap decisions
 
 5. **After user decisions:**
+   - **Update dates:** Use current date for all decision log entries
    - **If Initiative Creation Approved:**
-     - Create initiative document in `02-initiatives/active/` or `planned/`
+     - Create initiative document in `02-initiatives/active/` or `planned/` (with current date)
      - Link initiative to solution and opportunity
      - Set initiative scope, success metrics, timeline, ownership
+     - Set "Created" date to current date
+     - Set "Last Updated" date to current date
    - **If Roadmap Placement Approved:**
-     - Update appropriate roadmap document:
+     - Update appropriate roadmap document (with current date):
        - `01-strategy/roadmap/01-strategic-roadmap.md`
        - `01-strategy/roadmap/02-portfolio-roadmap.md`
        - `01-strategy/roadmap/03-delivery-roadmap.md`
      - Add item to roadmap with timeline
      - Link roadmap item to initiative/solution
+     - Update roadmap "Last Updated" date to current date
    - **Update Kanban Board:**
      - Move cards from "📋 Roadmap Inclusion 🔴" to "✅ Active"
-     - Update card metadata with initiative/roadmap decision and date
+     - Update card metadata with initiative/roadmap decision and current date
      - Link cards to initiative and roadmap documents
    - Workflow complete for this cycle
 
@@ -403,15 +475,16 @@ The orchestrator executes commands in order, stopping at human decision points a
 - Skip Step 7
 - Report completion
 
-### Step 3: Report Orchestration Results
+### Step 4: Report Orchestration Results
 
 After executing as many steps as possible:
 
 1. **Summary Report**
    - List all stages detected (with counts)
+   - List date validation results (dates checked/updated)
    - List all commands executed
-   - List all documents created/updated
-   - List all kanban board updates
+   - List all documents created/updated (with dates)
+   - List all kanban board updates (with dates)
    - List all human decision points reached
    - List any stages skipped (no items to process)
 
@@ -524,15 +597,23 @@ After each stage completion, the orchestrator:
    - Update "Decision Maker" field (if human decision)
    - Update status if changed
 
-3. **Move Card (if appropriate):**
+3. **Update Card Display Text:**
+   - **REQUIRED:** Use pipe syntax `[[link|display text]]` for all kanban cards
+   - Extract readable title from document (check `# Title` in document)
+   - Display text should be short, descriptive (under 50 characters)
+   - Use title case for readability
+   - Remove path prefixes and file extensions from display text
+
+4. **Move Card (if appropriate):**
    - Determine if card should move to different column
    - Check if human decision required for move
    - Move card if within agent capabilities
    - Flag for human review if human decision needed
 
-4. **Verify Update:**
+5. **Verify Update:**
    - Ensure card updated correctly
    - Verify links work
+   - Confirm display text is readable (pipe syntax used)
    - Confirm metadata accurate
 
 **Reference:** Use `07-reference/prompts/decision-facilitation/kanban-update-prompt.md` for standardized kanban updates.
@@ -571,6 +652,12 @@ After each stage completion, the orchestrator:
 - Kanban board missing or malformed: Report error, suggest manual check
 - Card not found: Report error, suggest creating card
 - Document status doesn't match kanban: Flag mismatch, suggest reconciliation
+
+**Date Validation Errors:**
+- Date format invalid: Report error, correct to YYYY-MM-DD format
+- Date in future: Report error, update to current date
+- Missing required dates: Report error, add current date
+- Historical dates modified: Report warning, preserve original dates
 
 ### General Error Handling
 
@@ -893,11 +980,12 @@ pm.orchestrate-workflow
 
 The orchestrator will:
 1. Detect current workflow stages (using kanban boards and file system)
-2. Execute commands in sequence (Steps 1-7)
-3. Stop at human decision points (🔴)
-4. Update kanban boards after each stage
-5. Report progress and workflow state
-6. Report results and next steps
+2. Validate and update dates before execution (Step 2)
+3. Execute commands in sequence (Steps 3.1-3.7)
+4. Stop at human decision points (🔴)
+5. Update kanban boards after each stage (with current dates)
+6. Report progress and workflow state
+7. Report results and next steps
 
 **Re-execution:**
 You can run it multiple times - it will pick up where it left off after you make decisions. The orchestrator detects:
