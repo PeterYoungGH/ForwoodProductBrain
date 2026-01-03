@@ -1,4 +1,4 @@
-# Standard Screen Resolutions - Platform Spec - Inbox
+# Standard Screen Resolutions - Platform Spec - Processing
 
 # Standard Screen Resolutions for Multi-Platform Application
 

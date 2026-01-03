@@ -1,4 +1,13 @@
-# EDP Pain Points and Requests - To Do
+# EDP Pain Points and Requests - [ARCHIVED-DUPLICATE]
+
+**Status:** Archived (Duplicate)  
+**Archive Date:** 2026-01-03  
+**Reason:** Duplicate of 2025-12-08-edp-pain-points-and-requests-[PROCESSING].md which has been processed  
+**Active Version:** [2025-12-08-edp-pain-points-and-requests-[PROCESSING].md](./2025-12-08-edp-pain-points-and-requests-[PROCESSING].md)
+
+---
+
+# EDP Pain Points and Requests - To Do (Original Content)
 
 Hello Jessica,
 

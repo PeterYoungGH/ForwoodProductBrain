@@ -279,15 +279,17 @@ Present integration suggestions in the following format, organized by risk level
 ```markdown
 ## Integration Suggestions
 
+Please review the options below and enter the number(s) of the options you'd like me to execute (e.g., "1, 3, 5" or "1 3 5").
+
 ### HIGH RISK Items
 
-- [ ] **[HIGH RISK] Create new**: Strategy Document
+1. **[HIGH RISK] Create new**: Strategy Document
   - **Location**: `01-strategy/roadmap/current-roadmap.md`
   - **Action**: Create new roadmap document with Q1-Q4 milestones from inbox item
   - **Impact**: Will become the active roadmap, may need to archive existing roadmap
   - **Template**: Use roadmap format from strategy section
 
-- [ ] **[HIGH RISK] Update existing**: Strategic Focus Areas
+2. **[HIGH RISK] Update existing**: Strategic Focus Areas
   - **Location**: `01-strategy/strategic-focus/focus-areas.md`
   - **Action**: Add new strategic pillars (Focus, Team Capability, Customer Connection, etc.)
   - **Impact**: Updates strategic focus document
@@ -295,7 +297,7 @@ Present integration suggestions in the following format, organized by risk level
 
 ### MEDIUM RISK Items
 
-- [ ] **[MEDIUM RISK] Create new**: Business Outcome
+3. **[MEDIUM RISK] Create new**: Business Outcome
   - **Location**: `04-opportunities/01-business-outcomes/oculus-platform-launch.md`
   - **Action**: Create business outcome for "Launch Forwood One and win 5 new deals"
   - **Impact**: New business outcome, will need to link to product outcomes
@@ -303,7 +305,7 @@ Present integration suggestions in the following format, organized by risk level
 
 ### LOW RISK Items
 
-- [ ] **[LOW RISK] Create new**: Solution Document
+4. **[LOW RISK] Create new**: Solution Document
   - **Location**: `04-opportunities/04-solutions/active/oculus-mvp.md`
   - **Action**: Document Forwood One MVP solution
   - **Impact**: New solution document
@@ -311,24 +313,25 @@ Present integration suggestions in the following format, organized by risk level
 
 ### Archive Only
 
-- [ ] **Archive only (no integration)**: Keep raw data for reference but don't integrate at this time
+5. **Archive only (no integration)**: Keep raw data for reference but don't integrate at this time
 ```
 
 ### Presentation Guidelines
 
 1. **Group by Risk Level**: Present HIGH RISK first, then MEDIUM, then LOW
-2. **Use Checkboxes**: Each option must be a checkbox the user can select
+2. **Use Numbered Options**: Each option must have a unique number (starting from 1) that the user can enter to select
 3. **Clear Descriptions**: Each option must clearly describe what will happen
 4. **Show Impact**: Indicate what existing documents will be affected
-5. **Include Archive Option**: Always include "Archive only" as an option
+5. **Include Archive Option**: Always include "Archive only" as a numbered option
 6. **Number of Options**: Present ALL potential integrations - don't filter or prioritize
 
 ### Handling User Selections
 
-1. **Partial Selection**: Only execute the options the user has checked
-2. **No Selection**: If user selects nothing, ask for clarification or offer to archive only
-3. **Archive Only**: If user selects only "Archive only", skip integration and move to archive
-4. **Confirmation**: Before executing, confirm what will be done based on selections
+1. **Parse User Input**: Parse the user's input to identify which numbers they selected (e.g., "1, 3, 5" or "1 3 5")
+2. **Partial Selection**: Only execute the options corresponding to the numbers the user entered
+3. **No Selection**: If user provides no numbers, ask for clarification or offer to archive only
+4. **Archive Only**: If user selects only the archive option number, skip integration and move to archive
+5. **Confirmation**: Before executing, confirm what will be done based on the selected numbers
 
 ## Integration Execution Rules
 
@@ -547,10 +550,10 @@ User moves inbox item from "Inbox" to "Processing" column in kanban board.
 AI reads inbox item, analyzes content, scans existing Product Brain structure, identifies integration points.
 
 ### Step 3: AI Presents Choices
-AI presents structured integration suggestions organized by risk level with checkboxes.
+AI presents structured integration suggestions organized by risk level with unique numbers.
 
 ### Step 4: User Selects Options
-User reviews suggestions and checks boxes for options they want to execute.
+User reviews suggestions and enters the number(s) of options they want to execute (e.g., "1, 3, 5" or "1 3 5").
 
 ### Step 5: AI Executes Selected Options
 AI creates/updates documents, creates links, updates index files - only for selected options.

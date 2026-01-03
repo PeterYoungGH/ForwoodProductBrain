@@ -101,11 +101,18 @@ When a new version is available for download from the Play Store or Apple Store,
 ## Processed Documents
 
 - [EDP Customer Feedback Insights](../../03-discovery/insights/2025-12-01-edp-feedback-insights.md)
+- [EDP Feedback Research](../../03-discovery/research/customer-requirements/edp-feedback-2025-12.md) - Created research document
 
 ---
 
 ## Processing Notes
 
 **Status:** Processing
-**Last Status Update:** 2025-12-01
+**Last Status Update:** 2026-01-03
 **Kanban Board:** [⬛ Inbox.md](../⬛ Inbox.md)
+
+### Integration Summary
+
+- Created research document in customer-requirements capturing EDP's feedback on contractual requirements, stability issues, and service requests
+- Linked to existing EDP Pain Points research document for cross-reference
+- Research document complements existing insights and provides structured reference for opportunity creation

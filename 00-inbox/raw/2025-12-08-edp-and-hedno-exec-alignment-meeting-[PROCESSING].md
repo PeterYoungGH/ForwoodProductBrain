@@ -1,4 +1,4 @@
-# EDP and HEDNO Exec Alignment Meeting - Inbox
+# EDP and HEDNO Exec Alignment Meeting - Processing
 
 Notes from Meagan's AI notetaker
 
@@ -245,22 +245,25 @@ Thanks,
 ## Processing Notes
 
 **Status:** Processing
-**Last Status Update:** 2025-12-08
+**Last Status Update:** 2026-01-03
 **Kanban Board:** [⬛ Inbox.md](../⬛ Inbox.md)
 
 ### Processed Documents
 
 The following documents were created or updated from this inbox item:
 
-- [EDP and HEDNO Exec Alignment Meeting Research](../../03-discovery/research/user-research/edp-hedno-exec-alignment-meeting-2025-12.md) - Created research document
+- [EDP and HEDNO Exec Alignment Meeting Research (Customer Requirements)](../../03-discovery/research/customer-requirements/edp-hedno-exec-alignment-meeting-2025-12.md) - Created research document in customer-requirements
+- [EDP and HEDNO Exec Alignment Meeting Research (User Research)](../../03-discovery/research/user-research/edp-hedno-exec-alignment-meeting-2025-12.md) - Existing research document
 - [EDP Stability and Performance Improvements Opportunity](../../04-opportunities/03-opportunities/backlog/edp-stability-performance-improvements.md) - Created opportunity
 - [Hedno Stability and Reliability Opportunity](../../04-opportunities/03-opportunities/backlog/hedno-stability-reliability.md) - Created opportunity
 - [Macquarie Portfolio Standardisation Opportunity](../../04-opportunities/03-opportunities/backlog/macquarie-portfolio-standardisation.md) - Created opportunity
-- [EDP and HEDNO Messaging Framework](../../05-communications/reference/edp-hedno-messaging-framework-2025-12.md) - Created communication reference
+- [EDP and HEDNO Messaging Framework](../../05-communications/reference/edp-hedno-messaging-framework-2025-12.md) - Updated communication reference
+- [EDP and HEDNO Exec Alignment Meeting Notes](../../06-communications/reference/edp-hedno-exec-alignment-meeting-2025-12.md) - Created detailed meeting notes
 
 ### Integration Summary
 
-- Created research document capturing meeting notes and strategic insights
+- Created research document in customer-requirements capturing meeting notes and strategic insights
+- Updated existing messaging framework document with current date
+- Created detailed meeting notes document in 06-communications/reference
 - Created three opportunities for client-specific needs (EDP stability, Hedno reliability, Macquarie standardisation)
-- Created communication reference document with messaging framework for Sales and Customer Success teams
 - All opportunities placed in backlog for prioritization

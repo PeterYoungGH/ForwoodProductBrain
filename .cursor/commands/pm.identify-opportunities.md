@@ -68,6 +68,30 @@ This command identifies and frames opportunities from insights or research, mapp
    - Link to business and product outcomes
    - Update any index files if needed
 
+### Step 5: Regenerate Ideas Kanban Canvas
+
+After completing opportunity identification:
+
+1. **Regenerate Canvas:**
+   - Run the canvas generation script to update the Ideas Kanban Canvas
+   - Command: Execute `.cursor/scripts/regenerate_ideas_kanban_canvas.py`
+   - Purpose: Update canvas visualization to reflect all changes made during opportunity identification
+   - This ensures the canvas always shows the current state of the workflow
+
+2. **Canvas Update Process:**
+   - Script automatically parses the Ideas Kanban board
+   - Scans all referenced documents
+   - Rebuilds relationship graph
+   - Regenerates canvas JSON file
+   - Updates `Ideas Kanban Canvas.canvas` with latest nodes and edges
+
+3. **Error Handling:**
+   - If canvas generation fails, log error but don't fail the opportunity identification command
+   - Canvas update is non-blocking
+   - User should still see opportunity identification results even if canvas update fails
+
+**Note:** Canvas regeneration happens automatically at the end of opportunity identification, ensuring the visual representation stays in sync with workflow changes.
+
 ## Related Prompts
 
 - [Opportunity Framing Prompt](../../07-reference/prompts/opportunity-identification/opportunity-framing-prompt.md) - Primary prompt used by this command

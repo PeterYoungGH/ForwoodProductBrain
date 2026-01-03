@@ -213,7 +213,7 @@ The orchestrator executes commands in order, stopping at human decision points a
    - Follow the full command execution steps from `pm.process-inbox-todo.md`
    - Process all items in "To Do" column or "📥 Inbox" kanban column
    - Present integration suggestions to user
-   - **STOP and WAIT** for user to select checkboxes
+   - **STOP and WAIT** for user to enter number(s) for selected options (e.g., "1, 3, 5")
    - Execute only selected integrations
    - Continue to next stage detection after completion
 
@@ -525,6 +525,30 @@ After executing as many steps as possible:
    - Items blocked by human decisions
    - Kanban board reconciliation status
 
+### Step 5: Regenerate Ideas Kanban Canvas
+
+After completing all workflow steps and reporting results:
+
+1. **Regenerate Canvas:**
+   - Run the canvas generation script to update the Ideas Kanban Canvas
+   - Command: Execute `.cursor/scripts/regenerate_ideas_kanban_canvas.py`
+   - Purpose: Update canvas visualization to reflect all changes made during orchestration
+   - This ensures the canvas always shows the current state of the workflow
+
+2. **Canvas Update Process:**
+   - Script automatically parses the Ideas Kanban board
+   - Scans all referenced documents
+   - Rebuilds relationship graph
+   - Regenerates canvas JSON file
+   - Updates `Ideas Kanban Canvas.canvas` with latest nodes and edges
+
+3. **Error Handling:**
+   - If canvas generation fails, log error but don't fail the orchestrator
+   - Canvas update is non-blocking
+   - User should still see orchestrator results even if canvas update fails
+
+**Note:** Canvas regeneration happens automatically at the end of orchestration, ensuring the visual representation stays in sync with workflow changes.
+
 ## Decision Point Handling
 
 ### Human Decision Points (🔴)
@@ -532,8 +556,8 @@ After executing as many steps as possible:
 The orchestrator **MUST STOP** at these points and wait for user input:
 
 1. **Step 1 (Inbox Processing):**
-   - User must select which integrations to execute (checkbox selection)
-   - Orchestrator waits for user to check boxes before proceeding
+   - User must select which integrations to execute (by entering number(s), e.g., "1, 3, 5")
+   - Orchestrator waits for user to provide number(s) before proceeding
 
 2. **Step 4 (Opportunity Validation):**
    - User must decide: Active vs Backlog vs Archive for each opportunity

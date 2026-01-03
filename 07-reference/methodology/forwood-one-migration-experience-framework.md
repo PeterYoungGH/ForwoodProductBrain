@@ -1,7 +1,7 @@
 # Forwood One Migration Experience Framework
 
-**Last Updated:** 2025-12-17  
-**Source:** [Forwood One Migration Experience Framework](../../00-inbox/raw/2025-12-17-forwood-one-migration-experience-framework-[TO-DO].md)
+**Last Updated:** 2026-01-03  
+**Source:** [Inbox Item: Forwood One Migration Experience Framework](../../00-inbox/raw/2025-12-17-forwood-one-migration-experience-framework-[INBOX].md)
 
 ## Overview
 
@@ -285,6 +285,7 @@ Sales, CS, Support, Academy, and Partner Enablement (and participating partners)
 
 ## Related Documents
 
+- [Business Outcome: Forwood One Migration Success](../../04-opportunities/01-business-outcomes/forwood-one-migration-success.md)
 - [Business Outcome: CRM Upgrade Pathway](../../04-opportunities/01-business-outcomes/crm-upgrade-pathway.md)
 - [Business Outcome: Safety Plus Upgrade](../../04-opportunities/01-business-outcomes/safety-plus-upgrade.md)
 

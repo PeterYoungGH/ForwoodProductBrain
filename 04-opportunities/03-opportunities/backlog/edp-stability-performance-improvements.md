@@ -1,8 +1,8 @@
 # Opportunity: EDP Stability and Performance Improvements
 
-**Status:** Backlog  
+**Status:** Archived  
 **Created:** 2025-12-08  
-**Last Updated:** 2025-12-17  
+**Last Updated:** 2026-01-03  
 **Priority:** High
 
 ## Overview
@@ -74,9 +74,10 @@ Key insights that led to identifying this opportunity:
 
 ### Prioritization Decision - 2025-12-17
 
-**Decision:** Keep in Backlog
-
-**Decision Maker:** Human
+**Decision ID:** DEC-2025-12-17-001  
+**Decision:** Keep in Backlog  
+**Decision Maker:** Human  
+**Status:** Superseded
 
 **Rationale:** 
 - Opportunity Score: 54 (High priority - Importance: 9/10, Satisfaction: 4/10)
@@ -89,6 +90,27 @@ Key insights that led to identifying this opportunity:
 - Links to "Platform Readiness Metrics" product outcome
 - Evidence from EDP and HEDNO Exec Alignment Meeting Research
 - Evidence from EDP Pain Points and Requests Research
+
+### Archive Decision - 2026-01-03
+
+**Decision ID:** DEC-2026-01-03-005  
+**Decision:** Archive  
+**Decision Maker:** Human  
+**Status:** Active
+
+**Rationale:**
+- This opportunity relates to Safety+ platform stability and performance issues, not Forwood One platform
+- Forwood One is the strategic platform direction, and Safety+ issues are legacy platform concerns
+- Customer needs for stability and performance are being addressed through Forwood One migration and platform readiness opportunities
+- Archiving this opportunity as it is no longer relevant for Forwood One platform roadmap
+
+**Supporting Evidence:**
+- Opportunity focuses on Safety+ platform issues (legacy platform)
+- Strategic direction is Forwood One platform, not Safety+ improvements
+- Related customer needs are addressed through "Customers Need Confidence in Migration Success" opportunity (Active)
+- EDP stability concerns are addressed through Forwood One migration success criteria
+
+**Previous Decision:** DEC-2025-12-17-001
 
 ## Related Documents
 

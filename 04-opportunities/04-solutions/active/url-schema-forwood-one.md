@@ -134,7 +134,7 @@ This solution addresses client satisfaction and adoption by:
 ## Experiments
 
 Link to experiments that test this solution:
-- *[Experiments will be added as they are designed]*
+- [URL Schema Customer Feedback and Acceptance Experiment](../../05-experiments/planned/url-schema-customer-feedback-experiment.md) - Planned 2026-01-03
 
 ## Validation Status
 

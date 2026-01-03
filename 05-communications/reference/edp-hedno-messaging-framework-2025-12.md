@@ -1,6 +1,7 @@
 # EDP and HEDNO Messaging Framework
 
-**Last Updated:** 2025-12-08  
+**Last Updated:** 2026-01-03  
+**Created:** 2025-12-08  
 **Purpose:** Reference guide for messaging framework for EDP and HEDNO executive meetings
 
 ## Overview

@@ -58,6 +58,30 @@ This command applies decision frameworks to structure product work, assess risks
    - Link from related documents (if applicable)
    - Update any index files if needed
 
+### Step 5: Regenerate Ideas Kanban Canvas
+
+After completing decision framework application:
+
+1. **Regenerate Canvas:**
+   - Run the canvas generation script to update the Ideas Kanban Canvas
+   - Command: Execute `.cursor/scripts/regenerate_ideas_kanban_canvas.py`
+   - Purpose: Update canvas visualization to reflect all changes made during decision framework application
+   - This ensures the canvas always shows the current state of the workflow
+
+2. **Canvas Update Process:**
+   - Script automatically parses the Ideas Kanban board
+   - Scans all referenced documents
+   - Rebuilds relationship graph
+   - Regenerates canvas JSON file
+   - Updates `Ideas Kanban Canvas.canvas` with latest nodes and edges
+
+3. **Error Handling:**
+   - If canvas generation fails, log error but don't fail the decision framework command
+   - Canvas update is non-blocking
+   - User should still see decision framework results even if canvas update fails
+
+**Note:** Canvas regeneration happens automatically at the end of decision framework application, ensuring the visual representation stays in sync with workflow changes.
+
 ## Related Prompts
 
 - [OST Application Prompt](../../07-reference/prompts/decision-frameworks/ost-application-prompt.md) - For applying OST framework

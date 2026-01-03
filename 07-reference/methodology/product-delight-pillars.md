@@ -1,4 +1,12 @@
-# The Progression of Delight Pillars
+# Product Delight Pillars
+
+Dr Nesrine Changuel's model describing three progressive pillars that represent the journey from meeting user needs to creating emotional connection.
+
+**Last Updated:** 2026-01-03  
+**Created:** 2026-01-03  
+**Source:** [Inbox Item: Product Delight Pillars](../../00-inbox/raw/2025-11-28-product-delight-pillars-[INBOX].md)
+
+---
 
 ## Overview
 
@@ -100,8 +108,43 @@ Together, these pillars form a path from **efficiency** to **emotion**, enabling
 
 ---
 
-## Processing Notes
+## Integration with Other Frameworks
 
-**Status:** To Do
-**Last Status Update:** 2025-11-28
-**Kanban Board:** [⬛ Inbox.md](../⬛ Inbox.md)
+Use this framework alongside:
+
+- **[Product Delight Checklist](./product-delight-checklist.md)** — to validate each pillar's implementation
+- **[Four Product Risks Framework](./four-product-risks-framework.md)** — to ensure solutions address real customer jobs
+- **[Jobs to Be Done Framework](./jobs-to-be-done-framework.md)** — to understand functional, emotional, and social jobs
+- **[Discovery Process](./discovery-process.md)** — to ground delight design in research
+
+---
+
+## Application in Product Development
+
+### During Planning
+
+- **Pillar 1:** Identify and prioritize friction removal
+- **Pillar 2:** Design for anticipation based on user research
+- **Pillar 3:** Plan memorable moments aligned with brand purpose
+
+### During Specification
+
+- **Pillar 1:** Ensure workflows are efficient and clear
+- **Pillar 2:** Add contextual intelligence and smart defaults
+- **Pillar 3:** Design delightful interactions that enhance core functionality
+
+### During Validation
+
+- **Pillar 1:** Test for ease of use and efficiency
+- **Pillar 2:** Validate that features anticipate user needs
+- **Pillar 3:** Measure emotional response and delight moments
+
+---
+
+## Related Documents
+
+- [Product Delight Checklist](./product-delight-checklist.md)
+- [Four Product Risks Framework](./four-product-risks-framework.md)
+- [Jobs to Be Done Framework](./jobs-to-be-done-framework.md)
+- [Inbox Item: Product Delight Pillars](../../00-inbox/raw/2025-11-28-product-delight-pillars-[INBOX].md)
+

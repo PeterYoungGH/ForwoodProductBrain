@@ -146,8 +146,8 @@ Following the rules in `RULES.md` → "User Choice Presentation Format":
    - Present HIGH RISK first, then MEDIUM, then LOW
    - Use clear section headers
 
-2. **Format as Checkboxes**
-   - Use checkboxes (`- [ ]`) for each suggestion
+2. **Format as Numbered Options**
+   - Assign a unique number to each suggestion (starting from 1)
    - Include all required information:
      - Risk level indicator
      - Action type
@@ -155,21 +155,21 @@ Following the rules in `RULES.md` → "User Choice Presentation Format":
      - Description
      - Impact
      - Template (if applicable)
-   - Each option must be a checkbox the user can select
+   - Each option must be numbered so the user can select by entering the number(s)
 
 3. **Include Archive Option**
-   - Always include "Archive only (no integration)" as a checkbox option
+   - Always include "Archive only (no integration)" as a numbered option
    - Place at the end of all suggestions
 
 4. **Example Format**:
    ```markdown
    ## Integration Suggestions for: [Inbox Item Title]
 
-   Please review the options below and check the boxes for the options you'd like me to execute.
+   Please review the options below and enter the number(s) of the options you'd like me to execute (e.g., "1, 3, 5" or "1 3 5").
 
    ### HIGH RISK Items
 
-   - [ ] **[HIGH RISK] Create new**: Strategy Document
+   1. **[HIGH RISK] Create new**: Strategy Document
      - **Location**: `01-strategy/roadmap/current-roadmap.md`
      - **Action**: Create new roadmap document with Q1-Q4 milestones from inbox item
      - **Impact**: Will become the active roadmap, may need to archive existing roadmap
@@ -177,7 +177,7 @@ Following the rules in `RULES.md` → "User Choice Presentation Format":
 
    ### MEDIUM RISK Items
 
-   - [ ] **[MEDIUM RISK] Create new**: Business Outcome
+   2. **[MEDIUM RISK] Create new**: Business Outcome
      - **Location**: `04-opportunities/01-business-outcomes/oculus-platform-launch.md`
      - **Action**: Create business outcome for "Launch Oculus and win 5 new deals"
      - **Impact**: New business outcome, will need to link to product outcomes
@@ -185,7 +185,7 @@ Following the rules in `RULES.md` → "User Choice Presentation Format":
 
    ### LOW RISK Items
 
-   - [ ] **[LOW RISK] Create new**: Solution Document
+   3. **[LOW RISK] Create new**: Solution Document
      - **Location**: `04-opportunities/04-solutions/active/oculus-mvp.md`
      - **Action**: Document Oculus MVP solution
      - **Impact**: New solution document
@@ -193,29 +193,29 @@ Following the rules in `RULES.md` → "User Choice Presentation Format":
 
    ### Archive Only
 
-   - [ ] **Archive only (no integration)**: Keep raw data for reference but don't integrate at this time
+   4. **Archive only (no integration)**: Keep raw data for reference but don't integrate at this time
    ```
 
 5. **Wait for User Selection**
-   - Present the suggestions with checkboxes
-   - User selects by checking the boxes for options they want to execute
-   - Do NOT proceed until user has explicitly checked the boxes for selected options
+   - Present the suggestions with unique numbers
+   - User selects by entering the number(s) of options they want to execute (e.g., "1, 3, 5" or "1 3 5")
+   - Do NOT proceed until user has explicitly provided the number(s) for selected options
 
 #### 2.4 Execute Selected Integrations
 
 Following the rules in `RULES.md` → "Integration Execution Rules":
 
-**CRITICAL**: Only execute options that the user has explicitly selected (checked boxes). Never execute unselected options.
+**CRITICAL**: Only execute options that the user has explicitly selected (by number). Never execute unselected options.
 
 1. **Pre-Execution Checklist**
-   - Identify which checkboxes the user has checked
-   - Verify which options were selected
+   - Parse the user's input to identify which numbers they selected (e.g., "1, 3, 5" or "1 3 5")
+   - Verify which options correspond to the selected numbers
    - Confirm all selected options are understood
    - Identify templates needed
    - Verify target locations are valid
    - Ensure risk levels have been respected
 
-2. **For Each Selected Option** (checked by user):
+2. **For Each Selected Option** (selected by number by user):
 
    **If "Create new" document:**
    - Read the appropriate template from `06-reference/templates/`
@@ -353,10 +353,10 @@ After processing all items (or if user stops processing):
 
 ## Critical Rules
 
-1. **NEVER execute without user approval**: All integrations require explicit user selection (checked boxes)
+1. **NEVER execute without user approval**: All integrations require explicit user selection (by number)
 2. **Respect risk levels**: HIGH and MEDIUM risk items always require approval
-3. **Present ALL options**: Don't filter or prioritize - present everything as checkbox choices
-4. **Use checkboxes**: Each option must be a checkbox (`- [ ]`) that the user can select
+3. **Present ALL options**: Don't filter or prioritize - present everything as numbered choices
+4. **Use numbered options**: Each option must have a unique number that the user can enter to select
 5. **Follow templates**: Use appropriate templates and RULES.md format requirements
 6. **Maintain traceability**: All processed documents must link back to source
 7. **Preserve original content**: Don't delete or lose original inbox item content
@@ -376,8 +376,8 @@ If you encounter issues:
 2. **Template not found**: Ask user which template to use or create a basic structure
 3. **Conflicting content**: Present the conflict to user and ask for guidance
 4. **Invalid paths**: Verify paths and ask user to confirm correct location
-5. **Unclear user selection**: If user's checkbox selection is ambiguous, ask for clarification (e.g., "Which checkboxes did you want me to execute?")
-6. **No selection**: If user hasn't checked any boxes, ask for clarification or offer to archive only
+5. **Unclear user selection**: If user's number selection is ambiguous, ask for clarification (e.g., "Which numbers did you want me to execute? Please enter the numbers separated by commas or spaces.")
+6. **No selection**: If user hasn't provided any numbers, ask for clarification or offer to archive only
 7. **User cancels**: Stop processing, preserve current state, report what was completed
 
 ## Example Workflow
@@ -388,9 +388,9 @@ If you encounter issues:
 4. AI reads the inbox item file
 5. **AI syncs raw file status**: Updates the raw file's title to include "Status: To Do" and updates the "Processing Notes" section to show "Status: To Do" and current date
 6. AI analyzes content and identifies integration points
-7. AI presents structured checkbox choices organized by risk level
-8. User checks boxes for options they want to execute
-9. AI identifies checked boxes and executes only selected options
+7. AI presents structured numbered choices organized by risk level
+8. User enters number(s) for options they want to execute (e.g., "1, 3, 5")
+9. AI parses the numbers and executes only selected options
 10. AI updates inbox item with processed document links
 11. AI moves item to "Processing" column in kanban board
 12. **AI renames raw file**: If file status changed, uses `mv` to rename file from `-[TO-DO]` to `-[PROCESSING]` (does NOT create new file)
@@ -447,6 +447,30 @@ The status should be updated in both the file title/header and the Processing No
 4. **On manual changes**: If the kanban board is manually updated, the raw file status should be synced (update both title and Processing Notes)
 
 **Important**: Always update both the file title/header and the Processing Notes section to keep them in sync with the kanban board status.
+
+## Step 3: Regenerate Ideas Kanban Canvas
+
+After completing inbox processing and updating kanban boards:
+
+1. **Regenerate Canvas:**
+   - Run the canvas generation script to update the Ideas Kanban Canvas
+   - Command: Execute `.cursor/scripts/regenerate_ideas_kanban_canvas.py`
+   - Purpose: Update canvas visualization to reflect all changes made during inbox processing
+   - This ensures the canvas always shows the current state of the workflow
+
+2. **Canvas Update Process:**
+   - Script automatically parses the Ideas Kanban board
+   - Scans all referenced documents
+   - Rebuilds relationship graph
+   - Regenerates canvas JSON file
+   - Updates `Ideas Kanban Canvas.canvas` with latest nodes and edges
+
+3. **Error Handling:**
+   - If canvas generation fails, log error but don't fail the inbox processing command
+   - Canvas update is non-blocking
+   - User should still see inbox processing results even if canvas update fails
+
+**Note:** Canvas regeneration happens automatically at the end of inbox processing, ensuring the visual representation stays in sync with workflow changes.
 
 ## Related Prompts
 

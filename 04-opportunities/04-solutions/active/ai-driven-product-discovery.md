@@ -63,7 +63,7 @@ This solution addresses the need to accelerate discovery and delivery quality wh
 ## Experiments
 
 Link to experiments that test this solution:
-- [Experiments will be added as they are designed](../05-experiments/active/)
+- [AI-Driven Workflow Efficiency and Quality Impact Experiment](../../05-experiments/planned/ai-workflow-efficiency-experiment.md) - Planned 2026-01-03
 
 ## Validation Status
 

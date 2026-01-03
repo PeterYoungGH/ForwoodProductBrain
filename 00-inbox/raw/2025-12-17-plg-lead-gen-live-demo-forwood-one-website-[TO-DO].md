@@ -1,4 +1,13 @@
-# PLG - Lead Gen via Live Demo of Forwood One on Website - To Do
+# PLG - Lead Gen via Live Demo of Forwood One on Website - [ARCHIVED-DUPLICATE]
+
+**Status:** Archived (Duplicate)  
+**Archive Date:** 2026-01-03  
+**Reason:** Duplicate of 2025-12-17-plg-lead-gen-live-demo-forwood-one-website-[PROCESSING].md which has been processed  
+**Active Version:** [2025-12-17-plg-lead-gen-live-demo-forwood-one-website-[PROCESSING].md](./2025-12-17-plg-lead-gen-live-demo-forwood-one-website-[PROCESSING].md)
+
+---
+
+# PLG - Lead Gen via Live Demo of Forwood One on Website - To Do (Original Content)
 
 **Date Received:** 2025-12-17  
 **Source:** Idea/Initiative  

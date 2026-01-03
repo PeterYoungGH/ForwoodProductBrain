@@ -63,6 +63,30 @@ This command extracts actionable insights from research materials, ensuring insi
    - Link from source research document (if applicable)
    - Link to related opportunities or outcomes
 
+### Step 5: Regenerate Ideas Kanban Canvas
+
+After completing insight extraction:
+
+1. **Regenerate Canvas:**
+   - Run the canvas generation script to update the Ideas Kanban Canvas
+   - Command: Execute `.cursor/scripts/regenerate_ideas_kanban_canvas.py`
+   - Purpose: Update canvas visualization to reflect all changes made during insight extraction
+   - This ensures the canvas always shows the current state of the workflow
+
+2. **Canvas Update Process:**
+   - Script automatically parses the Ideas Kanban board
+   - Scans all referenced documents
+   - Rebuilds relationship graph
+   - Regenerates canvas JSON file
+   - Updates `Ideas Kanban Canvas.canvas` with latest nodes and edges
+
+3. **Error Handling:**
+   - If canvas generation fails, log error but don't fail the insight extraction command
+   - Canvas update is non-blocking
+   - User should still see insight extraction results even if canvas update fails
+
+**Note:** Canvas regeneration happens automatically at the end of insight extraction, ensuring the visual representation stays in sync with workflow changes.
+
 ## Related Prompts
 
 - [Insight Extraction Prompt](../../07-reference/prompts/research-analysis/insight-extraction-prompt.md) - Primary prompt used by this command

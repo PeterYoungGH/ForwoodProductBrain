@@ -1,8 +1,8 @@
 # Opportunity: Hedno Stability and Reliability
 
-**Status:** Backlog  
+**Status:** Archived  
 **Created:** 2025-12-08  
-**Last Updated:** 2025-12-17  
+**Last Updated:** 2026-01-03  
 **Priority:** High
 
 ## Overview
@@ -77,9 +77,10 @@ Key insights that led to identifying this opportunity:
 
 ### Prioritization Decision - 2025-12-17
 
-**Decision:** Keep in Backlog
-
-**Decision Maker:** Human
+**Decision ID:** DEC-2025-12-17-002  
+**Decision:** Keep in Backlog  
+**Decision Maker:** Human  
+**Status:** Superseded
 
 **Rationale:** 
 - Opportunity Score: 63 (Very High priority - Importance: 9/10, Satisfaction: 3/10)
@@ -92,6 +93,27 @@ Key insights that led to identifying this opportunity:
 - Links to "Platform Readiness Metrics" product outcome
 - Evidence from EDP and HEDNO Exec Alignment Meeting Research
 - Customer feedback highlighting stability and reliability concerns
+
+### Archive Decision - 2026-01-03
+
+**Decision ID:** DEC-2026-01-03-006  
+**Decision:** Archive  
+**Decision Maker:** Human  
+**Status:** Active
+
+**Rationale:**
+- This opportunity relates to Safety+ platform stability and reliability issues, not Forwood One platform
+- Forwood One is the strategic platform direction, and Safety+ issues are legacy platform concerns
+- Customer needs for stability and reliability are being addressed through Forwood One migration and platform readiness opportunities
+- Archiving this opportunity as it is no longer relevant for Forwood One platform roadmap
+
+**Supporting Evidence:**
+- Opportunity focuses on Safety+ platform breakages (legacy platform)
+- Strategic direction is Forwood One platform, not Safety+ improvements
+- Related customer needs are addressed through "Customers Need Confidence in Migration Success" opportunity (Active)
+- Hedno stability concerns are addressed through Forwood One migration success criteria
+
+**Previous Decision:** DEC-2025-12-17-002
 
 ## Related Documents
 

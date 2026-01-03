@@ -95,7 +95,7 @@ This solution addresses the need for product-led growth and lead generation by:
 ## Experiments
 
 Link to experiments that test this solution:
-- [Experiments will be added as they are designed](../05-experiments/active/)
+- [Interactive Website Demo Lead Generation and Conversion Experiment](../../05-experiments/planned/interactive-demo-lead-generation-experiment.md) - Planned 2026-01-03
 
 ## Validation Status
 

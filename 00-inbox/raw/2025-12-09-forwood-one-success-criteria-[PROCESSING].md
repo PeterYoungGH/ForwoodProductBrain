@@ -1,4 +1,4 @@
-# Forwood One Success Criteria - Inbox
+# Forwood One Success Criteria - Processing
 
 From Meagan - Head of Solutions
 

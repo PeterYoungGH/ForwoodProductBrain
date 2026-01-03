@@ -148,10 +148,17 @@ Link to outcomes this research relates to:
 - [ ] Create opportunities from high-priority pain points
 - [ ] Link research to relevant outcomes and opportunities
 
+## Related Research
+
+This research document is part of a series of EDP customer feedback documents:
+- [EDP Feedback Research](./edp-feedback-2025-12.md) - Earlier feedback on contractual requirements and operational issues
+- [EDP Project Team Vision Framing Session](../../../03-discovery/research/customer-requirements/edp-project-team-vision-framing-session-2025-12.md) (if exists) - Vision and requirements from team session
+
 ## Artifacts
 
 Links to research artifacts:
 - [Source: EDP Pain Points and Requests Email](../../../00-inbox/raw/2025-12-08-edp-pain-points-and-requests-[PROCESSING].md)
+- [EDP Customer Feedback Insights](../../../03-discovery/insights/2025-12-01-edp-feedback-insights.md)
 
 ## Notes
 
@@ -162,5 +169,5 @@ The feedback is organized into three main categories:
 2. Other detected issues (operational and stability problems)
 3. Corrective and minor evolutionary service requests
 
-This research document serves as a structured reference for creating opportunities and solutions to address EDP's needs.
+This research document serves as a structured reference for creating opportunities and solutions to address EDP's needs. It complements the [EDP Feedback Research](./edp-feedback-2025-12.md) document, which captures earlier feedback on similar topics.
 

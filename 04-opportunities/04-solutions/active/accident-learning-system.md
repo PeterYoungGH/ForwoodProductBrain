@@ -75,7 +75,7 @@ The ALS addresses the critical need to learn from incidents and prevent future o
 ## Experiments
 
 Link to experiments that test this solution:
-- [Experiments to be defined](../05-experiments/active/)
+- [Accident Learning System Effectiveness and Adoption Experiment](../../05-experiments/planned/accident-learning-system-effectiveness-experiment.md) - Planned 2026-01-03
 
 ## Validation Status
 

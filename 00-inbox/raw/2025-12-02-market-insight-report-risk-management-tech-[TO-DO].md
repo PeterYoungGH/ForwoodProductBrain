@@ -1,4 +1,13 @@
-# Market Insight Report - Risk Management-Tech - Processing
+# Market Insight Report - Risk Management-Tech - [ARCHIVED-DUPLICATE]
+
+**Status:** Archived (Duplicate)  
+**Archive Date:** 2026-01-03  
+**Reason:** Duplicate of 2025-12-02-market-insight-report-risk-management-tech-[PROCESSING].md which has been processed  
+**Active Version:** [2025-12-02-market-insight-report-risk-management-tech-[PROCESSING].md](./2025-12-02-market-insight-report-risk-management-tech-[PROCESSING].md)
+
+---
+
+# Market Insight Report - Risk Management-Tech - Processing (Original Content)
 
 Market Insight Report - Risk Management-Tech 
 

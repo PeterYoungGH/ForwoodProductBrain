@@ -1,4 +1,4 @@
-# Unified Opportunity System Canvas - Inbox
+# Unified Opportunity System Canvas - Processing
 
 # Unified Opportunity System Canvas
 

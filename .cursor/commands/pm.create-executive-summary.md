@@ -76,6 +76,30 @@ This command generates concise executive summaries that distill complex product 
    - Link from source document (if applicable)
    - Link to related outcomes, solutions, or research
 
+### Step 5: Regenerate Ideas Kanban Canvas
+
+After completing executive summary creation:
+
+1. **Regenerate Canvas:**
+   - Run the canvas generation script to update the Ideas Kanban Canvas
+   - Command: Execute `.cursor/scripts/regenerate_ideas_kanban_canvas.py`
+   - Purpose: Update canvas visualization to reflect all changes made during executive summary creation
+   - This ensures the canvas always shows the current state of the workflow
+
+2. **Canvas Update Process:**
+   - Script automatically parses the Ideas Kanban board
+   - Scans all referenced documents
+   - Rebuilds relationship graph
+   - Regenerates canvas JSON file
+   - Updates `Ideas Kanban Canvas.canvas` with latest nodes and edges
+
+3. **Error Handling:**
+   - If canvas generation fails, log error but don't fail the executive summary command
+   - Canvas update is non-blocking
+   - User should still see executive summary results even if canvas update fails
+
+**Note:** Canvas regeneration happens automatically at the end of executive summary creation, ensuring the visual representation stays in sync with workflow changes.
+
 ## Document Type-Specific Guidance
 
 ### For Opportunities

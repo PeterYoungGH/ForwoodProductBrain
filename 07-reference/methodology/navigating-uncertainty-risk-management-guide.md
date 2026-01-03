@@ -2,8 +2,11 @@
 
 A comprehensive guide to best-practice risk management for high-risk industries, covering identification, assessment, mitigation, monitoring, and communication of risks.
 
-**Last Updated:** 2025-12-01  
+**Status:** Reference Only  
+**Last Updated:** 2026-01-03  
 **Source:** [Inbox Item: Navigating Uncertainty Guide](../../00-inbox/raw/2025-11-28-navigating-uncertainty-best-practices-for-high-risk-industries-[PROCESSING].md)
+
+**Note:** This document is kept as reference material only. No opportunities or solutions are derived from this content.
 
 ---
 

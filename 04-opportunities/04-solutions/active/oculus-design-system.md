@@ -66,7 +66,7 @@ This solution addresses the need for a cohesive, scalable, and accessible user e
 ## Experiments
 
 Link to experiments that test this solution:
-- [Experiments will be added as they are designed](../05-experiments/active/)
+- [Design System Usability and Consistency Impact Experiment](../../05-experiments/planned/design-system-usability-impact-experiment.md) - Planned 2026-01-03
 
 ## Validation Status
 

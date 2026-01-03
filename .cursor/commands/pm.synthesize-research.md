@@ -65,6 +65,30 @@ This command synthesizes market intelligence from multiple sources to create a c
    - Link from source materials (if applicable)
    - Link to related opportunities or outcomes
 
+### Step 5: Regenerate Ideas Kanban Canvas
+
+After completing research synthesis:
+
+1. **Regenerate Canvas:**
+   - Run the canvas generation script to update the Ideas Kanban Canvas
+   - Command: Execute `.cursor/scripts/regenerate_ideas_kanban_canvas.py`
+   - Purpose: Update canvas visualization to reflect all changes made during research synthesis
+   - This ensures the canvas always shows the current state of the workflow
+
+2. **Canvas Update Process:**
+   - Script automatically parses the Ideas Kanban board
+   - Scans all referenced documents
+   - Rebuilds relationship graph
+   - Regenerates canvas JSON file
+   - Updates `Ideas Kanban Canvas.canvas` with latest nodes and edges
+
+3. **Error Handling:**
+   - If canvas generation fails, log error but don't fail the research synthesis command
+   - Canvas update is non-blocking
+   - User should still see research synthesis results even if canvas update fails
+
+**Note:** Canvas regeneration happens automatically at the end of research synthesis, ensuring the visual representation stays in sync with workflow changes.
+
 ## Related Prompts
 
 - [Market Synthesis Prompt](../../07-reference/prompts/research-analysis/market-synthesis-prompt.md) - Primary prompt used by this command
