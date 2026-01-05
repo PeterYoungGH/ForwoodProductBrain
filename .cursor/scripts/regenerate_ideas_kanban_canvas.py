@@ -2,6 +2,15 @@
 """
 Canvas Generation Script for Ideas Kanban
 Generates an Obsidian canvas that visualizes all items from the Ideas Kanban board.
+
+ALIGNMENT WITH PORTFOLIO ROADMAP FRAMEWORK:
+This script aligns with the Portfolio Roadmap framework (01-strategy/roadmap/02-portfolio-roadmap.md):
+- Organizes items by portfolio roadmap horizons: Now (Next 3 Months), Next (3-6 Months), Later (6+ Months)
+- Maps initiatives to their horizons from the portfolio roadmap
+- Positions items based on their relationship to initiatives and portfolio roadmap status
+- Maintains document type hierarchy within each horizon layer
+
+See: 07-reference/methodology/ideas-kanban-canvas-rules.md for detailed rules.
 """
 
 import json
@@ -16,10 +25,12 @@ from collections import defaultdict
 CANVAS_FILE = "Ideas Kanban Canvas.canvas"
 WORKSPACE_ROOT = Path(__file__).parent.parent.parent
 KANBAN_FILE = WORKSPACE_ROOT / "⬛ Ideas Kanban.md"
+PORTFOLIO_ROADMAP = WORKSPACE_ROOT / "01-strategy/roadmap/02-portfolio-roadmap.md"
 
 # Layout configuration
 HORIZONTAL_SPACING = 600  # Space between nodes in same layer (increased from 500)
-VERTICAL_SPACING = 800  # Space between layers (increased from 600)
+VERTICAL_SPACING = 1200  # Space between portfolio roadmap horizons (Now/Next/Later)
+HORIZON_INTERNAL_SPACING = 800  # Space between document type layers within a horizon
 
 # Type-based colors
 TYPE_COLORS = {
@@ -60,7 +71,7 @@ TYPE_DISPLAY_NAMES = {
     "other": "Other"
 }
 
-# Document type hierarchy (from top to bottom)
+# Document type hierarchy (from top to bottom within each horizon)
 HIERARCHY_LAYERS = [
     ("initiatives", ["02-initiatives/"]),
     ("business_outcomes", ["04-opportunities/01-business-outcomes/"]),
@@ -70,6 +81,13 @@ HIERARCHY_LAYERS = [
     ("experiments", ["04-opportunities/05-experiments/"]),
     ("supporting", ["03-discovery/", "00-inbox/", "05-research/"])
 ]
+
+# Portfolio roadmap horizons
+PORTFOLIO_HORIZONS = {
+    "now": 0,      # Now (Next 3 Months) - top layer
+    "next": 1,     # Next (3-6 Months) - middle layer
+    "later": 2     # Later (6+ Months) - bottom layer
+}
 
 
 def parse_kanban_board(kanban_path: Path) -> Dict[str, List[str]]:
@@ -214,6 +232,104 @@ def resolve_path(relative_path: str, base_path: Path) -> Optional[Path]:
     return None
 
 
+def parse_portfolio_roadmap(roadmap_path: Path) -> Dict[str, Dict[str, str]]:
+    """
+    Parse portfolio roadmap to extract initiatives and their horizons/status.
+    Returns: Dict mapping initiative file paths to {'horizon': 'now|next|later', 'status': '...'}
+    """
+    initiatives = {}
+    
+    if not roadmap_path.exists():
+        print(f"Warning: Portfolio roadmap not found: {roadmap_path}")
+        return initiatives
+    
+    try:
+        content = roadmap_path.read_text(encoding='utf-8')
+        current_horizon = None
+        current_section = None
+        
+        for line in content.split('\n'):
+            # Detect horizon sections
+            if line.startswith('### Now '):
+                current_horizon = 'now'
+            elif line.startswith('### Next '):
+                current_horizon = 'next'
+            elif line.startswith('### Later '):
+                current_horizon = 'later'
+            
+            # Detect initiative sections
+            if line.startswith('#### Initiative: '):
+                initiative_name = line.replace('#### Initiative: ', '').strip()
+                current_section = 'initiative'
+            
+            # Extract status
+            if current_section == 'initiative' and current_horizon:
+                status_match = re.search(r'- \*\*Status:\*\*\s*(\w+)', line)
+                if status_match:
+                    status = status_match.group(1).lower()
+            
+            # Extract initiative file link
+            if current_section == 'initiative' and current_horizon:
+                link_match = re.search(r'\[([^\]]+)\]\(([^)]+)\)', line)
+                if link_match:
+                    link_text, link_path = link_match.groups()
+                    # Resolve relative path
+                    if link_path.startswith('../../'):
+                        # Remove ../../ prefix and resolve
+                        rel_path = link_path.replace('../../', '')
+                        initiatives[rel_path] = {
+                            'horizon': current_horizon,
+                            'status': status if 'status' in locals() else 'default',
+                            'name': initiative_name if 'initiative_name' in locals() else link_text
+                        }
+                    elif not link_path.startswith('http'):
+                        initiatives[link_path] = {
+                            'horizon': current_horizon,
+                            'status': status if 'status' in locals() else 'default',
+                            'name': initiative_name if 'initiative_name' in locals() else link_text
+                        }
+    except Exception as e:
+        print(f"Warning: Could not parse portfolio roadmap: {e}")
+    
+    return initiatives
+
+
+def get_item_horizon(item_path: str, nodes: Dict[str, Dict], portfolio_initiatives: Dict[str, Dict]) -> str:
+    """
+    Determine which portfolio roadmap horizon an item belongs to.
+    Priority:
+    1. If item is an initiative, use its horizon from portfolio roadmap
+    2. If item links to an initiative, use that initiative's horizon
+    3. Fallback: Use document status (Active -> now, Backlog -> next, Proposed -> later)
+    """
+    doc_type = get_document_type(item_path)
+    
+    # If it's an initiative, check portfolio roadmap
+    if doc_type == 'initiative':
+        # Try to match initiative path
+        for init_path, init_data in portfolio_initiatives.items():
+            if item_path.endswith(init_path) or init_path in item_path:
+                return init_data['horizon']
+    
+    # If item links to an initiative, use that initiative's horizon
+    # This would require checking links, which is done in build_relationship_graph
+    # For now, we'll use status-based fallback
+    
+    # Fallback: Use status
+    full_path = resolve_path(item_path, WORKSPACE_ROOT)
+    if full_path:
+        status = get_document_status(full_path).lower()
+        if status in ['active', 'building']:
+            return 'now'
+        elif status in ['backlog', 'validating']:
+            return 'next'
+        elif status in ['proposed', 'exploring']:
+            return 'later'
+    
+    # Default to 'next' if unknown
+    return 'next'
+
+
 def get_document_status(file_path: Path) -> str:
     """Extract status from document metadata."""
     if not file_path.exists():
@@ -313,10 +429,13 @@ def generate_edge_id(from_node: str, to_node: str) -> str:
     return hashlib.md5(combined.encode()).hexdigest()[:16]
 
 
-def build_relationship_graph(items: List[str]) -> Tuple[Dict[str, Dict], Dict[str, Set[str]]]:
-    """Build a graph of document relationships."""
+def build_relationship_graph(items: List[str], portfolio_initiatives: Dict[str, Dict]) -> Tuple[Dict[str, Dict], Dict[str, Set[str]]]:
+    """Build a graph of document relationships with portfolio roadmap alignment."""
     nodes = {}
     edges = defaultdict(set)
+    
+    # Map of initiative node IDs to their horizons (for linking items to initiatives)
+    initiative_horizons = {}
     
     # First pass: create nodes for all items
     for item_path in items:
@@ -327,6 +446,9 @@ def build_relationship_graph(items: List[str]) -> Tuple[Dict[str, Dict], Dict[st
         doc_type = get_document_type(item_path)
         status = get_document_status(full_path)
         node_id = generate_node_id(item_path)
+        
+        # Determine horizon from portfolio roadmap
+        horizon = get_item_horizon(item_path, {}, portfolio_initiatives)
         
         # Extract document title
         title = extract_document_title(full_path)
@@ -345,9 +467,14 @@ def build_relationship_graph(items: List[str]) -> Tuple[Dict[str, Dict], Dict[st
             'type': doc_type,
             'status': status,
             'layer': get_hierarchy_layer(doc_type),
+            'horizon': horizon,
             'title': title,
             'formatted_title': formatted_title
         }
+        
+        # Track initiative horizons
+        if doc_type == 'initiative':
+            initiative_horizons[node_id] = horizon
     
     # Second pass: extract links and create edges
     for item_path in items:
@@ -374,6 +501,10 @@ def build_relationship_graph(items: List[str]) -> Tuple[Dict[str, Dict], Dict[st
                     # Only create edge if target node exists
                     if to_node_id in nodes:
                         edges[from_node_id].add(to_node_id)
+                        
+                        # If linking to an initiative, inherit its horizon
+                        if nodes[to_node_id]['type'] == 'initiative' and to_node_id in initiative_horizons:
+                            nodes[from_node_id]['horizon'] = initiative_horizons[to_node_id]
                 except ValueError:
                     # Link points outside workspace, skip
                     pass
@@ -391,60 +522,78 @@ def group_nodes_by_type(nodes: List[str], node_data: Dict[str, Dict]) -> Dict[st
 
 
 def calculate_positions(nodes: Dict[str, Dict]) -> Dict[str, Tuple[float, float]]:
-    """Calculate x,y positions for all nodes based on hierarchy with grouping by type."""
-    # Group nodes by layer
-    nodes_by_layer = defaultdict(list)
-    for node_id, node_data in nodes.items():
-        layer = node_data['layer']
-        nodes_by_layer[layer].append(node_id)
-    
+    """
+    Calculate x,y positions for all nodes based on portfolio roadmap horizons and document type hierarchy.
+    Organizes by: Portfolio Horizon (Now/Next/Later) -> Document Type -> Alphabetical
+    """
     positions = {}
+    
+    # Group nodes by portfolio roadmap horizon first
+    nodes_by_horizon = defaultdict(lambda: defaultdict(list))
+    for node_id, node_data in nodes.items():
+        horizon = node_data.get('horizon', 'next')  # Default to 'next' if not set
+        layer = node_data['layer']
+        nodes_by_horizon[horizon][layer].append(node_id)
     
     # Type order for consistent sorting within layers
     type_order = ['initiative', 'business_outcome', 'product_outcome', 'opportunity', 
                   'solution', 'experiment', 'research', 'insight', 'inbox_item', 'other']
     
-    # Calculate positions for each layer
-    for layer in sorted(nodes_by_layer.keys()):
-        layer_nodes = nodes_by_layer[layer]
+    # Calculate positions for each horizon (Now -> Next -> Later)
+    horizon_y_base = {
+        'now': 0,
+        'next': 1,
+        'later': 2
+    }
+    
+    for horizon in ['now', 'next', 'later']:
+        if horizon not in nodes_by_horizon:
+            continue
         
-        # Group nodes by type within this layer
-        type_groups = group_nodes_by_type(layer_nodes, nodes)
+        horizon_y_start = horizon_y_base[horizon] * VERTICAL_SPACING
         
-        # Sort groups by type order, then sort nodes within each group
-        sorted_groups = []
-        for doc_type in type_order:
-            if doc_type in type_groups:
-                # Sort nodes within group (by title for consistency)
-                sorted_nodes = sorted(type_groups[doc_type], 
-                                    key=lambda nid: nodes[nid].get('title', '').lower())
-                sorted_groups.append((doc_type, sorted_nodes))
-        
-        # Calculate total width needed for this layer (accounting for variable node sizes)
-        total_width = 0
-        node_widths = []
-        for doc_type, group_nodes in sorted_groups:
-            for node_id in group_nodes:
-                width, _ = get_node_size(layer)
-                node_widths.append((node_id, width))
-                total_width += width + HORIZONTAL_SPACING
-        
-        # Remove last spacing
-        if total_width > 0:
-            total_width -= HORIZONTAL_SPACING
-        
-        # Calculate starting x position (center-aligned)
-        start_x = -total_width / 2
-        
-        # Position nodes
-        current_x = start_x
-        y = layer * VERTICAL_SPACING
-        
-        for node_id, width in node_widths:
-            # Center the node at current_x
-            x = current_x + width / 2
-            positions[node_id] = (x, y)
-            current_x += width + HORIZONTAL_SPACING
+        # Within each horizon, organize by document type hierarchy (layer)
+        for layer in sorted(nodes_by_horizon[horizon].keys()):
+            layer_nodes = nodes_by_horizon[horizon][layer]
+            
+            # Group nodes by type within this layer
+            type_groups = group_nodes_by_type(layer_nodes, nodes)
+            
+            # Sort groups by type order, then sort nodes within each group
+            sorted_groups = []
+            for doc_type in type_order:
+                if doc_type in type_groups:
+                    # Sort nodes within group (by title for consistency)
+                    sorted_nodes = sorted(type_groups[doc_type], 
+                                        key=lambda nid: nodes[nid].get('title', '').lower())
+                    sorted_groups.append((doc_type, sorted_nodes))
+            
+            # Calculate total width needed for this layer (accounting for variable node sizes)
+            total_width = 0
+            node_widths = []
+            for doc_type, group_nodes in sorted_groups:
+                for node_id in group_nodes:
+                    width, _ = get_node_size(layer)
+                    node_widths.append((node_id, width))
+                    total_width += width + HORIZONTAL_SPACING
+            
+            # Remove last spacing
+            if total_width > 0:
+                total_width -= HORIZONTAL_SPACING
+            
+            # Calculate starting x position (center-aligned)
+            start_x = -total_width / 2
+            
+            # Position nodes
+            current_x = start_x
+            # Y position: horizon base + layer offset within horizon
+            y = horizon_y_start + (layer * HORIZON_INTERNAL_SPACING)
+            
+            for node_id, width in node_widths:
+                # Center the node at current_x
+                x = current_x + width / 2
+                positions[node_id] = (x, y)
+                current_x += width + HORIZONTAL_SPACING
     
     return positions
 
@@ -525,8 +674,13 @@ def generate_canvas_json(nodes: Dict[str, Dict], edges: Dict[str, Set[str]], pos
 
 
 def regenerate_canvas():
-    """Main function to regenerate the Ideas Kanban canvas."""
-    print("Regenerating Ideas Kanban Canvas...")
+    """Main function to regenerate the Ideas Kanban canvas aligned with Portfolio Roadmap."""
+    print("Regenerating Ideas Kanban Canvas (aligned with Portfolio Roadmap)...")
+    
+    # Parse portfolio roadmap to get initiatives and horizons
+    print("  Parsing portfolio roadmap...")
+    portfolio_initiatives = parse_portfolio_roadmap(PORTFOLIO_ROADMAP)
+    print(f"  Found {len(portfolio_initiatives)} initiatives in portfolio roadmap")
     
     # Parse kanban board
     print("  Parsing kanban board...")
@@ -539,13 +693,13 @@ def regenerate_canvas():
     
     print(f"  Found {len(all_items)} items in kanban board")
     
-    # Build relationship graph
+    # Build relationship graph (with portfolio roadmap alignment)
     print("  Building relationship graph...")
-    nodes, edges = build_relationship_graph(list(all_items))
+    nodes, edges = build_relationship_graph(list(all_items), portfolio_initiatives)
     print(f"  Created {len(nodes)} nodes and {sum(len(v) for v in edges.values())} edges")
     
-    # Calculate positions
-    print("  Calculating positions...")
+    # Calculate positions (organized by portfolio roadmap horizons)
+    print("  Calculating positions (by portfolio roadmap horizons)...")
     positions = calculate_positions(nodes)
     
     # Generate canvas JSON
@@ -559,6 +713,7 @@ def regenerate_canvas():
         json.dump(canvas_json, f, indent=2, ensure_ascii=False)
     
     print(f"✓ Canvas regenerated successfully: {len(canvas_json['nodes'])} nodes, {len(canvas_json['edges'])} edges")
+    print(f"  Organized by Portfolio Roadmap horizons: Now (top), Next (middle), Later (bottom)")
     return True
 
 

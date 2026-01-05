@@ -36,6 +36,20 @@ Brief one-to-two sentence description of the solution and how it addresses the o
 - Explain how it addresses the opportunity
 - Be concise but informative
 
+### 3.5. User Story (Required - PM-DoR)
+User story in standard format.
+
+**Format:**
+```markdown
+As a [user type], I want [goal], so that [benefit].
+```
+
+**Guidelines:**
+- User type must be specific (not "our customers")
+- Goal must be clear and actionable
+- Benefit must explain the value
+- Required for PM-DoR validation
+
 ### 4. Related Opportunity (Required)
 Link to the opportunity this solution addresses.
 
@@ -70,7 +84,158 @@ Explanation of how this solution addresses the customer need, pain point, or des
 - Explain the mechanism by which it addresses the customer need
 - Be specific about the connection
 
-### 7. Assumptions (Required)
+### 7. Success Metrics (Required - PM-DoR)
+How will we measure success? Specific, measurable targets.
+
+**Format:**
+```markdown
+- Metric 1: [specific target]
+- Metric 2: [specific target]
+- Metric 3: [specific target]
+```
+
+**Guidelines:**
+- Must be specific (not vague)
+- Must be measurable (quantifiable)
+- Must have targets (not just direction)
+- Required for PM-DoR validation
+- Replaces or supplements "Expected Impact" section
+
+### 8. Why Now? (Required - PM-DoR)
+Business context for timing and priority.
+
+**Format:**
+```markdown
+- [Business driver 1]
+- [Business driver 2]
+- [Timing rationale]
+```
+
+**Guidelines:**
+- Must provide business context for timing
+- Must explain priority rationale
+- Must include timing drivers (not just "it's important")
+- Required for PM-DoR validation
+
+### 9. Acceptance Criteria (Required - PM-DoR)
+Specific, testable criteria for completion.
+
+**Format:**
+```markdown
+1. GIVEN [context] WHEN [action] THEN [result]
+2. GIVEN [context] WHEN [action] THEN [result]
+3. GIVEN [context] WHEN [action] THEN [result]
+4. GIVEN [context] WHEN [action] THEN [result]
+5. GIVEN [context] WHEN [action] THEN [result]
+```
+
+**Guidelines:**
+- Must use GIVEN/WHEN/THEN format
+- Minimum count based on work size (see PM-DoR standards):
+  - XS (1-2 points): 3 AC
+  - S (3-5 points): 5 AC
+  - M (8 points): 7 AC
+  - L (13 points): 10 AC
+  - XL (21+ points): 15 AC
+- Must be specific, testable, unambiguous, complete, and bounded
+- Required for PM-DoR validation
+- See [PM-DoR Standards](../../07-reference/technical-specs/pm-dor-standards.md) for quality checklist
+
+### 10. Dependencies (Required - PM-DoR)
+External systems, teams, or factors this solution depends on.
+
+**Format:**
+```markdown
+- [ ] [System/team/factor 1] - [Status]
+- [ ] [System/team/factor 2] - [Status]
+```
+
+**Guidelines:**
+- Must list external systems, teams, or factors
+- Must include status for each dependency
+- Cannot be "None" without justification
+- Required for PM-DoR validation
+- Previously part of Implementation Considerations, now separate section
+
+### 11. Out of Scope (Required - PM-DoR)
+What is explicitly NOT included in this work.
+
+**Format:**
+```markdown
+- [Explicitly excluded item 1]
+- [Explicitly excluded item 2]
+```
+
+**Guidelines:**
+- Must explicitly document what is NOT included
+- Must set clear boundaries
+- Cannot be "Everything not mentioned"
+- Required for PM-DoR validation
+
+### 12. Wireframes/Mockups (Required for UI-Impacting Work - PM-DoR)
+Visual representation of UI changes.
+
+**Format:**
+```markdown
+[Attach or link to visuals]
+```
+
+**Guidelines:**
+- Required for UI-impacting work only
+- Must provide visual representation of UI changes
+- Must cover all UI states (empty, loading, error, success, etc.)
+- Must include all flows
+- Required for PM-DoR validation if UI work
+
+### 13. User Flow (Required for UI-Impacting Work - PM-DoR)
+How user navigates through the feature.
+
+**Format:**
+```markdown
+[Describe the navigation/flow]
+```
+
+**Guidelines:**
+- Required for UI-impacting work only
+- Must describe how user navigates through the feature
+- Must ensure full flow is considered
+- Required for PM-DoR validation if UI work
+
+### 14. Breakdown Suggestion (Required for Large Work >13 points - PM-DoR)
+Proposed phasing or decomposition.
+
+**Format:**
+```markdown
+[Proposed phasing or decomposition]
+```
+
+**Guidelines:**
+- Required for large/complex work (>13 points estimated) only
+- Must propose phasing or decomposition
+- Must support incremental delivery
+- Required for PM-DoR validation if large work
+
+### 15. MVP Definition (Required for Large Work >13 points - PM-DoR)
+Minimum viable version if full scope is at risk.
+
+**Format:**
+```markdown
+**Must have:**
+- [Essential feature 1]
+- [Essential feature 2]
+
+**Nice to have:**
+- [Optional feature 1]
+- [Optional feature 2]
+```
+
+**Guidelines:**
+- Required for large/complex work (>13 points estimated) only
+- Must separate must-have from nice-to-have
+- Must identify minimum viable version
+- Required for PM-DoR validation if large work
+
+### 16. Assumptions (Required)
 Key assumptions underlying this solution.
 
 **Format:**
@@ -84,7 +249,7 @@ Key assumptions underlying this solution.
 - Include assumptions about user behavior, technical feasibility, etc.
 - These should be tested through experiments
 
-### 8. Expected Impact (Required)
+### 17. Expected Impact (Required)
 Expected impact on the opportunity and outcomes.
 
 **Format:**
@@ -102,24 +267,23 @@ Expected impact on the opportunity and outcomes.
 - Link to outcomes if possible
 - Include quantitative expectations if available
 
-### 9. Implementation Considerations (Required)
+### 18. Implementation Considerations (Required)
 Practical considerations for implementing this solution.
 
 **Format:**
 ```markdown
 - **Effort:** [High/Medium/Low]
 - **Complexity:** [High/Medium/Low]
-- **Dependencies:** [List dependencies]
 - **Risks:** [List risks]
 ```
 
 **Guidelines:**
 - Assess effort and complexity honestly
-- List technical or organizational dependencies
 - Identify key risks
 - Help with prioritization decisions
+- **Note:** Dependencies are now documented in the "Dependencies" section (section 10)
 
-### 10. Experiments (Optional but Recommended)
+### 19. Experiments (Optional but Recommended)
 Links to experiments that test this solution.
 
 **Format:**
@@ -135,7 +299,7 @@ Link to experiments that test this solution:
 - Include active, planned, and completed experiments
 - Shows validation progress
 
-### 11. Validation Status (Required)
+### 20. Validation Status (Required)
 Current validation status of the solution.
 
 **Format:**
@@ -152,7 +316,42 @@ Current validation status of the solution.
 - Check off items as they are completed
 - Helps track where solution is in validation process
 
-### 12. Decision (Required)
+### 21. PM-DoR Validation Checklist (Required - PM-DoR)
+PM-DoR validation checklist to ensure solution is ready for engineering refinement.
+
+**Format:**
+```markdown
+### Required for ALL Solutions
+- [ ] Business Problem clearly stated
+- [ ] Success Metrics defined (specific, measurable targets)
+- [ ] Acceptance Criteria present (≥5 for standard work, GIVEN/WHEN/THEN format)
+- [ ] User Story provided (As a [user], I want [goal], so that [benefit])
+- [ ] Why Now? section completed (business context for timing)
+- [ ] Dependencies identified and status known
+- [ ] Out of Scope explicitly documented
+
+### Required for UI-Impacting Work
+- [ ] Wireframes/Mockups provided (all UI states and flows)
+- [ ] User Flow documented
+
+### Required for Large/Complex Work (>13 points estimated)
+- [ ] Breakdown Suggestion provided
+- [ ] MVP Definition provided (must-have vs nice-to-have)
+
+### Validation Status
+- [ ] PM-DoR Complete
+- [ ] Validated by: [TDM/PM Lead]
+- [ ] Validation Date: [YYYY-MM-DD]
+- [ ] Ready for Engineering Refinement: [Yes/No]
+```
+
+**Guidelines:**
+- Required for all solutions
+- Must be completed before solution moves to roadmap inclusion
+- See [PM-DoR Validation Guide](../../07-reference/methodology/pm-dor-validation-guide.md) for detailed validation process
+- See [PM-DoR Standards](../../07-reference/technical-specs/pm-dor-standards.md) for quality requirements
+
+### 22. Decision (Required)
 Decision status and rationale.
 
 **Format:**
@@ -169,7 +368,7 @@ Decision status and rationale.
 - Include rationale for transparency
 - Document decision date
 
-### 13. Notes (Optional)
+### 23. Notes (Optional)
 Additional context, learnings, or considerations.
 
 ## Format Requirements
@@ -261,11 +460,22 @@ Before considering a Solution document complete, verify:
 - [ ] Metadata includes Status, Created, Last Updated, Priority
 - [ ] Overview clearly describes solution and connection to opportunity
 - [ ] Link to Related Opportunity is present
+- [ ] **User Story is provided** (PM-DoR requirement)
 - [ ] Solution Description is detailed and clear
 - [ ] "How It Addresses the Opportunity" section explains the connection
+- [ ] **Success Metrics are defined** (specific, measurable targets - PM-DoR requirement)
+- [ ] **Why Now? section is completed** (business context - PM-DoR requirement)
+- [ ] **Acceptance Criteria are present** (≥5 for standard work, GIVEN/WHEN/THEN format - PM-DoR requirement)
+- [ ] **Dependencies are identified** (with status - PM-DoR requirement)
+- [ ] **Out of Scope is explicitly documented** (PM-DoR requirement)
+- [ ] **Wireframes/Mockups provided** (if UI work - PM-DoR requirement)
+- [ ] **User Flow documented** (if UI work - PM-DoR requirement)
+- [ ] **Breakdown Suggestion provided** (if large work >13 points - PM-DoR requirement)
+- [ ] **MVP Definition provided** (if large work >13 points - PM-DoR requirement)
 - [ ] Assumptions are documented
 - [ ] Expected Impact is described
 - [ ] Implementation Considerations are assessed
+- [ ] **PM-DoR Validation Checklist is completed** (PM-DoR requirement)
 - [ ] Validation Status is tracked
 - [ ] Decision section is present (can be "In Progress")
 - [ ] All links use correct relative paths
@@ -374,6 +584,14 @@ Link to experiments that test this solution:
 - Should include user education and onboarding updates
 ```
 
+## PM-DoR Requirements
+
+Solutions must meet PM-DoR (Product Manager Definition of Ready) criteria before moving to roadmap inclusion or engineering refinement. See:
+
+- [PM-DoR Validation Guide](../../07-reference/methodology/pm-dor-validation-guide.md) - Detailed validation process
+- [PM-DoR Standards Reference](../../07-reference/technical-specs/pm-dor-standards.md) - Quick reference for PM-DoR standards
+- [PM-DoR Framework Research](../../03-discovery/research/process-research/pm-dor-framework-2026-01.md) - Full framework documentation
+
 ## Conformance Instructions
 
 To conform an existing Solution document to this format:
@@ -382,15 +600,26 @@ To conform an existing Solution document to this format:
 2. Ensure all required metadata fields are present
 3. Verify Overview describes solution and connection to opportunity
 4. Ensure link to Related Opportunity exists
-5. Check Solution Description is detailed and clear
-6. Verify "How It Addresses the Opportunity" section exists and explains connection
-7. Ensure Assumptions are documented
-8. Check Expected Impact section is present
-9. Verify Implementation Considerations are assessed
-10. Ensure Validation Status is tracked with checkboxes
-11. Check Decision section is present
-12. Validate all links use correct relative paths
-13. Add any missing required sections
+5. **Add User Story section** (PM-DoR requirement)
+6. Check Solution Description is detailed and clear
+7. Verify "How It Addresses the Opportunity" section exists and explains connection
+8. **Add Success Metrics section** (PM-DoR requirement)
+9. **Add Why Now? section** (PM-DoR requirement)
+10. **Add Acceptance Criteria section** (PM-DoR requirement - GIVEN/WHEN/THEN format)
+11. **Add Dependencies section** (PM-DoR requirement - with status)
+12. **Add Out of Scope section** (PM-DoR requirement)
+13. **Add Wireframes/Mockups section** (if UI work - PM-DoR requirement)
+14. **Add User Flow section** (if UI work - PM-DoR requirement)
+15. **Add Breakdown Suggestion section** (if large work >13 points - PM-DoR requirement)
+16. **Add MVP Definition section** (if large work >13 points - PM-DoR requirement)
+17. Ensure Assumptions are documented
+18. Check Expected Impact section is present
+19. Verify Implementation Considerations are assessed (dependencies moved to separate section)
+20. **Add PM-DoR Validation Checklist** (PM-DoR requirement)
+21. Ensure Validation Status is tracked with checkboxes
+22. Check Decision section is present
+23. Validate all links use correct relative paths
+24. Add any missing required sections
 
 
 

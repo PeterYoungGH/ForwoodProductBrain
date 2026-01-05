@@ -13,25 +13,32 @@
             "state": {
               "type": "kanban",
               "state": {
-                "file": "⬛ Ideas Kanban.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false,
-                    false,
-                    false,
-                    false,
-                    false
-                  ]
-                }
+                "file": "00-inbox/⬛ Inbox.md",
+                "kanbanViewState": {}
               },
               "icon": "lucide-trello",
-              "title": "⬛ Ideas Kanban"
+              "title": "⬛ Inbox"
+            }
+          },
+          {
+            "id": "f1499288981bc172",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Ideas Kanban Canvas.canvas",
+                "viewState": {
+                  "x": -440.83972089936765,
+                  "y": 2746.3753736279396,
+                  "zoom": -2.2795028465934575
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Ideas Kanban Canvas"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -63,7 +70,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "roadmap",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -98,7 +105,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5
+    "width": 470.5
   },
   "right": {
     "id": "a0cd58f19d945516",
@@ -176,13 +183,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "⬛ Ideas Kanban.md",
+                "file": "Ideas Kanban Canvas.canvas",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ⬛ Ideas Kanban"
+              "title": "Outline of Ideas Kanban Canvas"
             }
           }
         ],
@@ -204,8 +211,23 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "7b7c1d8458548080",
+  "active": "f1499288981bc172",
   "lastOpenFiles": [
+    "07-reference/methodology/ideas-kanban-canvas-alignment-summary.md",
+    "07-reference/methodology/ideas-kanban-canvas-rules.md",
+    "⬛ Ideas Kanban.md",
+    "00-inbox/⬛ Inbox.md",
+    "07-reference/methodology/roadmapping-framework.md",
+    "03-discovery/insights/2026-01-03-forwood-one-voice-of-customer-insights.md",
+    "03-discovery/research/user-research/forwood-one-voice-of-customer-research-2026-01.md",
+    "00-inbox/raw/2026-01-03-forwood-one-voice-of-customer-research-[INBOX].md",
+    "01-strategy/roadmap/01-strategic-roadmap.md",
+    "00-inbox/raw/2026-01-03-pm-dor-definition-ready-review-criteria-[INBOX].md",
+    "07-reference/technical-specs/pm-dor-standards.md",
+    "07-reference/methodology/pm-dor-validation-guide.md",
+    "03-discovery/research/process-research/pm-dor-framework-2026-01.md",
+    "03-discovery/research/process-research",
+    "00-inbox/raw/2026-01-03-vl-jepa-vision-language-joint-embedding-predictive-architecture-[INBOX].md",
     "04-opportunities/03-opportunities/backlog/customers-need-clear-forwood-one-platform-communication.md",
     "04-opportunities/03-opportunities/backlog/customers-need-action-oriented-reporting-dashboards.md",
     "04-opportunities/03-opportunities/backlog/customers-need-enterprise-integrations.md",
@@ -215,24 +237,10 @@
     "04-opportunities/05-experiments/planned/design-system-usability-impact-experiment.md",
     "04-opportunities/05-experiments/planned/ai-workflow-efficiency-experiment.md",
     "04-opportunities/05-experiments/planned/accident-learning-system-effectiveness-experiment.md",
-    "⬛ Ideas Kanban.md",
     "04-opportunities/05-experiments/planned/url-schema-customer-feedback-experiment.md",
     "00-inbox/raw/DECISIONS-EXECUTION-PROGRESS-2026-01-03.md",
     "04-opportunities/03-opportunities/active/customers-need-confidence-in-migration-success.md",
-    "04-opportunities/03-opportunities/active/customers-need-clear-forwood-one-platform-communication.md",
     "Ideas Kanban Canvas.canvas",
-    "00-inbox/raw/DECISIONS-REQUIRED-2026-01-03.md",
-    "00-inbox/raw/FINAL-WORKFLOW-SUMMARY-2026-01-03.md",
-    "03-discovery/research/customer-requirements/kenmare-security-incident-management-requirements.md",
-    "00-inbox/raw/2025-11-28-2024-product-vision-[PROCESSING].md",
-    "00-inbox/raw/2025-11-28-user-personas-[PROCESSING].md",
-    "00-inbox/raw/2025-11-28-product-operating-model-[PROCESSING].md",
-    "00-inbox/raw/2025-11-28-product-delight-pillars-[PROCESSING].md",
-    "00-inbox/raw/2025-12-09-forwood-one-success-criteria-[PROCESSING].md",
-    "00-inbox/raw/2025-12-08-standard-screen-resolutions-platform-spec-[PROCESSING].md",
-    "00-inbox/raw/2025-12-06-unified-opportunity-system-canvas-[PROCESSING].md",
-    "00-inbox/raw/2025-12-08-edp-and-hedno-exec-alignment-meeting-[PROCESSING].md",
-    "03-discovery/research/customer-requirements/rossing-forwood-one-platform-meeting-2025-12.md",
     "06-communications/reference",
     "Untitled.canvas",
     "07-reference/technical-specs",
@@ -243,7 +251,6 @@
     "05-research/sources/atlassian/JIRA/QA-UAT",
     "07-reference/prompts/one-on-ones",
     "06-communications/one-on-ones/prepared",
-    "06-communications/one-on-ones/templates",
-    "06-communications/one-on-ones"
+    "06-communications/one-on-ones/templates"
   ]
 }

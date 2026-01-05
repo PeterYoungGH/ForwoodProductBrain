@@ -241,6 +241,10 @@ Link to outcomes this research relates to:
 Links to research artifacts:
 - [Source: User Personas Inbox Item](../../../00-inbox/raw/2025-11-28-user-personas-[INBOX].md)
 
+## Related Documents
+
+- [Forwood One Voice of Customer Research](./forwood-one-voice-of-customer-research-2026-01.md) - Complementary research on buyer psychology, market sentiment, and customer transformation. This VoC research focuses on what customers struggle with, what they hope for, and how they experience transformation after using Forwood - complementing this Jobs-to-Be-Done personas research which focuses on platform user needs and design implications.
+
 ## Notes
 
 This research provides comprehensive user personas with Jobs-to-Be-Done overlay, identifying 11 distinct personas from field workers to executives. Each persona includes functional, emotional, and social jobs, frustrations, and design implications.
