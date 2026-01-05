@@ -16,9 +16,49 @@ Generate a comprehensive Product Feature Map + User Flows document by scanning t
 
 1. Generate timestamp: `YYYY-MM-DD-HHMMSS` format (e.g., `2025-01-15-143022`)
 2. Set output file path: `.specify/product-feature-map-{timestamp}.md`
-3. Initialise data structures for collecting features, routes, entities, flows
+3. **Check if file already exists** - If it does, read it to determine what's already been generated and resume from there
+4. **Create/initialise output file immediately** with header and initial structure:
+
+   ```markdown
+   # Product Feature Map
+
+   **Generated**: {timestamp}
+   **Codebase**: Forwood Safety Platform
+   **Status**: In Progress
+
+   > **Note**: This file is being generated incrementally. If the process was interrupted, it may be incomplete.
+
+   ## A. Overview
+
+   [To be populated...]
+
+   ## B. Feature Catalogue
+
+   [To be populated...]
+
+   ## C. Cross-cutting Capabilities
+
+   [To be populated...]
+
+   ## D. Key User Flows
+
+   [To be populated...]
+
+   ## E. Indexes
+
+   [To be populated...]
+   ```
+
+5. Initialise data structures for collecting features, routes, entities, flows
 
 ## Scanning Phase
+
+**Save Strategy**:
+
+- Track approximate line count as you generate content
+- **Save the file after every ~100 lines of content generated** (in addition to section checkpoints)
+- After completing each discovery step (1-6), update the file with a progress marker
+- After all scanning is complete, save the collected data summary
 
 ### 1. Route Discovery
 
@@ -42,7 +82,8 @@ Generate a comprehensive Product Feature Map + User Flows document by scanning t
   - `app+/$featureSetKey+/fill+/$formId.tsx` → `/app/{featureSetKey}/fill/{formId}`
   - `app+/actions+/$actionId.review.tsx` → `/app/actions/{actionId}/review`
 
-**Navigation Config**: 
+**Navigation Config**:
+
 - Read `web/app/components/layout/AppSidebar.tsx` to extract navigation structure
 - Read `web/app/locales/en/navigation.json` for nav labels and descriptions
 - Map navigation items to routes and feature sets
@@ -65,11 +106,13 @@ Generate a comprehensive Product Feature Map + User Flows document by scanning t
   - `featureSetId` (parent relationship)
 - Extract `TenantFeatureSet` and `TenantFeature` for feature flag information
 
-**Feature Registry**: 
+**Feature Registry**:
+
 - Read `packages/ehs-core/src/feature-registry.ts` if available
 - Extract feature definitions and metadata
 
-**API Module**: 
+**API Module**:
+
 - Check `api/src/modules/featureset/` for feature set management endpoints
 
 ### 3. Domain Entity Discovery
@@ -85,7 +128,8 @@ Generate a comprehensive Product Feature Map + User Flows document by scanning t
   - Relationships (one-to-many, many-to-many)
   - Key fields that indicate purpose
 
-**Type Exports**: 
+**Type Exports**:
+
 - Read `packages/ehs-core/src/types.ts` to see exported types
 - Map Prisma models to TypeScript types
 
@@ -106,6 +150,7 @@ Generate a comprehensive Product Feature Map + User Flows document by scanning t
   - Domain-specific operations from service methods
 
 **Key Modules to Scan**:
+
 - `action/` → Action management
 - `form/` → Form builder and management
 - `checklist/` → Checklist library
@@ -119,15 +164,18 @@ Generate a comprehensive Product Feature Map + User Flows document by scanning t
 
 ### 5. Permission/RBAC Discovery
 
-**ABAC System**: 
+**ABAC System**:
+
 - Read `api/src/modules/abac/services/impl/abac-feature-access.service.impl.ts`
 - Understand feature access logic and CASL integration
 
-**CASL System**: 
+**CASL System**:
+
 - Read `api/src/modules/casl/casl-ability.factory.ts`
 - Extract permission evaluation patterns
 
-**Permission Models**: 
+**Permission Models**:
+
 - Read `packages/ehs-core/prisma/schema/core/abac-permissions.prisma`
 - Extract:
   - `Role` model (role definitions)
@@ -135,11 +183,13 @@ Generate a comprehensive Product Feature Map + User Flows document by scanning t
   - `PermissionAbility` model (CASL ability definitions)
   - `RolePermission` model (role-permission mappings)
 
-**Frontend Auth**: 
+**Frontend Auth**:
+
 - Read `web/app/services/auth/authorization.service.ts`
 - Extract access check patterns and role requirements
 
-**Documentation**: 
+**Documentation**:
+
 - Read `docs/specs/ABAC/` for ABAC implementation details
 - Extract permission patterns and scope levels
 
@@ -159,7 +209,8 @@ Generate a comprehensive Product Feature Map + User Flows document by scanning t
   - Create Action → Review Action → Complete Action
   - Create Checklist → Assign Checklist → Complete Checklist
 
-**Route Sequences**: 
+**Route Sequences**:
+
 - Infer flows from route dependencies:
   - Forms require Form creation before filling
   - Actions require FormResponse or Event
@@ -167,6 +218,7 @@ Generate a comprehensive Product Feature Map + User Flows document by scanning t
 - Map navigation patterns from AppSidebar
 
 **Key Flows to Document**:
+
 1. User Login & Tenant Selection
 2. Create Verification Form
 3. Fill & Submit Verification Form
@@ -185,6 +237,12 @@ Generate a comprehensive Product Feature Map + User Flows document by scanning t
 
 ## Analysis Phase
 
+**Save Strategy**:
+
+- Track approximate line count as you generate content
+- **Save the file after every ~100 lines of content generated**
+- After organising features and mapping entities, save the analysis results to the file before starting generation
+
 ### Organise Features Hierarchically
 
 Group features by domain/module:
@@ -201,6 +259,7 @@ Group features by domain/module:
 ### Map Entities to Features
 
 For each feature, identify:
+
 - Which domain entities it creates/edits/views
 - Which API modules it uses
 - Which routes it exposes
@@ -208,6 +267,7 @@ For each feature, identify:
 ### Identify Cross-cutting Capabilities
 
 Extract platform-level capabilities:
+
 - Authentication/session management
 - Roles & permissions (ABAC/CASL)
 - Search/filtering patterns
@@ -219,6 +279,65 @@ Extract platform-level capabilities:
 - Multi-tenancy
 
 ## Generation Phase
+
+**IMPORTANT: Incremental Saving**
+
+To prevent data loss if the process times out, **save the file frequently**. Use the following pattern:
+
+1. **Track line count**: As you generate content, keep a rough count of lines added. Every ~100 lines, save the file.
+2. After completing each section (Overview, Feature Catalogue section, Cross-cutting section, Flow, Index), **immediately write/update the file**
+3. Use `write` or `search_replace` to append or update the file content
+4. After each save, output a brief status message (e.g., "✓ Saved Overview section" or "✓ Saved ~100 lines")
+5. Continue building the document incrementally rather than building it all in memory
+
+**Line Count Tracking**:
+
+- Count markdown lines (headers, bullets, table rows, code blocks, etc.)
+- When you've generated approximately 100 lines since last save, save immediately
+- Don't wait for section completion if you've hit ~100 lines
+- Reset counter after each save
+
+**Save Checkpoints (in order):**
+
+**PRIMARY RULE: Save after every ~100 lines of content generated, regardless of section boundaries.**
+
+Additional section-based checkpoints:
+
+1. **After Overview section** → Replace `[To be populated...]` with actual content, save file
+2. **During Feature Catalogue** → Save frequently:
+   - Track line count as you generate each domain
+   - Save after ~100 lines (may be mid-domain)
+   - Also save after completing each domain:
+     - After Safety Management domain → Save
+     - After Risk Management domain → Save
+     - After Action Management domain → Save
+     - After Event Management domain → Save
+     - After Content Management domain → Save
+     - After Administration domain → Save
+     - After Settings domain → Save
+     - After Platform domain → Save
+3. **During Cross-cutting Capabilities** → Save after ~100 lines, then final save when complete
+4. **During User Flows** → Save after every 1-2 flows (each flow is ~30-50 lines, so 2 flows ≈ ~100 lines)
+5. **During Indexes** → Save after each index completes:
+   - After Feature Index → Save
+   - After Route Index → Save
+   - After Domain Object Index → Save
+6. **Final save** → Update status from "In Progress" to "Complete", save file
+
+**Implementation Pattern:**
+
+- Use `search_replace` to replace placeholder text like `[To be populated...]` with actual content
+- Or use `read_file` to get current content, append new sections, then `write` the complete updated content
+- **Track line count**: As you generate content, estimate lines added. When you reach ~100 lines since last save, save immediately
+- After each save operation, output: `✓ Saved [Section Name] section` or `✓ Saved ~100 lines of content`
+- **Don't batch too much**: If generating a large section (like a feature with many sub-features), save periodically within that section
+
+**Example Save Pattern:**
+
+1. Generate Overview section (~50 lines) → Save → "✓ Saved Overview section"
+2. Start Feature Catalogue, generate Safety Management header + Verifications feature (~80 lines) → Continue
+3. Generate Inspections feature (~40 lines, total ~120 lines) → **Save now** (hit ~100 line threshold) → "✓ Saved ~100 lines of Feature Catalogue"
+4. Continue with next feature...
 
 ### Document Structure
 
@@ -262,30 +381,30 @@ Generate Markdown with the following structure:
 #### Verifications (Feature Set)
 
 - **What**: Conduct and manage critical control verification activities. Users fill verification forms, submit responses, and create actions from non-compliant findings.
-- **Entry points**: 
+- **Entry points**:
   - Route: `/app/verifications`
   - Nav label: "Critical Control Verifications"
   - Deep link: `/app/verifications/responses/{responseId}`
 - **Core objects**: `Form`, `FormResponse`, `Action`, `ActionTemplate`
-- **Key screens/components**: 
+- **Key screens/components**:
   - `web/app/routes/app+/verifications+/_index.tsx` (list view)
   - `web/app/routes/app+/$featureSetKey+/fill+/$formId.tsx` (form filling)
   - `web/app/routes/app+/$featureSetKey+/responses+/$responseId.edit.tsx` (response editing)
-- **Primary operations**: 
+- **Primary operations**:
   - Create form (via Form Builder)
   - Fill form (initiate and complete)
   - Submit response
   - View responses (list and detail)
   - Export responses
   - Create action from response
-- **Permissions/roles**: 
+- **Permissions/roles**:
   - Requires `access` permission on `Verifications` FeatureSet
   - CASL ability: `can('access', 'Verifications')`
   - May require specific role scopes for create/edit operations
-- **Feature flags**: 
+- **Feature flags**:
   - Controlled by `TenantFeatureSet.isEnabled` for feature set
   - Controlled by `TenantFeature.isEnabled` for individual features
-- **Related features**: 
+- **Related features**:
   - Actions (creates actions from responses)
   - Forms (uses form builder)
   - Action Templates (assigns templates to feature sets)
@@ -322,6 +441,7 @@ Generate Markdown with the following structure:
 **Trigger**: User needs to access the application
 
 **Steps**:
+
 1. Navigate to login page (`/auth/login`)
 2. Authenticate via AWS Cognito
 3. If super admin: Select tenant from dropdown (`/app` with tenant selection)
@@ -331,21 +451,25 @@ Generate Markdown with the following structure:
 **Flow path**: Authentication → Tenant Selection → Dashboard → Feature Access
 
 **Systems/actions**:
+
 - Session created with JWT token
 - Tenant context established
 - Feature access evaluated via ABAC
 - User preferences loaded
 
 **Entry/exit points**:
+
 - Entry: `/auth/login`
 - Exit: `/app/{featureSetKey}` or `/app` (dashboard)
 
 **Dependencies**:
+
 - Valid AWS Cognito credentials
 - Tenant membership (for non-super-admin users)
 - Feature access permissions
 
 **Failure points**:
+
 - Invalid credentials → Login error
 - No tenant access → Tenant selection required
 - No feature access → "No features available" message
@@ -367,26 +491,28 @@ Generate Markdown with the following structure:
 - **Inspections** → [Inspections Feature Set](#inspections-feature-set)
 - **Risk Register** → [Risk Register](#risk-register)
 - **Verifications** → [Verifications Feature Set](#verifications-feature-set)
-[... continue alphabetically ...]
+  [... continue alphabetically ...]
 
 ### Route Index
 
-| Route | Feature | Evidence |
-|-------|---------|----------|
-| `/app/verifications` | Verifications Feature Set | `web/app/routes/app+/verifications+/_index.tsx` |
+| Route                              | Feature                      | Evidence                                                |
+| ---------------------------------- | ---------------------------- | ------------------------------------------------------- |
+| `/app/verifications`               | Verifications Feature Set    | `web/app/routes/app+/verifications+/_index.tsx`         |
 | `/app/verifications/fill/{formId}` | Verifications - Form Filling | `web/app/routes/app+/$featureSetKey+/fill+/$formId.tsx` |
-| `/app/actions` | Actions Feature Set | `web/app/routes/app+/actions+/index.tsx` |
-| `/app/actions/{actionId}/review` | Actions - Review | `web/app/routes/app+/actions+/$actionId.review.tsx` |
-| `/admin/tenants` | Admin - Tenant Management | `web/app/routes/admin+/tenants+/_index.tsx` |
+| `/app/actions`                     | Actions Feature Set          | `web/app/routes/app+/actions+/index.tsx`                |
+| `/app/actions/{actionId}/review`   | Actions - Review             | `web/app/routes/app+/actions+/$actionId.review.tsx`     |
+| `/admin/tenants`                   | Admin - Tenant Management    | `web/app/routes/admin+/tenants+/_index.tsx`             |
+
 [... continue for all routes ...]
 
 ### Domain Object Index
 
-| Domain Object | Created In | Edited In | Viewed In | Evidence |
-|---------------|------------|-----------|-----------|----------|
-| `Action` | Verifications/Inspections (from responses), Events, Action Templates | Actions module (`/app/actions/{id}/update-status`) | Actions list (`/app/actions`), Action detail (`/app/actions/{id}`) | `api/src/modules/action/`, `web/app/routes/app+/actions+/` |
-| `Form` | Form Builder (`/app/settings/content-management/forms`) | Form Builder | Form list, Form detail | `api/src/modules/form/`, `web/app/routes/app+/settings+/content-management+/` |
-| `FormResponse` | Form Filling (`/app/{featureSetKey}/fill/{formId}`) | Response editing (`/app/{featureSetKey}/responses/{responseId}/edit`) | Response list, Response detail | `api/src/modules/form/`, `web/app/routes/app+/$featureSetKey+/responses+/` |
+| Domain Object  | Created In                                                           | Edited In                                                             | Viewed In                                                          | Evidence                                                                      |
+| -------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| `Action`       | Verifications/Inspections (from responses), Events, Action Templates | Actions module (`/app/actions/{id}/update-status`)                    | Actions list (`/app/actions`), Action detail (`/app/actions/{id}`) | `api/src/modules/action/`, `web/app/routes/app+/actions+/`                    |
+| `Form`         | Form Builder (`/app/settings/content-management/forms`)              | Form Builder                                                          | Form list, Form detail                                             | `api/src/modules/form/`, `web/app/routes/app+/settings+/content-management+/` |
+| `FormResponse` | Form Filling (`/app/{featureSetKey}/fill/{formId}`)                  | Response editing (`/app/{featureSetKey}/responses/{responseId}/edit`) | Response list, Response detail                                     | `api/src/modules/form/`, `web/app/routes/app+/$featureSetKey+/responses+/`    |
+
 [... continue for all domain objects ...]
 ```
 
@@ -405,7 +531,7 @@ Before finalising, verify:
 
 ## Completion
 
-1. Write the complete Markdown document to `.specify/product-feature-map-{timestamp}.md`
+1. **Final save**: Ensure all content has been written to `.specify/product-feature-map-{timestamp}.md`
 2. Output the file path to the user
 3. Provide a brief summary:
    - Number of features documented
@@ -413,14 +539,21 @@ Before finalising, verify:
    - Number of routes indexed
    - Number of domain objects indexed
 
+**Note**: Since the file is saved incrementally throughout the process, if the command times out, the partially completed file will still be available. You can resume by reading the existing file and continuing from where it left off.
+
 ## Rules
 
-1. **Be Evidence-Based**: Every feature must cite at least one code reference (route, file, or module)
-2. **Mark Uncertainties**: If evidence is indirect, mark as `(Assumption)` and cite the evidence
-3. **Use Australian English**: "organise" not "organize", "colour" not "color", etc.
-4. **Keep It Scannable**: Use short paragraphs, bullets, and tables
-5. **Don't Invent Features**: Only document features with code evidence
-6. **Hierarchical Organisation**: Group features by domain, then feature set, then feature
-7. **Flow Completeness**: Each flow should show complete user journey from trigger to completion
-8. **Index Usability**: Indexes should enable quick lookup of features, routes, and objects
-
+1. **Incremental Saving**: **CRITICAL** - Save the file frequently:
+   - Save after every ~100 lines of content generated
+   - Save after completing each major section
+   - Do not wait until the end or batch too much content
+   - This prevents data loss if the process times out
+2. **Be Evidence-Based**: Every feature must cite at least one code reference (route, file, or module)
+3. **Mark Uncertainties**: If evidence is indirect, mark as `(Assumption)` and cite the evidence
+4. **Use Australian English**: "organise" not "organize", "colour" not "color", etc.
+5. **Keep It Scannable**: Use short paragraphs, bullets, and tables
+6. **Don't Invent Features**: Only document features with code evidence
+7. **Hierarchical Organisation**: Group features by domain, then feature set, then feature
+8. **Flow Completeness**: Each flow should show complete user journey from trigger to completion
+9. **Index Usability**: Indexes should enable quick lookup of features, routes, and objects
+10. **Resume Capability**: If resuming from a partial file, read the existing content first and continue from where it left off
