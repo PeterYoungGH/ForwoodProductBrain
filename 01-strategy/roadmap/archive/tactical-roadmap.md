@@ -8,9 +8,9 @@
 
 ## Overview
 
-This tactical roadmap provides the detailed 12-month execution plan derived from our [Strategic Roadmap (2-Year Vision)](./strategic-roadmap.md). It includes specific quarterly milestones, deliverables, and tactical initiatives that will drive us toward our strategic goals.
+This tactical roadmap provides the detailed 12-month execution plan derived from our [Strategic Roadmap (2-Year Vision)](strategic-roadmap.md). It includes specific quarterly milestones, deliverables, and tactical initiatives that will drive us toward our strategic goals.
 
-**Note:** This roadmap combines elements of both the **Strategic Roadmap** (6-12 months) and **Portfolio Roadmap** (3-6 months) layers from Forwood's [4-layer roadmapping framework](../../07-reference/methodology/roadmapping-framework.md). As we evolve our roadmap structure, we may separate these into distinct roadmap documents.
+**Note:** This roadmap combines elements of both the **Strategic Roadmap** (6-12 months) and **Portfolio Roadmap** (3-6 months) layers from Forwood's [4-layer roadmapping framework](roadmapping-framework.md). As we evolve our roadmap structure, we may separate these into distinct roadmap documents.
 
 ## Strategic Alignment
 
@@ -24,11 +24,11 @@ This tactical roadmap supports the following strategic themes:
 ## Business Outcomes
 
 What business outcomes are we driving toward this year?
-- [Forwood One Platform Launch and New Customer Acquisition](../../04-opportunities/01-business-outcomes/oculus-platform-launch-new-deals.md)
-- [Safety Plus Upgrade](../../04-opportunities/01-business-outcomes/safety-plus-upgrade.md)
-- [CRM Upgrade Pathway](../../04-opportunities/01-business-outcomes/crm-upgrade-pathway.md)
-- [Risk and Compliance Platform Integration](../../04-opportunities/01-business-outcomes/risk-compliance-integration.md)
-- [Strategic Integration Plan](../../04-opportunities/01-business-outcomes/strategic-integration-plan.md)
+- [Forwood One Platform Launch and New Customer Acquisition](oculus-platform-launch-new-deals.md)
+- [Safety Plus Upgrade](safety-plus-upgrade.md)
+- [CRM Upgrade Pathway](crm-upgrade-pathway.md)
+- [Risk and Compliance Platform Integration](risk-compliance-integration.md)
+- [Strategic Integration Plan](strategic-integration-plan.md)
 
 ## Quarterly Tactical Plan
 
@@ -127,30 +127,30 @@ What business outcomes are we driving toward this year?
 
 ### Forwood One Platform Launch
 - **Focus:** Launch Forwood One platform and achieve commercial traction with 5 new customer deals
-- **Key Initiatives:** [Forwood One Platform Launch](../../02-initiatives/active/Forwood-One-platform-launch.md)
+- **Key Initiatives:** [Forwood One Platform Launch](Forwood-One-platform-launch.md)
 - **Timeline:** Q1-Q4 FY26
 
 ### Customer Migration
 - **Focus:** Migrate existing customers from Safety+, CRM+, and Risk+ platforms to Forwood One
-- **Key Initiatives:** [Forwood One Platform Launch](../../02-initiatives/active/Forwood-One-platform-launch.md)
+- **Key Initiatives:** [Forwood One Platform Launch](Forwood-One-platform-launch.md)
 - **Timeline:** Q2-Q4 FY26
 
 ### Product Excellence
 - **Focus:** Deliver design system, achieve usability targets, and ensure positive customer experience
-- **Key Initiatives:** [Forwood One Platform Launch](../../02-initiatives/active/Forwood-One-platform-launch.md)
+- **Key Initiatives:** [Forwood One Platform Launch](Forwood-One-platform-launch.md)
 - **Timeline:** Q1-Q4 FY26
 
 ## Key Initiatives
 
-- [Forwood One Platform Launch](../../02-initiatives/active/Forwood-One-platform-launch.md)
+- [Forwood One Platform Launch](Forwood-One-platform-launch.md)
 
 ## Product Outcomes
 
 What product outcomes support our tactical roadmap?
-- [Forwood One NPS Score](../../04-opportunities/02-product-outcomes/oculus-nps-score.md)
-- [Usability Testing Success Rate](../../04-opportunities/02-product-outcomes/usability-testing-success-rate.md)
-- [Forwood One Design System](../../04-opportunities/02-product-outcomes/oculus-design-system.md)
-- [Forwood One Customer Experience](../../04-opportunities/02-product-outcomes/oculus-customer-experience.md)
+- [Forwood One NPS Score](oculus-nps-score.md)
+- [Usability Testing Success Rate](usability-testing-success-rate.md)
+- [Forwood One Design System](04-opportunities/02-product-outcomes/oculus-design-system.md)
+- [Forwood One Customer Experience](oculus-customer-experience.md)
 
 ## Tactical Priorities
 
@@ -208,19 +208,19 @@ What product outcomes support our tactical roadmap?
 
 Guided by industry insight, we continue to develop advanced CRM+ methodology capabilities. The Site-Specific Checklist Builder & Verification Scheduler enables governed tailoring from a single master checklist, with a central library and smart scheduling that deliver full oversight in a fraction of the time.
 
-**Case Study:** [Site-Specific Checklist Builder & Verification Scheduler Case Study](../../05-research/sources/site-specific-checklist-builder-case-study.md)
+**Case Study:** [Site-Specific Checklist Builder & Verification Scheduler Case Study](site-specific-checklist-builder-case-study.md)
 
 **Impact:** What once took weeks of workshops and manual coordination can now be completed in a single day — with full oversight, speed, and assurance.
 
 ## Related Documents
 
-- [Roadmapping Framework](../../07-reference/methodology/roadmapping-framework.md) - 4-layer roadmap structure and methodology
-- [Strategic Roadmap (2-Year Vision)](./strategic-roadmap.md) - Long-term vision and strategy
-- [Strategic Focus Areas](../strategic-focus/focus-areas.md)
-- [Vision](../vision/vision-statements.md)
-- [Business Outcomes](../../04-opportunities/01-business-outcomes/index.md)
-- [Site-Specific Checklist Builder Case Study](../../05-research/sources/site-specific-checklist-builder-case-study.md)
-- [CRM Operational Pillars](../../07-reference/methodology/crm-operational-pillars.md)
+- [Roadmapping Framework](roadmapping-framework.md) - 4-layer roadmap structure and methodology
+- [Strategic Roadmap (2-Year Vision)](strategic-roadmap.md) - Long-term vision and strategy
+- [Strategic Focus Areas](focus-areas.md)
+- [Vision](vision-statements.md)
+- [Business Outcomes](04-opportunities/01-business-outcomes/index.md)
+- [Site-Specific Checklist Builder Case Study](site-specific-checklist-builder-case-study.md)
+- [CRM Operational Pillars](crm-operational-pillars.md)
 - [Inbox Item: 2-Year Strategy & Roadmap Overview](../../00-inbox/raw/2025-12-01-2-year-strategy-roadmap.md)
 - [Inbox Item: Product – One Page Strategy (FY 25-26)](../../00-inbox/raw/2025-01-27-strategy-product-one-page-fy25-26.md)
 - [Inbox Item: Forwood CRM Vision & Executive Roadmap (Speaker Notes for Ferrovial)](../../00-inbox/raw/2025-12-01-ferrovial-crm-vision-executive-roadmap-speaker-notes.md)

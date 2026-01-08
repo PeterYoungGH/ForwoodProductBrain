@@ -105,7 +105,7 @@ Forwood One is designed to support all five operational pillars:
 ## Related Documents
 
 - [Five Pillars of Best Practice Critical Risk Management](./five-pillars-of-best-practice-critical-risk-management.md)
-- [Strategic Roadmap (2-Year)](../../01-strategy/roadmap/strategic-roadmap.md)
+- [Strategic Roadmap (2-Year)](strategic-roadmap.md)
 - [Vision](../../01-strategy/vision/vision-statements.md)
 - [Inbox Item: 2-Year Strategy & Roadmap Overview](../../00-inbox/raw/2025-12-01-2-year-strategy-roadmap.md)
 

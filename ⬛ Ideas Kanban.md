@@ -6,12 +6,15 @@ kanban-plugin: board
 
 ## 📥 Inbox
 
+- [ ] [[00-inbox/raw/2026-01-07-heca-safety-performance-measurement.md|HECA Safety Performance Measurement]]
 - [ ] [[00-inbox/raw/2026-01-03-vl-jepa-vision-language-joint-embedding-predictive-architecture-[INBOX].md|VL-JEPA: Vision-Language Joint Embedding Architecture]]
 - [ ] *[Add new ideas here]*
 
 
 ## 🔍 Discovery
 
+- [ ] [[03-discovery/research/market-research/2026-01-08-qgn-35-critical-controls-phmps-queensland-coal-mines.md|QGN 35: Critical Controls PHMPs Queensland Coal Mines]] - Research document created 2026-01-08
+- [ ] [[03-discovery/research/market-research/2026-01-07-heca-safety-performance-measurement.md|HECA Safety Performance Measurement]] - Research document created 2026-01-07
 - [ ] [[03-discovery/research/user-research/forwood-one-voice-of-customer-research-2026-01.md|Forwood One: Voice of Customer Research]] - Insights extracted 2026-01-03
 - [ ] [[03-discovery/research/customer-requirements/edp-pain-points-and-requests-2025-12.md|EDP Pain Points & Requests]] - Insights extracted, opportunity created (backlog)
 - [ ] [[03-discovery/research/customer-requirements/edp-project-team-vision-framing-session-2025-12.md|EDP Vision Framing Session]] - Insights extracted 2026-01-03

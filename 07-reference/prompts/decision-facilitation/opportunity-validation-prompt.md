@@ -103,3 +103,4 @@ Provide validation results in this format:
 - [Jobs to Be Done Framework](../../../methodology/jobs-to-be-done-framework.md)
 
 
+

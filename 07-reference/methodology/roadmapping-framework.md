@@ -268,8 +268,8 @@ Forwood uses four roadmap layers, each serving a different audience and purpose:
 
 ## Related Documents
 
-- [Strategic Roadmap (2-Year Vision)](../../01-strategy/roadmap/strategic-roadmap.md) - Long-term vision and strategy
-- [Tactical Roadmap (12-Month)](../../01-strategy/roadmap/tactical-roadmap.md) - Current execution plan
+- [Strategic Roadmap (2-Year Vision)](strategic-roadmap.md) - Long-term vision and strategy
+- [Tactical Roadmap (12-Month)](tactical-roadmap.md) - Current execution plan
 - [Strategic Focus Areas](../../01-strategy/strategic-focus/focus-areas.md) - Current strategic priorities
 - [Vision Statements](../../01-strategy/vision/vision-statements.md) - Product vision and purpose
 

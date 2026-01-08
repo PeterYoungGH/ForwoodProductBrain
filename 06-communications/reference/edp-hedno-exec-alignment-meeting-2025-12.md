@@ -154,3 +154,4 @@ This document contains detailed meeting notes from the internal alignment meetin
 - [EDP and HEDNO Exec Alignment Meeting Research](../../03-discovery/research/customer-requirements/edp-hedno-exec-alignment-meeting-2025-12.md)
 - [Inbox Item: EDP and HEDNO Exec Alignment Meeting](../../00-inbox/raw/2025-12-08-edp-and-hedno-exec-alignment-meeting-[INBOX].md)
 
+

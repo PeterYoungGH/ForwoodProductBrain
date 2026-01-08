@@ -14,6 +14,7 @@
 | 4 | `pm.identify-opportunities` | Create opportunities from research | Approve opportunity creation |
 | 5 | `pm.apply-decision-framework` | Assess solutions or prioritize | Review and make final decisions |
 | 6 | `pm.create-executive-summary` | Create executive summaries for any document | Review and approve summary |
+| 7 | `pm.add-journal-entry` | Create a new dated journal entry | Add your journal content |
 
 ## Command Details
 
@@ -189,6 +190,33 @@
 - Four Product Risks (for solutions)
 - Jobs to Be Done (for opportunities)
 - Strategic Pillars and Mission (for all documents)
+
+---
+
+### 7. pm.add-journal-entry
+
+**Purpose:** Create a new dated journal entry file for daily brain dumps and reflections.
+
+**When to use:**
+- You want to capture daily thoughts and reflections
+- You need a place for brain dumps that may or may not go into the inbox
+- You want to reference journal entries in communications or other documents
+- You need to capture ideas that don't need immediate processing
+
+**Your involvement:**
+- Add your journal content to the created file
+- Optionally add tags and links to related documents
+
+**Output:**
+- Journal entry file in `08-journal/YYYY-MM-DD.md`
+- File includes date and time in header
+- Structured format ready for your content
+
+**File location:**
+- `08-journal/YYYY-MM-DD.md`
+- One entry per day (same date = same file)
+
+**Note:** Journal entries are NOT automatically processed into the inbox. They can be manually moved to inbox if needed, or referenced from other documents.
 
 ---
 

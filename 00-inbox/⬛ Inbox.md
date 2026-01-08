@@ -9,9 +9,10 @@ kanban-plugin: board
 - [ ] *[Add new ideas here]*
 
 
-## To Do
+## Processing
 
-- [ ] *[Add new ideas here]*
+- [ ] [[00-inbox/raw/2026-01-08-qgn-35-integration-critical-controls-phmps-coal-mines-queensland-[PROCESSING].md|QGN 35: Integration of Critical Controls into PHMPs for Coal Mines]]
+- [ ] [[00-inbox/raw/2026-01-07-heca-safety-performance-measurement.md|HECA Safety Performance Measurement]]
 
 
 ## Processing

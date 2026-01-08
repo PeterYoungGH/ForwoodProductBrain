@@ -197,3 +197,4 @@ The criteria are treated as input, not 100% locked-in plans, allowing for adjust
 - Criteria emphasize controlled, production-ready migrations with strong client experience
 
 
+

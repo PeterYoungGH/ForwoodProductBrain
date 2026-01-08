@@ -2,7 +2,7 @@
 
 **Status:** Active  
 **Created:** 2025-12-04  
-**Last Updated:** 2025-12-04  
+**Last Updated:** 2026-01-08  
 **Priority:** High
 
 ## Overview
@@ -35,6 +35,7 @@ What evidence supports this opportunity?
 - [Research: SaaS Compliance-Led Innovation Curve](../../../03-discovery/research/market-research/2025-12-04-saas-compliance-led-innovation-curve.md) - Compliance is becoming one of the most powerful forces shaping enterprise purchasing decisions
 - [Key Findings Snapshot: Product Insights](../../../03-discovery/insights/2025-12-02-key-findings-snapshot-product-insights.md) - EU/UK markets have high regulatory maturity and strict data-governance expectations, explainable AI is non-negotiable
 - [Market Insight Report - Risk Management-Tech Research](../../../03-discovery/research/market-research/2025-12-02-market-insight-report-risk-management-tech.md) - Data governance/transparency requirements and explainable AI are key technology trends
+- [Research: QGN 35 – Integration of Critical Controls into PHMPs for Queensland Coal Mines](../../../03-discovery/research/market-research/2026-01-08-qgn-35-critical-controls-phmps-queensland-coal-mines.md) - Queensland regulatory requirement mandating integration of critical controls into Principal Hazard Management Plans (PHMPs) by June 1, 2026. Demonstrates specific compliance requirements in mining industry that require structured documentation, verification workflows, and accountability frameworks - directly supporting need for compliance-first product features.
 
 ## Impact
 
@@ -64,6 +65,7 @@ Link to related research:
 - [Research: SaaS Compliance-Led Innovation Curve](../../../03-discovery/research/market-research/2025-12-04-saas-compliance-led-innovation-curve.md)
 - [Key Findings Snapshot: Product Insights](../../../03-discovery/insights/2025-12-02-key-findings-snapshot-product-insights.md)
 - [Market Insight Report - Risk Management-Tech Research](../../../03-discovery/research/market-research/2025-12-02-market-insight-report-risk-management-tech.md)
+- [Research: QGN 35 – Integration of Critical Controls into PHMPs for Queensland Coal Mines](../../../03-discovery/research/market-research/2026-01-08-qgn-35-critical-controls-phmps-queensland-coal-mines.md)
 
 ## Insights
 

@@ -113,10 +113,10 @@ From static checklists to a living, intelligent platform that predicts, prevents
 The following documents were created or updated from this inbox item:
 
 - [Vision Statements](../../01-strategy/vision/vision-statements.md) - Updated with mission statement, Forwood One vision reference, and delivery goal
-- [Strategic Roadmap (2-Year)](../../01-strategy/roadmap/strategic-roadmap.md) - Updated with Future Innovation section and corrected Oculus references to Forwood One
+- [Strategic Roadmap (2-Year)](strategic-roadmap.md) - Updated with Future Innovation section and corrected Oculus references to Forwood One
 - [CRM Operational Pillars](../../07-reference/methodology/crm-operational-pillars.md) - Created new document documenting the 5 CRM operational pillars
 - [Strategic Focus Areas](../../01-strategy/strategic-focus/focus-areas.md) - Updated strategic pillar descriptions to match inbox item
-- [Tactical Roadmap (12-Month)](../../01-strategy/roadmap/tactical-roadmap.md) - Updated with detailed strategic theme descriptions and added Site-Specific Checklist Builder section with links
+- [Tactical Roadmap (12-Month)](tactical-roadmap.md) - Updated with detailed strategic theme descriptions and added Site-Specific Checklist Builder section with links
 
 ## Integration Summary
 

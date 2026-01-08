@@ -168,3 +168,4 @@ python3 .cursor/scripts/regenerate_ideas_kanban_canvas.py
 - The canvas serves as a bridge between the Ideas Kanban workflow and Portfolio Roadmap planning
 - Regular regeneration ensures the canvas stays in sync with portfolio roadmap updates
 
+

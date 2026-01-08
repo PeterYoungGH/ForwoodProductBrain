@@ -103,3 +103,4 @@ Key insights that led to identifying this opportunity:
 - Forwood has decade of fatality prevention data advantage
 - Links to Client Satisfaction, Data & AI Innovation, and Platform Launch outcomes
 
+

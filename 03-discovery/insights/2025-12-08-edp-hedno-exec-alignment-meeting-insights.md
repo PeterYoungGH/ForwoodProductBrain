@@ -240,3 +240,4 @@ Both clients operate under the Macquarie portfolio, creating opportunities for s
 - EDP and Hedno have different sensitivities requiring tailored approaches
 
 
+

@@ -298,3 +298,4 @@ Related frameworks:
 - [Decision Log Format](../../07-reference/methodology/decision-log-format.md) - Decision logging format
 
 
+

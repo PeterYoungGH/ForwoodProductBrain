@@ -378,3 +378,4 @@ $desktop-large: 1920px;   /* Full HD desktop */
 - [Inbox Item: Standard Screen Resolutions Platform Spec](../../00-inbox/raw/2025-12-08-standard-screen-resolutions-platform-spec-[INBOX].md)
 
 
+

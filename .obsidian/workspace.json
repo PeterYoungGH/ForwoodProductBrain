@@ -14,7 +14,16 @@
               "type": "kanban",
               "state": {
                 "file": "00-inbox/⬛ Inbox.md",
-                "kanbanViewState": {}
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                  ]
+                }
               },
               "icon": "lucide-trello",
               "title": "⬛ Inbox"
@@ -24,17 +33,14 @@
             "id": "f1499288981bc172",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Ideas Kanban Canvas.canvas",
-                "viewState": {
-                  "x": -440.83972089936765,
-                  "y": 2746.3753736279396,
-                  "zoom": -2.2795028465934575
-                }
+                "file": "06-communications/stakeholder-updates/2026-01-08-v2-product-dor-date-change-request.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Ideas Kanban Canvas"
+              "icon": "lucide-file",
+              "title": "2026-01-08-v2-product-dor-date-change-request"
             }
           }
         ],
@@ -183,13 +189,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ideas Kanban Canvas.canvas",
+                "file": "06-communications/stakeholder-updates/2026-01-08-v2-product-dor-date-change-request.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Ideas Kanban Canvas"
+              "title": "Outline of 2026-01-08-v2-product-dor-date-change-request"
             }
           }
         ],
@@ -213,34 +219,37 @@
   },
   "active": "f1499288981bc172",
   "lastOpenFiles": [
+    "08-journal/2026-01-08.md",
+    "06-communications/stakeholder-updates/2026-01-08-v2-product-dor-date-change-request.md",
+    "08-journal/README.md",
+    "08-journal/2026-01-07.md",
+    "06-communications/stakeholder-updates/2026-01-07-v1-technical-release-impact-on-uat-and-v2-scoping.md",
+    "01-strategy/roadmap/Roadmap Canvas.canvas",
+    "08-journal",
+    "01-strategy/roadmap/archive/portfolio-roadmap-2026-01-07.md",
+    "00-inbox/raw/2026-01-08-qgn-35-integration-critical-controls-phmps-coal-mines-queensland-[INBOX].md",
+    "00-inbox/raw/2026-01-08-qgn-35-integration-critical-controls-phmps-coal-mines-queensland-[PROCESSING].md",
+    "03-discovery/research/market-research/2026-01-08-qgn-35-critical-controls-phmps-queensland-coal-mines.md",
+    "01-strategy/roadmap/recommendations/portfolio-roadmap-alignment-recommendations.md",
+    "Ideas Kanban Canvas.canvas",
+    "01-strategy/roadmap/02-portfolio-roadmap.md",
+    "01-strategy/roadmap/recommendations/strategic-themes-recommendations-voc-alignment.md",
+    "01-strategy/roadmap/recommendations",
+    "01-strategy/roadmap/archive/tactical-roadmap.md",
+    "01-strategy/roadmap/archive/strategic-roadmap.md",
+    "01-strategy/roadmap/strategic-themes-recommendations-voc-alignment.md",
+    "01-strategy/roadmap/archive/strategic-roadmap-2026-01-07.md",
+    "⬛ Ideas Kanban.md",
+    "01-strategy/roadmap/01-strategic-roadmap.md",
+    "03-discovery/research/market-research/2026-01-07-heca-safety-performance-measurement.md",
+    "00-inbox/raw/2026-01-07-heca-safety-performance-measurement.md",
+    "00-inbox/raw/2026-01-06-post-technical-release-bugs-[INBOX].md",
+    "03-discovery/research/user-research/forwood-one-voice-of-customer-research-2026-01.md",
+    "07-reference/methodology/roadmapping-framework.md",
+    "01-strategy/roadmap/03-delivery-roadmap.md",
     "00-inbox/raw/2025-11-28-2024-product-vision-[INBOX].md",
     "00-inbox/raw/2025-11-28-product-operating-model-[INBOX].md",
-    "00-inbox/raw/2025-11-28-user-personas-[INBOX].md",
-    "00-inbox/raw/2025-12-08-edp-and-hedno-exec-alignment-meeting-[INBOX].md",
-    "00-inbox/raw/2025-11-28-product-delight-pillars-[INBOX].md",
-    "07-reference/methodology/ideas-kanban-canvas-alignment-summary.md",
-    "07-reference/methodology/ideas-kanban-canvas-rules.md",
-    "⬛ Ideas Kanban.md",
-    "00-inbox/⬛ Inbox.md",
-    "07-reference/methodology/roadmapping-framework.md",
-    "03-discovery/insights/2026-01-03-forwood-one-voice-of-customer-insights.md",
-    "03-discovery/research/user-research/forwood-one-voice-of-customer-research-2026-01.md",
-    "00-inbox/raw/2026-01-03-forwood-one-voice-of-customer-research-[INBOX].md",
-    "01-strategy/roadmap/01-strategic-roadmap.md",
-    "00-inbox/raw/2026-01-03-pm-dor-definition-ready-review-criteria-[INBOX].md",
-    "07-reference/technical-specs/pm-dor-standards.md",
-    "07-reference/methodology/pm-dor-validation-guide.md",
-    "03-discovery/research/process-research/pm-dor-framework-2026-01.md",
     "03-discovery/research/process-research",
-    "00-inbox/raw/2026-01-03-vl-jepa-vision-language-joint-embedding-predictive-architecture-[INBOX].md",
-    "04-opportunities/03-opportunities/backlog/customers-need-clear-forwood-one-platform-communication.md",
-    "04-opportunities/03-opportunities/backlog/customers-need-action-oriented-reporting-dashboards.md",
-    "04-opportunities/03-opportunities/backlog/customers-need-enterprise-integrations.md",
-    "04-opportunities/03-opportunities/backlog/customers-need-domain-specific-ai-that-reduces-work.md",
-    "04-opportunities/03-opportunities/backlog/customers-need-mobile-offline-field-worker-experiences.md",
-    "04-opportunities/05-experiments/planned/interactive-demo-lead-generation-experiment.md",
-    "04-opportunities/05-experiments/planned/design-system-usability-impact-experiment.md",
-    "Ideas Kanban Canvas.canvas",
     "06-communications/reference",
     "Untitled.canvas",
     "07-reference/technical-specs",
@@ -249,8 +258,6 @@
     "Untitled 1.canvas",
     "07-reference/prompts/decision-facilitation",
     "05-research/sources/atlassian/JIRA/QA-UAT",
-    "07-reference/prompts/one-on-ones",
-    "06-communications/one-on-ones/prepared",
-    "06-communications/one-on-ones/templates"
+    "07-reference/prompts/one-on-ones"
   ]
 }

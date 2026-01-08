@@ -101,3 +101,4 @@ Key insights that led to identifying this opportunity:
 - HR, ERP, CMMS, and project controls integrations expected in every enterprise deal
 - Links to Client Satisfaction, Platform Launch, and Market Expansion outcomes
 
+

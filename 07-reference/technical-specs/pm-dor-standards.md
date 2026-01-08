@@ -292,3 +292,4 @@ Use this checklist for quick validation:
 - [Solution RULES](../../04-opportunities/04-solutions/RULES.md) - Solution format rules
 - [PM-DoR Framework Research](../../03-discovery/research/process-research/pm-dor-framework-2026-01.md) - Full framework documentation
 
+

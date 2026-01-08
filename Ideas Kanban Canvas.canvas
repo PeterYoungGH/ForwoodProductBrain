@@ -1,413 +1,53 @@
 {
-  "nodes": [
-    {
-      "id": "d1da80b70e9b0c7e",
-      "x": 950.0,
-      "y": 5200,
-      "width": 350,
-      "height": 350,
-      "type": "file",
-      "file": "04-opportunities/05-experiments/planned/interactive-demo-lead-generation-experiment.md",
-      "color": "5"
-    },
-    {
-      "id": "972a0932ca88ac40",
-      "x": 2500.0,
-      "y": 3200,
-      "width": 400,
-      "height": 400,
-      "type": "file",
-      "file": "04-opportunities/04-solutions/active/url-schema-forwood-one.md",
-      "color": "5"
-    },
-    {
-      "id": "88ebcfc7c6f345b8",
-      "x": -1900.0,
-      "y": 6000,
-      "width": 350,
-      "height": 350,
-      "type": "file",
-      "file": "03-discovery/research/customer-requirements/forwood-one-success-criteria-2025-12.md",
-      "color": "1"
-    },
-    {
-      "id": "b9863f78d5fc0732",
-      "x": -2000.0,
-      "y": 2400,
-      "width": 400,
-      "height": 400,
-      "type": "file",
-      "file": "04-opportunities/03-opportunities/active/customers-need-clear-forwood-one-platform-communication.md",
-      "color": "1"
-    },
-    {
-      "id": "8406e2f3529bf799",
-      "x": 2000.0,
-      "y": 2400,
-      "width": 400,
-      "height": 400,
-      "type": "file",
-      "file": "04-opportunities/03-opportunities/active/product-led-growth-website-demo-lead-generation.md",
-      "color": "1"
-    },
-    {
-      "id": "5437e66de0f40683",
-      "x": 0.0,
-      "y": 4800,
-      "width": 350,
-      "height": 350,
-      "type": "file",
-      "file": "03-discovery/research/customer-requirements/kenmare-security-incident-management-requirements.md",
-      "color": "1"
-    },
-    {
-      "id": "96ccc6b2048b3a85",
-      "x": 0.0,
-      "y": 2400,
-      "width": 400,
-      "height": 400,
-      "type": "file",
-      "file": "04-opportunities/03-opportunities/active/kenmare-extend-platform-security-incident-management.md",
-      "color": "1"
-    },
-    {
-      "id": "c4843d847acc2e22",
-      "x": -1000.0,
-      "y": 2400,
-      "width": 400,
-      "height": 400,
-      "type": "file",
-      "file": "04-opportunities/03-opportunities/active/customers-need-confidence-in-migration-success.md",
-      "color": "1"
-    },
-    {
-      "id": "8d3ec5b1ecabb310",
-      "x": -950.0,
-      "y": 6000,
-      "width": 350,
-      "height": 350,
-      "type": "file",
-      "file": "03-discovery/research/user-research/forwood-one-voice-of-customer-research-2026-01.md",
-      "color": "1"
-    },
-    {
-      "id": "3114b37afebb8adb",
-      "x": 3800.0,
-      "y": 6000,
-      "width": 350,
-      "height": 350,
-      "type": "file",
-      "file": "03-discovery/research/market-research/2025-12-04-saas-compliance-led-innovation-curve.md",
-      "color": "1"
-    },
-    {
-      "id": "66a73a1e854dd5fe",
-      "x": -950.0,
-      "y": 5200,
-      "width": 350,
-      "height": 350,
-      "type": "file",
-      "file": "04-opportunities/05-experiments/planned/ai-workflow-efficiency-experiment.md",
-      "color": "5"
-    },
-    {
-      "id": "08d5e75e38326e4f",
-      "x": -1900.0,
-      "y": 5200,
-      "width": 350,
-      "height": 350,
-      "type": "file",
-      "file": "04-opportunities/05-experiments/planned/accident-learning-system-effectiveness-experiment.md",
-      "color": "5"
-    },
-    {
-      "id": "6e68e20793022475",
-      "x": -1500.0,
-      "y": 3200,
-      "width": 400,
-      "height": 400,
-      "type": "file",
-      "file": "04-opportunities/04-solutions/active/ai-driven-product-discovery.md",
-      "color": "5"
-    },
-    {
-      "id": "fe94ff642b14e0bb",
-      "x": 2850.0,
-      "y": 6000,
-      "width": 350,
-      "height": 350,
-      "type": "file",
-      "file": "03-discovery/research/customer-requirements/rossing-forwood-one-platform-meeting-2025-12.md",
-      "color": "1"
-    },
-    {
-      "id": "6b123fe7d161ed18",
-      "x": 0.0,
-      "y": 6000,
-      "width": 350,
-      "height": 350,
-      "type": "file",
-      "file": "03-discovery/research/user-research/forwood-user-personas-2025-11.md",
-      "color": "1"
-    },
-    {
-      "id": "3ae8d28cb6d65b24",
-      "x": 950.0,
-      "y": 6000,
-      "width": 350,
-      "height": 350,
-      "type": "file",
-      "file": "03-discovery/research/market-research/2025-12-02-key-findings-snapshot-product.md",
-      "color": "1"
-    },
-    {
-      "id": "ebeed5f4684ac5b8",
-      "x": -3800.0,
-      "y": 6000,
-      "width": 350,
-      "height": 350,
-      "type": "file",
-      "file": "03-discovery/research/customer-requirements/edp-pain-points-and-requests-2025-12.md",
-      "color": "1"
-    },
-    {
-      "id": "5b86dee77a456470",
-      "x": 1000.0,
-      "y": 2400,
-      "width": 400,
-      "height": 400,
-      "type": "file",
-      "file": "04-opportunities/03-opportunities/active/enterprise-compliance-first-features.md",
-      "color": "1"
-    },
-    {
-      "id": "21f647453bfa8430",
-      "x": 1900.0,
-      "y": 5200,
-      "width": 350,
-      "height": 350,
-      "type": "file",
-      "file": "04-opportunities/05-experiments/planned/url-schema-customer-feedback-experiment.md",
-      "color": "5"
-    },
-    {
-      "id": "c996ef14fbe050d6",
-      "x": 1900.0,
-      "y": 6000,
-      "width": 350,
-      "height": 350,
-      "type": "file",
-      "file": "03-discovery/research/market-research/2025-12-02-market-insight-report-risk-management-tech.md",
-      "color": "1"
-    },
-    {
-      "id": "32748c92b6c516f7",
-      "x": -2850.0,
-      "y": 6000,
-      "width": 350,
-      "height": 350,
-      "type": "file",
-      "file": "03-discovery/research/customer-requirements/edp-project-team-vision-framing-session-2025-12.md",
-      "color": "1"
-    },
-    {
-      "id": "6f8c1a087c2be0a7",
-      "x": 0.0,
-      "y": 5200,
-      "width": 350,
-      "height": 350,
-      "type": "file",
-      "file": "04-opportunities/05-experiments/planned/design-system-usability-impact-experiment.md",
-      "color": "5"
-    },
-    {
-      "id": "e41e94e8792360ef",
-      "x": -2500.0,
-      "y": 3200,
-      "width": 400,
-      "height": 400,
-      "type": "file",
-      "file": "04-opportunities/04-solutions/active/accident-learning-system.md",
-      "color": "5"
-    },
-    {
-      "id": "38548e2b5094fa3b",
-      "x": 1500.0,
-      "y": 3200,
-      "width": 400,
-      "height": 400,
-      "type": "file",
-      "file": "04-opportunities/04-solutions/active/website-interactive-demo-lead-generation.md",
-      "color": "5"
-    },
-    {
-      "id": "56ea1bbe8f75a952",
-      "x": 500.0,
-      "y": 3200,
-      "width": 400,
-      "height": 400,
-      "type": "file",
-      "file": "04-opportunities/04-solutions/active/oculus-design-system.md",
-      "color": "5"
-    },
-    {
-      "id": "a2acda38d95abe1e",
-      "x": -500.0,
-      "y": 3200,
-      "width": 400,
-      "height": 400,
-      "type": "file",
-      "file": "04-opportunities/04-solutions/active/crm-plus-platform-features.md",
-      "color": "5"
-    }
-  ],
-  "edges": [
-    {
-      "id": "52625f991d7779ba",
-      "fromNode": "972a0932ca88ac40",
-      "fromSide": "bottom",
-      "toNode": "21f647453bfa8430",
-      "toSide": "top"
-    },
-    {
-      "id": "921d0514e40a155a",
-      "fromNode": "b9863f78d5fc0732",
-      "fromSide": "bottom",
-      "toNode": "fe94ff642b14e0bb",
-      "toSide": "top"
-    },
-    {
-      "id": "e9aab3320e40087c",
-      "fromNode": "8406e2f3529bf799",
-      "fromSide": "bottom",
-      "toNode": "38548e2b5094fa3b",
-      "toSide": "top"
-    },
-    {
-      "id": "f8128d52f49cda92",
-      "fromNode": "5437e66de0f40683",
-      "fromSide": "top",
-      "toNode": "96ccc6b2048b3a85",
-      "toSide": "bottom"
-    },
-    {
-      "id": "086a8632e7902ef1",
-      "fromNode": "96ccc6b2048b3a85",
-      "fromSide": "bottom",
-      "toNode": "5437e66de0f40683",
-      "toSide": "top"
-    },
-    {
-      "id": "5029546af7f4a919",
-      "fromNode": "c4843d847acc2e22",
-      "fromSide": "bottom",
-      "toNode": "88ebcfc7c6f345b8",
-      "toSide": "top"
-    },
-    {
-      "id": "c2d444e0abb38f5e",
-      "fromNode": "c4843d847acc2e22",
-      "fromSide": "bottom",
-      "toNode": "32748c92b6c516f7",
-      "toSide": "top"
-    },
-    {
-      "id": "a33c4ec8f816d55e",
-      "fromNode": "8d3ec5b1ecabb310",
-      "fromSide": "right",
-      "toNode": "6b123fe7d161ed18",
-      "toSide": "left"
-    },
-    {
-      "id": "7b5b8f5319125420",
-      "fromNode": "3114b37afebb8adb",
-      "fromSide": "top",
-      "toNode": "5b86dee77a456470",
-      "toSide": "bottom"
-    },
-    {
-      "id": "cd49b5feb55497ad",
-      "fromNode": "6e68e20793022475",
-      "fromSide": "bottom",
-      "toNode": "66a73a1e854dd5fe",
-      "toSide": "top"
-    },
-    {
-      "id": "d69f1c146db3a06b",
-      "fromNode": "6b123fe7d161ed18",
-      "fromSide": "right",
-      "toNode": "8d3ec5b1ecabb310",
-      "toSide": "left"
-    },
-    {
-      "id": "52b1e479e9f09622",
-      "fromNode": "3ae8d28cb6d65b24",
-      "fromSide": "right",
-      "toNode": "c996ef14fbe050d6",
-      "toSide": "left"
-    },
-    {
-      "id": "2820dec8d810bfdc",
-      "fromNode": "ebeed5f4684ac5b8",
-      "fromSide": "right",
-      "toNode": "32748c92b6c516f7",
-      "toSide": "left"
-    },
-    {
-      "id": "15ee5e9e6683e4ad",
-      "fromNode": "5b86dee77a456470",
-      "fromSide": "bottom",
-      "toNode": "3114b37afebb8adb",
-      "toSide": "top"
-    },
-    {
-      "id": "ee8aae6a4a34fbcf",
-      "fromNode": "5b86dee77a456470",
-      "fromSide": "bottom",
-      "toNode": "c996ef14fbe050d6",
-      "toSide": "top"
-    },
-    {
-      "id": "2ee4da779fddf2cd",
-      "fromNode": "32748c92b6c516f7",
-      "fromSide": "right",
-      "toNode": "ebeed5f4684ac5b8",
-      "toSide": "left"
-    },
-    {
-      "id": "32730de733075dec",
-      "fromNode": "e41e94e8792360ef",
-      "fromSide": "bottom",
-      "toNode": "08d5e75e38326e4f",
-      "toSide": "top"
-    },
-    {
-      "id": "3b1599e033b8f25c",
-      "fromNode": "e41e94e8792360ef",
-      "fromSide": "right",
-      "toNode": "a2acda38d95abe1e",
-      "toSide": "left"
-    },
-    {
-      "id": "3a1b0cb9a4c5470c",
-      "fromNode": "38548e2b5094fa3b",
-      "fromSide": "bottom",
-      "toNode": "d1da80b70e9b0c7e",
-      "toSide": "top"
-    },
-    {
-      "id": "4c186322142032df",
-      "fromNode": "56ea1bbe8f75a952",
-      "fromSide": "bottom",
-      "toNode": "6f8c1a087c2be0a7",
-      "toSide": "top"
-    },
-    {
-      "id": "56abfd71c8813b2c",
-      "fromNode": "a2acda38d95abe1e",
-      "fromSide": "right",
-      "toNode": "e41e94e8792360ef",
-      "toSide": "left"
-    }
-  ]
+	"nodes":[
+		{"id":"d1da80b70e9b0c7e","x":950,"y":5200,"width":350,"height":350,"type":"file","file":"04-opportunities/05-experiments/planned/interactive-demo-lead-generation-experiment.md","color":"5"},
+		{"id":"972a0932ca88ac40","x":2500,"y":3200,"width":400,"height":400,"type":"file","file":"04-opportunities/04-solutions/active/url-schema-forwood-one.md","color":"5"},
+		{"id":"88ebcfc7c6f345b8","x":-1900,"y":6000,"width":350,"height":350,"type":"file","file":"03-discovery/research/customer-requirements/forwood-one-success-criteria-2025-12.md","color":"1"},
+		{"id":"b9863f78d5fc0732","x":-2000,"y":2400,"width":400,"height":400,"type":"file","file":"04-opportunities/03-opportunities/active/customers-need-clear-forwood-one-platform-communication.md","color":"1"},
+		{"id":"8406e2f3529bf799","x":2000,"y":2400,"width":400,"height":400,"type":"file","file":"04-opportunities/03-opportunities/active/product-led-growth-website-demo-lead-generation.md","color":"1"},
+		{"id":"5437e66de0f40683","x":0,"y":4800,"width":350,"height":350,"type":"file","file":"03-discovery/research/customer-requirements/kenmare-security-incident-management-requirements.md","color":"1"},
+		{"id":"96ccc6b2048b3a85","x":0,"y":2400,"width":400,"height":400,"type":"file","file":"04-opportunities/03-opportunities/active/kenmare-extend-platform-security-incident-management.md","color":"1"},
+		{"id":"c4843d847acc2e22","x":-1000,"y":2400,"width":400,"height":400,"type":"file","file":"04-opportunities/03-opportunities/active/customers-need-confidence-in-migration-success.md","color":"1"},
+		{"id":"8d3ec5b1ecabb310","x":-950,"y":6000,"width":350,"height":350,"type":"file","file":"03-discovery/research/user-research/forwood-one-voice-of-customer-research-2026-01.md","color":"1"},
+		{"id":"3114b37afebb8adb","x":3800,"y":6000,"width":350,"height":350,"type":"file","file":"03-discovery/research/market-research/2025-12-04-saas-compliance-led-innovation-curve.md","color":"1"},
+		{"id":"66a73a1e854dd5fe","x":-950,"y":5200,"width":350,"height":350,"type":"file","file":"04-opportunities/05-experiments/planned/ai-workflow-efficiency-experiment.md","color":"5"},
+		{"id":"08d5e75e38326e4f","x":-1900,"y":5200,"width":350,"height":350,"type":"file","file":"04-opportunities/05-experiments/planned/accident-learning-system-effectiveness-experiment.md","color":"5"},
+		{"id":"6e68e20793022475","x":-1500,"y":3200,"width":400,"height":400,"type":"file","file":"04-opportunities/04-solutions/active/ai-driven-product-discovery.md","color":"5"},
+		{"id":"fe94ff642b14e0bb","x":2850,"y":6000,"width":350,"height":350,"type":"file","file":"03-discovery/research/customer-requirements/rossing-forwood-one-platform-meeting-2025-12.md","color":"1"},
+		{"id":"6b123fe7d161ed18","x":0,"y":6000,"width":350,"height":350,"type":"file","file":"03-discovery/research/user-research/forwood-user-personas-2025-11.md","color":"1"},
+		{"id":"3ae8d28cb6d65b24","x":950,"y":6000,"width":350,"height":350,"type":"file","file":"03-discovery/research/market-research/2025-12-02-key-findings-snapshot-product.md","color":"1"},
+		{"id":"ebeed5f4684ac5b8","x":-3800,"y":6000,"width":350,"height":350,"type":"file","file":"03-discovery/research/customer-requirements/edp-pain-points-and-requests-2025-12.md","color":"1"},
+		{"id":"5b86dee77a456470","x":1000,"y":2400,"width":400,"height":400,"type":"file","file":"04-opportunities/03-opportunities/active/enterprise-compliance-first-features.md","color":"1"},
+		{"id":"21f647453bfa8430","x":1900,"y":5200,"width":350,"height":350,"type":"file","file":"04-opportunities/05-experiments/planned/url-schema-customer-feedback-experiment.md","color":"5"},
+		{"id":"c996ef14fbe050d6","x":1900,"y":6000,"width":350,"height":350,"type":"file","file":"03-discovery/research/market-research/2025-12-02-market-insight-report-risk-management-tech.md","color":"1"},
+		{"id":"32748c92b6c516f7","x":-2850,"y":6000,"width":350,"height":350,"type":"file","file":"03-discovery/research/customer-requirements/edp-project-team-vision-framing-session-2025-12.md","color":"1"},
+		{"id":"6f8c1a087c2be0a7","x":0,"y":5200,"width":350,"height":350,"type":"file","file":"04-opportunities/05-experiments/planned/design-system-usability-impact-experiment.md","color":"5"},
+		{"id":"e41e94e8792360ef","x":-2500,"y":3200,"width":400,"height":400,"type":"file","file":"04-opportunities/04-solutions/active/accident-learning-system.md","color":"5"},
+		{"id":"38548e2b5094fa3b","x":1500,"y":3200,"width":400,"height":400,"type":"file","file":"04-opportunities/04-solutions/active/website-interactive-demo-lead-generation.md","color":"5"},
+		{"id":"56ea1bbe8f75a952","x":500,"y":3200,"width":400,"height":400,"type":"file","file":"04-opportunities/04-solutions/active/oculus-design-system.md","color":"5"},
+		{"id":"a2acda38d95abe1e","x":-500,"y":3200,"width":400,"height":400,"type":"file","file":"04-opportunities/04-solutions/active/crm-plus-platform-features.md","color":"5"}
+	],
+	"edges":[
+		{"id":"52625f991d7779ba","fromNode":"972a0932ca88ac40","fromSide":"bottom","toNode":"21f647453bfa8430","toSide":"top"},
+		{"id":"921d0514e40a155a","fromNode":"b9863f78d5fc0732","fromSide":"bottom","toNode":"fe94ff642b14e0bb","toSide":"top"},
+		{"id":"e9aab3320e40087c","fromNode":"8406e2f3529bf799","fromSide":"bottom","toNode":"38548e2b5094fa3b","toSide":"top"},
+		{"id":"f8128d52f49cda92","fromNode":"5437e66de0f40683","fromSide":"top","toNode":"96ccc6b2048b3a85","toSide":"bottom"},
+		{"id":"086a8632e7902ef1","fromNode":"96ccc6b2048b3a85","fromSide":"bottom","toNode":"5437e66de0f40683","toSide":"top"},
+		{"id":"5029546af7f4a919","fromNode":"c4843d847acc2e22","fromSide":"bottom","toNode":"88ebcfc7c6f345b8","toSide":"top"},
+		{"id":"c2d444e0abb38f5e","fromNode":"c4843d847acc2e22","fromSide":"bottom","toNode":"32748c92b6c516f7","toSide":"top"},
+		{"id":"a33c4ec8f816d55e","fromNode":"8d3ec5b1ecabb310","fromSide":"right","toNode":"6b123fe7d161ed18","toSide":"left"},
+		{"id":"7b5b8f5319125420","fromNode":"3114b37afebb8adb","fromSide":"top","toNode":"5b86dee77a456470","toSide":"bottom"},
+		{"id":"cd49b5feb55497ad","fromNode":"6e68e20793022475","fromSide":"bottom","toNode":"66a73a1e854dd5fe","toSide":"top"},
+		{"id":"d69f1c146db3a06b","fromNode":"6b123fe7d161ed18","fromSide":"right","toNode":"8d3ec5b1ecabb310","toSide":"left"},
+		{"id":"52b1e479e9f09622","fromNode":"3ae8d28cb6d65b24","fromSide":"right","toNode":"c996ef14fbe050d6","toSide":"left"},
+		{"id":"2820dec8d810bfdc","fromNode":"ebeed5f4684ac5b8","fromSide":"right","toNode":"32748c92b6c516f7","toSide":"left"},
+		{"id":"15ee5e9e6683e4ad","fromNode":"5b86dee77a456470","fromSide":"bottom","toNode":"3114b37afebb8adb","toSide":"top"},
+		{"id":"ee8aae6a4a34fbcf","fromNode":"5b86dee77a456470","fromSide":"bottom","toNode":"c996ef14fbe050d6","toSide":"top"},
+		{"id":"2ee4da779fddf2cd","fromNode":"32748c92b6c516f7","fromSide":"right","toNode":"ebeed5f4684ac5b8","toSide":"left"},
+		{"id":"32730de733075dec","fromNode":"e41e94e8792360ef","fromSide":"bottom","toNode":"08d5e75e38326e4f","toSide":"top"},
+		{"id":"3b1599e033b8f25c","fromNode":"e41e94e8792360ef","fromSide":"right","toNode":"a2acda38d95abe1e","toSide":"left"},
+		{"id":"3a1b0cb9a4c5470c","fromNode":"38548e2b5094fa3b","fromSide":"bottom","toNode":"d1da80b70e9b0c7e","toSide":"top"},
+		{"id":"4c186322142032df","fromNode":"56ea1bbe8f75a952","fromSide":"bottom","toNode":"6f8c1a087c2be0a7","toSide":"top"},
+		{"id":"56abfd71c8813b2c","fromNode":"a2acda38d95abe1e","fromSide":"right","toNode":"e41e94e8792360ef","toSide":"left"}
+	]
 }

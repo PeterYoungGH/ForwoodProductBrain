@@ -183,3 +183,4 @@ Links to research artifacts:
 - Timeline messaging must balance realism with client expectations
 - Both clients are part of Macquarie portfolio, which provides strategic context
 
+
