@@ -194,3 +194,4 @@ If you encounter issues:
 - Journal entries can be referenced in communications and research
 - One entry per day is the default (same date = same file)
 
+

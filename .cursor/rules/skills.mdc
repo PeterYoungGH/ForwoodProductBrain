@@ -1,0 +1,195 @@
+---
+alwaysApply: true
+---
+
+# Skills Usage Rule
+
+## Overview
+
+The Product Brain system includes **88 modular skills** organized into 12 categories. These skills are reusable, well-tested units of PM functionality that should be preferred over ad-hoc approaches. Always check if a skill exists before implementing custom logic.
+
+## Master Skills Reference
+
+**Primary Reference:** `07-reference/SKILLS.md` - Complete catalog of all 88 skills with:
+- Category organization (Triage, Research, Synthesis, Opportunity, Solution, Validation, Strategy, Communication, Design, Safety Domain, Migration, Orchestration)
+- Stage-skill mapping (which skills apply to each workflow stage)
+- Autonomy levels (Full, Supervised, Human-Required)
+- Purpose and usage guidance
+
+**Skills Location:** `.cursor/commands/Skills/` - Individual skill files with detailed process steps, inputs, outputs, and examples.
+
+## When to Use Skills
+
+### Always Check for Skills First
+
+Before implementing any PM work, ask:
+1. **Is this a standard PM task?** → Check if a skill exists
+2. **What workflow stage am I in?** → Use stage-skill mapping from SKILLS.md
+3. **What category does this belong to?** → Check the relevant category folder
+
+### Skill Categories by Task Type
+
+- **Inbox Processing** → `Skills/triage/` (5 skills)
+- **Research & Analysis** → `Skills/research/` (7 skills) + `Skills/synthesis/` (7 skills)
+- **Opportunity Work** → `Skills/opportunity/` (7 skills)
+- **Solution Assessment** → `Skills/solution/` (6 skills)
+- **Experimentation** → `Skills/validation/` (6 skills)
+- **Roadmap & Strategy** → `Skills/strategy/` (6 skills)
+- **Stakeholder Communication** → `Skills/communication/` (9 skills)
+- **UX & Design** → `Skills/design/` (6 skills)
+- **Safety-Specific Work** → `Skills/safety-domain/` (13 skills)
+- **Customer Migration** → `Skills/migration/` (6 skills)
+- **Workflow Automation** → `Skills/orchestration/` (10 skills)
+
+### Stage-Skill Mapping
+
+Reference the Stage-Skill Mapping table in `07-reference/SKILLS.md`:
+- **Stage 1 (Inbox Processing):** `classify-content-type`, `assess-risk-level`, `route-to-destination`
+- **Stage 2 (Insight Extraction):** `extract-key-findings`, `identify-patterns`, `create-insight-summary`
+- **Stage 3 (Research Synthesis):** `cross-reference-sources`, `consolidate-themes`, `build-evidence-chain`
+- **Stage 4 (Opportunity Validation):** `frame-opportunity`, `calculate-jtbd-score`, `prioritize-opportunities`
+- **Stage 5 (Solution Exploration):** `assess-four-risks`, `compare-solutions`, `generate-solution-options`
+- **Stage 6 (Experimentation):** `design-experiment`, `analyze-experiment-results`, `recommend-go-no-go`
+- **Stage 7 (Roadmap Inclusion):** `calculate-innovation-score`, `align-to-strategy`, `create-roadmap-item`
+
+## How to Use Skills
+
+### 1. Find the Right Skill
+
+- **Check SKILLS.md first** - Use the category tables and stage-skill mapping
+- **Read the skill file** - Each skill in `.cursor/commands/Skills/` has:
+  - Purpose statement
+  - Required inputs
+  - Step-by-step process
+  - Output format
+  - Examples
+  - Related skills
+  - Autonomy level
+
+### 2. Follow the Skill's Process
+
+- **Read the skill file completely** before starting
+- **Follow the process steps** in order
+- **Use the output format** specified in the skill
+- **Check autonomy level** - Respect Full/Supervised/Human-Required boundaries
+
+### 3. Chain Skills When Needed
+
+- Skills often reference **Related Skills** - Use them together
+- Check **Used By Commands** to see how skills combine
+- Use `orchestration/chain-skills-for-stage.md` for multi-skill workflows
+
+## Required: Notify User When Using Skills
+
+### Always Announce Skill Usage
+
+When you use a skill, you **MUST** notify the user with this format:
+
+```
+🔧 **Using Skill:** [Skill Name] (`Skills/[category]/[skill-name].md`)
+
+**Purpose:** [Brief purpose from skill file]
+**Autonomy Level:** [Full/Supervised/Human-Required]
+
+[Brief description of what you're doing with this skill]
+```
+
+### Examples
+
+**Example 1: Using a Full Autonomy Skill**
+```
+🔧 **Using Skill:** Extract Key Findings (`Skills/synthesis/extract-key-findings.md`)
+
+**Purpose:** Pull key findings from research documents
+**Autonomy Level:** Full
+
+I'm extracting key findings from the research document to identify actionable insights.
+```
+
+**Example 2: Using a Supervised Skill**
+```
+🔧 **Using Skill:** Frame Opportunity (`Skills/opportunity/frame-opportunity.md`)
+
+**Purpose:** Structure a customer problem as a properly formatted opportunity
+**Autonomy Level:** Supervised
+
+I'm framing this customer problem as an opportunity following the OST methodology. I'll present the structured opportunity for your review.
+```
+
+**Example 3: Using Multiple Skills**
+```
+🔧 **Using Skills:**
+- Assess Four Risks (`Skills/solution/assess-four-risks.md`) - Evaluate Value, Usability, Feasibility, Viability
+- Compare Solutions (`Skills/solution/compare-solutions.md`) - Trade-off analysis between options
+
+**Autonomy Level:** Supervised (both)
+
+I'm assessing the four product risks for each solution option, then comparing them to recommend the best approach.
+```
+
+## Skill Selection Guidelines
+
+### Prefer Skills Over Custom Logic
+
+- ✅ **DO:** Use `assess-four-risks.md` for solution risk assessment
+- ❌ **DON'T:** Create custom risk assessment logic
+
+- ✅ **DO:** Use `calculate-jtbd-score.md` for opportunity scoring
+- ❌ **DON'T:** Create custom scoring formulas
+
+- ✅ **DO:** Use `extract-key-findings.md` for research analysis
+- ❌ **DON'T:** Manually extract findings without the skill
+
+### When Skills Don't Exist
+
+If no skill exists for a task:
+1. **Check related skills** - Maybe a similar skill can be adapted
+2. **Check orchestration skills** - `select-next-skill.md` might help
+3. **Document the gap** - Note that a new skill might be needed
+4. **Use best practices** - Follow patterns from similar skills
+
+## Autonomy Level Handling
+
+### Full Autonomy Skills
+- Can execute automatically
+- Still notify user when using
+- Auto-execute if confidence ≥90%
+
+### Supervised Skills
+- Execute but present results for review
+- Always notify user before execution
+- Wait for confirmation on decisions
+
+### Human-Required Skills
+- Cannot proceed without explicit human decision
+- Always notify user and stop
+- Present options clearly
+- Never auto-execute
+
+## Integration with Commands
+
+Skills power the `agentflow.xxx` commands:
+- `agentflow.process-inbox` → Uses `triage/*` skills
+- `agentflow.extract-insights` → Uses `synthesis/*` + `research/*` skills
+- `agentflow.identify-opportunities` → Uses `opportunity/*` skills
+- `agentflow.assess-solutions` → Uses `solution/*` + `validation/*` skills
+- `agentflow.orchestrate` → Uses all categories via `orchestration/*` skills
+
+When using these commands, they automatically use skills. Still notify the user which skills are being invoked.
+
+## Best Practices
+
+1. **Always check SKILLS.md first** - It's the master reference
+2. **Read the full skill file** - Don't guess the process
+3. **Follow the skill's format** - Outputs should match skill specifications
+4. **Chain related skills** - Skills often work together
+5. **Respect autonomy levels** - Don't auto-execute Human-Required skills
+6. **Notify user always** - Even for Full autonomy skills, let user know what's happening
+7. **Reference skill files** - Link to the skill file in your notification
+
+## Quick Reference
+
+- **Master List:** `07-reference/SKILLS.md`
+- **Skills Location:** `.cursor/commands/Skills/`
+- **Total Skills:** 88 across 12 categories
+- **Notification Format:** Always announce skill usage with category and file path

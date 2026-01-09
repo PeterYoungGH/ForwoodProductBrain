@@ -273,3 +273,4 @@ Canvas generation script: `.cursor/scripts/regenerate_ideas_kanban_canvas.py`
 - **2026-01-03:** Updated canvas generation to align with Now/Next/Later horizons and initiative status
 
 
+

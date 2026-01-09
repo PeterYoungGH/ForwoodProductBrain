@@ -1,7 +1,7 @@
 # Portfolio Roadmap
 
-**Last Updated:** 2026-01-07  
-**Roadmap Period:** Q1 FY26 - Q3 FY26 (Jan 2026 - Mar 2027)  
+**Last Updated:** 2026-01-09  
+**Roadmap Period:** Q3 FY26 - Future (Jan 2026+)  
 **Type:** Portfolio / Product-Area Roadmap (3-12 Month Horizon)  
 **Framework Layer:** Portfolio Roadmap  
 **Update Frequency:** Monthly / Fortnightly  
@@ -27,7 +27,7 @@ All initiatives are aligned with one or more strategic themes:
 
 ## Now / Next / Later / Future
 
-### Now (Next 3 Months) - Q1 FY26
+### Now (Next 3 Months) - Q3 FY26 (Jan-Mar 2026)
 
 **Focus:** Foundation and MVP Launch  
 **Status:** ✅ **LOCKED - All deliverables, metrics, and timelines preserved**
@@ -42,17 +42,17 @@ All initiatives are aligned with one or more strategic themes:
 - **Expected Outcome:** 5 new customer deals, successful Safety+ migrations, platform stability and adoption
 - **Key Metrics:** 
   - New customer deals: 5 new logos
-  - Sales pipeline: >15 deals by December 2025
+  - Sales pipeline: >15 deals by Q2 FY26 (Dec 2025)
   - Migration completion rate
   - Platform NPS score: 20+ from initial customers
 - **Status:** Building
 - **Key Initiatives:** [Forwood One Platform Launch](../../02-initiatives/active/Forwood-One-platform-launch.md)
 
 **Key Deliverables:**
-- Define and embed agentic product processes
-- Launch Forwood One MVP
-- Complete UAT and train wider team
-- Establish product discovery and delivery cadence
+##### Define and embed agentic product processes
+##### Launch Forwood One MVP
+##### Complete UAT and train wider team
+##### Establish product discovery and delivery cadence
 
 **Milestones:**
 - ✅ Forwood One MVP launched
@@ -60,9 +60,9 @@ All initiatives are aligned with one or more strategic themes:
 - ✅ Product processes embedded
 
 **Customer-Facing Milestones (from early adopter engagement):**
-- **Early–Mid January 2026:** Customer-facing presentation to be shared (overview of full product suite under Forwood One, roadmap, migration options)
-- **Late January 2026:** Roadmap and migration planning discussions (target week of 19 January, proposed date: 23 January)
-- **Q3 2026 (Target):** Customer migration window (subject to planning and readiness)
+- **Early–Mid Q3 FY26 (Jan 2026):** Customer-facing presentation to be shared (overview of full product suite under Forwood One, roadmap, migration options)
+- **Late Q3 FY26 (Jan 2026):** Roadmap and migration planning discussions (target week of 19 January, proposed date: 23 January)
+- **Q1 FY27 (Jul-Sep 2026) (Target):** Customer migration window (subject to planning and readiness)
 
 #### Initiative: Design System and UX Foundation
 - **Problem Statement:** Current platform lacks modern, consistent design system limiting user adoption and experience quality. Safety professionals need UX that builds trust and positions them as partners, not compliance cops (Theme 3: Credibility & Trust).
@@ -80,38 +80,37 @@ All initiatives are aligned with one or more strategic themes:
 - **Key Initiatives:** [Forwood One Platform Launch](../../02-initiatives/active/Forwood-One-platform-launch.md)
 
 **Key Deliverables:**
-- Onboard and embed Product Designer
-- Launch Forwood One V1 with design system
-- Launch Forwood One V2 with enhanced UX
-- Implement branding and new platform name
+##### Onboard and embed Product Designer
+##### Launch Forwood One V2 with design system
+##### Implement branding and new platform name
 
 ---
 
-### Next (3-6 Months) - Q2 FY26
+### Next (3-6 Months) - Q4 FY26 (Apr-Jun 2026)
 
 **Focus:** Platform Enhancement and Customer Migration  
 **Status:** ✅ **LOCKED - All deliverables, metrics, and timelines preserved**
 
-#### Initiative: Customer Migration Program
-- **Problem Statement:** Need to migrate existing Safety+, CRM+, and Risk+ customers to Forwood One without disruption. Migration enables consistent frameworks across customers (Theme 5: Standardization) and consolidates data for action-oriented systems (Theme 2).
-- **Opportunity Summary:** Enable seamless migration pathway ensuring customer success and retention. Migration supports standardization across customer operations and builds trust through smooth transitions.
+#### Initiative: Safety+ Upgrade Pathway
+- **Problem Statement:** Need to enable existing Safety+ customers to upgrade to Forwood One without disruption. Upgrade pathway enables consistent frameworks across customers (Theme 5: Standardization) and consolidates data for action-oriented systems (Theme 2).
+- **Opportunity Summary:** Enable seamless upgrade pathway for Safety+ customers ensuring customer success and retention. Upgrade supports standardization across customer operations and builds trust through smooth transitions.
 - **Strategic Theme Alignment:**
-  - **Theme 5 (Standardization):** Migration enables consistent frameworks across customers
-  - **Theme 3 (Credibility & Trust):** Smooth migration builds trust
-  - **Theme 2 (Data to Action):** Migration consolidates data for action-oriented systems
-- **Expected Outcome:** Successful customer migrations, high retention rate, positive migration experience
+  - **Theme 5 (Standardization):** Upgrade enables consistent frameworks across customers
+  - **Theme 3 (Credibility & Trust):** Smooth upgrade builds trust
+  - **Theme 2 (Data to Action):** Upgrade consolidates data for action-oriented systems
+- **Expected Outcome:** Successful Safety+ customer upgrades, high retention rate, positive upgrade experience
 - **Key Metrics:**
-  - Migration completion rate
-  - Customer retention post-migration
-  - Migration satisfaction scores
+  - Upgrade completion rate
+  - Customer retention post-upgrade
+  - Upgrade satisfaction scores
 - **Status:** Validating
 - **Key Initiatives:** [Forwood One Platform Launch](../../02-initiatives/active/Forwood-One-platform-launch.md)
 
 **Key Deliverables:**
-- Begin migration of Safety+ clients to Forwood One
-- Launch Forwood One V3 (ready for CRM client migration)
-- Validate Risk+ iframe in Forwood One
-- Develop migration playbooks and support processes
+##### Begin upgrade of Safety+ clients to Forwood One
+##### Launch Forwood One V2 (ready for Safety+ client upgrade)
+##### Develop upgrade playbooks and support processes
+##### Safety+ data migration and validation tools
 
 #### Initiative: Native App Launch
 - **Problem Statement:** Field workers need mobile-first experience optimized for offline use and field conditions. Mobile experience must position safety professionals as partners (Theme 3) and enable field-verified controls (Theme 4).
@@ -130,13 +129,13 @@ All initiatives are aligned with one or more strategic themes:
 - **Key Initiatives:** [Forwood One Platform Launch](../../02-initiatives/active/Forwood-One-platform-launch.md)
 
 **Key Deliverables:**
-- Launch MVP Forwood One Native App
-- Enhanced offline capability for field workers
-- Mobile-optimized workflows
+##### Launch MVP Forwood One Native App
+##### Enhanced offline capability for field workers
+##### Mobile-optimized workflows
 
 ---
 
-### Later (6-9 Months) - Q3 FY26 (Oct-Dec 2026)
+### Later (6-9 Months) - Q1 FY27 (Jul-Sep 2026)
 
 **Focus:** Strategic Theme Initiatives  
 **Status:** ⚠️ **REFRAMED - AI Features initiative split into theme-aligned initiatives**
@@ -159,11 +158,98 @@ All initiatives are aligned with one or more strategic themes:
 - **Key Initiatives:** [Forwood One Platform Launch](../../02-initiatives/active/Forwood-One-platform-launch.md)
 
 **Key Deliverables:**
-- Executive fatal risk dashboard
-- Real-time SIF risk visibility across operations, sites, and contractors
-- Governance tools for board-level oversight of critical controls
-- Predictive insights that highlight rising SIF potential before incidents occur
-- Integration with business systems (safety risk alongside production metrics)
+
+##### Proactive SIF Potential
+  - **Automated Proactive Alerts:** Predictive models that analyze verification data in real-time to detect high changes in risk exposure based on verification completion rates and verification compliance rates. Provides proactive alerts ahead of time to managers, supervisors, and C-suite executives when:
+    - Exposure or verification compliance rates in certain areas are peaking higher than normal
+    - Number of verifications in certain areas are lower than normal
+    - There's been a change in velocity of verification completion or compliance rates
+  - Predictive insights that highlight rising SIF potential before incidents occur
+- **Integration with Business Systems: Safety Risk Alongside Production Metrics:** This initiative focuses on the integration of safety risk data with business and production metrics. It is recognised as a potentially high-risk area and needs to be approached carefully and deliberately.
+  - **Approach & Scope:** The ideal future state is not for Forwood One to become responsible for defining, calculating, or storing detailed production metrics, nor to act as a large-scale data lake for operational data. Instead, the intent is to consume high-level production metrics from existing business systems and bring them into Forwood One in a controlled, lightweight way.
+  - **Primary Value:** Visualise and analyse the relationship between high-level production metrics and the detailed safety data already held in the platform, particularly in areas such as critical risk management and serious injury and fatality (SIF) prevention. This could include identifying correlations, trends, or patterns between production pressures and safety outcomes, rather than managing the underlying production data itself.
+  - **Exploratory Status:** This work should be framed as exploratory and held tentatively in the roadmap. Further research is required to understand what is feasible, what data is realistically available at an appropriate level of abstraction, and where Forwood One can add genuine value without overreaching into operational analytics.
+  - **Contextual Metrics Integration:** This approach also opens the door to the selective integration of other related contextual metrics that are known to influence safety risk. These could include external or environmental factors such as weather forecasts, commodity pricing, market volatility, or other operational context signals that sit adjacent to safety data but are not owned by the safety system itself. By treating these inputs as contextual overlays rather than core datasets, the platform can help surface meaningful insights into how broader operational conditions may correlate with safety outcomes, without attempting to own or model those domains in depth.
+  - **Goal:** Generate insights that create awareness and empathy for the competing pressures faced by frontline staff, who must manage production KPIs alongside safety expectations and environmental or commercial constraints. By responsibly surfacing these relationships, the platform can better inform executive decision-making and support more balanced, risk-aware governance. A useful way to frame this deliverable is as an opportunity to compare key trends in SIF prevention with high-level production and contextual metrics, with the explicit aim of providing insight and advice on the interplay between these factors. This would help executives and governance-level roles understand how production pressures, external conditions, and safety risks influence one another.
+
+---
+
+##### Executive Fatal Risk Dashboard
+Configurable dashboard and reporting area within Forwood One that provides different access levels, content, and experiences depending on user role (operator, executive, or board member). Each role sees different widgets, reports, KPIs, alerts, and insights relevant to their responsibilities.
+  - **Highly Pared-Back Executive Version:** A focused, high-level fatal risk dashboard for executives with a small number of critical areas:
+    - High potential (HIPO) events related to serious injury or fatality
+    - Learnings and outcomes from recent incidents and events that are relevant to operational strategy
+    - Aggregated recommendations and next steps for maturing critical risk management programs and other initiatives designed to prevent fatalities
+  - **Maturity Model Integration:** Dashboard connects to the maturity model to help executives understand their organisation's exposure to fatal risk and receive guidance on best practice and recommended next steps
+  - **Organisational Communication Mechanism:** Enables two-way communication between executives and the rest of the organisation. Other leaders can submit alerts or messages through the platform, and executives can communicate back in a broad and consistent way. Example use cases include:
+    - Stop-work events following a near miss or fatality
+    - Executive communication directly with all contractors and staff through Forwood One, outlining organisational response, areas of focus, expectations, and key learnings
+    - Supporting organisational learning and ensuring the business responds constructively and consistently to serious or tragic events
+  - **Governance Tools for Board-Level Oversight of Critical Controls:** Tools that enable board-level governance and oversight of critical controls, with a key focus on:
+    - Critical control effectiveness monitoring and reporting
+    - Critical control erosion levels (current state of control degradation)
+    - Critical control erosion rates (rate of change in control effectiveness over time)
+    - Board-level visibility into control health and trends
+    - Integration with executive dashboard for comprehensive fatal risk governance
+
+##### Real-time SIF Risk Visibility
+Clear, easy-to-understand visualizations of real-time SIF risk across operations, sites, and contractors. Key features include:
+  - View any part of global operations
+  - Deep dive down to specific sites
+  - Visualize hotspots (high-risk sites)
+  - Filter and segment between different parts of company structure or operating resources (contractors vs employees)
+  - **Dual Audience Support:**
+    - **Executive Level:** High 20,000-foot view of organization for strategic oversight
+    - **On-the-Ground Supervisors & Site Managers:** High-level view of risk they're exposing workers to as they schedule work and coordinate around risks present in emerging verification data as controls erode
+
+#### Initiative: Risk+ and Compliance+ Upgrade Pathway
+- **Problem Statement:** Need to enable existing Risk+ and Compliance+ customers to upgrade to Forwood One without disruption. Upgrade pathway enables consistent frameworks across customers (Theme 5: Standardization) and consolidates data for action-oriented systems (Theme 2).
+- **Opportunity Summary:** Enable seamless upgrade pathway for Risk+ and Compliance+ customers ensuring customer success and retention. Upgrade supports standardization across customer operations and builds trust through smooth transitions.
+- **Strategic Theme Alignment:**
+  - **Theme 5 (Standardization):** Upgrade enables consistent frameworks across customers
+  - **Theme 3 (Credibility & Trust):** Smooth upgrade builds trust
+  - **Theme 2 (Data to Action):** Upgrade consolidates data for action-oriented systems
+- **Expected Outcome:** Successful Risk+ and Compliance+ customer upgrades, high retention rate, positive upgrade experience
+- **Key Metrics:**
+  - Upgrade completion rate
+  - Customer retention post-upgrade
+  - Upgrade satisfaction scores
+- **Status:** Proposed
+- **Key Initiatives:** [Forwood One Platform Launch](../../02-initiatives/active/Forwood-One-platform-launch.md)
+
+**Key Deliverables:**
+##### Risk+ and Compliance+ upgrade pathway and tools
+##### Risk+ iframe validation and integration in Forwood One
+##### Data migration and validation tools for Risk+ and Compliance+
+##### Upgrade playbooks and support processes
+
+---
+
+### Future (9+ Months) - Q2 FY27+ (Oct 2026+)
+
+**Focus:** Advanced Strategic Theme Initiatives  
+**Status:** ✅ **NEW - Theme-aligned initiatives**
+
+#### Initiative: CRM+ Upgrade Pathway
+- **Problem Statement:** Need to enable existing CRM+ customers to upgrade to Forwood One without disruption. Upgrade pathway enables consistent frameworks across customers (Theme 5: Standardization) and consolidates data for action-oriented systems (Theme 2).
+- **Opportunity Summary:** Enable seamless upgrade pathway for CRM+ customers ensuring customer success and retention. Upgrade supports standardization across customer operations and builds trust through smooth transitions.
+- **Strategic Theme Alignment:**
+  - **Theme 5 (Standardization):** Upgrade enables consistent frameworks across customers
+  - **Theme 3 (Credibility & Trust):** Smooth upgrade builds trust
+  - **Theme 2 (Data to Action):** Upgrade consolidates data for action-oriented systems
+- **Expected Outcome:** Successful CRM+ customer upgrades, high retention rate, positive upgrade experience
+- **Key Metrics:**
+  - Upgrade completion rate
+  - Customer retention post-upgrade
+  - Upgrade satisfaction scores
+- **Status:** Proposed
+- **Key Initiatives:** [Forwood One Platform Launch](../../02-initiatives/active/Forwood-One-platform-launch.md)
+
+**Key Deliverables:**
+##### CRM+ upgrade pathway and tools
+##### CRM+ data migration and validation tools
+##### Upgrade playbooks and support processes
+##### Forwood One platform readiness for CRM+ client upgrade
 
 ---
 
@@ -185,10 +271,29 @@ All initiatives are aligned with one or more strategic themes:
 - **Key Initiatives:** [Forwood One Platform Launch](../../02-initiatives/active/Forwood-One-platform-launch.md)
 
 **Key Deliverables:**
+
+##### Role-Based Action Dashboards
+Configurable dashboards that provide different views and priorities depending on user role (operator, supervisor, EHS professional, executive). Each role sees action items, alerts, and insights relevant to their responsibilities and decision-making authority.
+##### Real-Time Action Visibility
+Clear, easy-to-understand visualizations of action status across operations, sites, and teams. Key features include:
+  - View action completion rates across any part of global operations
+  - Deep dive down to specific sites or teams to see action progress
+  - Visualize action hotspots (areas with high action backlog or delays)
+  - Filter and segment by company structure, operating resources, or action type
+  - **Dual Audience Support:**
+    - **Executive Level:** High-level view of action completion rates and trends for strategic oversight
+    - **Operational Level:** Detailed view for supervisors and EHS professionals managing day-to-day action workflows
+##### Proactive Action Alerts
+Automated alerts that detect when action items are at risk of delay or when action completion rates drop below expected thresholds. Provides proactive notifications to relevant stakeholders when:
+  - Action items are approaching deadlines without progress
+  - Action completion rates in certain areas are lower than normal
+  - There's been a change in velocity of action completion
+  - Critical actions are stalled or blocked
 - AI-powered action recommendation engine (not just analytics)
 - Automated control gap detection and closure workflows
 - Visible action tracking and follow-through (not just dashboards)
 - Data-to-action connection in dashboards
+- **Integration with Business Systems:** Lightweight integration with production systems to provide contextual overlays showing how production pressures may correlate with action delays or completion rates, helping executives understand competing priorities faced by frontline staff
 - Systems that celebrate issues and drive learning (not hide problems)
 
 ---
@@ -211,19 +316,32 @@ All initiatives are aligned with one or more strategic themes:
 - **Key Initiatives:** [Forwood One Platform Launch](../../02-initiatives/active/Forwood-One-platform-launch.md)
 
 **Key Deliverables:**
-- Non-blame reporting interfaces
-- Learning systems that celebrate issues
-- Tools that position safety professionals as enablers (not enforcers)
-- Leadership engagement tools for visible, consistent behavior
-- Systems that reward speaking up
-- Consistent language and frameworks across organizations
+
+##### Role-Based Trust Dashboards
+Configurable dashboards that provide different experiences depending on user role (worker, safety professional, supervisor, executive). Each role sees trust indicators, reporting trends, and engagement metrics relevant to their perspective and responsibilities.
+##### Real-Time Trust Visibility
+Clear visualizations of trust and credibility indicators across operations, sites, and teams. Key features include:
+  - View reporting rates and engagement levels across any part of global operations
+  - Deep dive down to specific sites or teams to see trust indicators
+  - Visualize trust hotspots (areas with low reporting rates or high engagement issues)
+  - Filter and segment by company structure, operating resources, or team type
+  - **Dual Audience Support:**
+    - **Executive Level:** High-level view of trust indicators and reporting trends for strategic oversight
+    - **Operational Level:** Detailed view for safety professionals and supervisors managing day-to-day trust-building activities
+##### Organisational Communication Mechanism
+Enables two-way communication between leadership and the rest of the organisation to build trust and credibility. Safety professionals and workers can submit concerns or feedback through the platform, and leadership can communicate back in a broad and consistent way. Example use cases include:
+  - Leadership recognition of good safety practices and reporting
+  - Visible responses to concerns raised through the platform
+  - Consistent messaging about safety priorities and expectations
+  - Celebration of issues and learnings (not hiding problems)
+##### Non-blame reporting interfaces
+##### Learning systems that celebrate issues
+##### Tools that position safety professionals as enablers (not enforcers)
+##### Leadership engagement tools for visible, consistent behavior
+##### Systems that reward speaking up
+##### Consistent language and frameworks across organizations
 
 ---
-
-### Future (9-12 Months) - Q3 FY26 (Jan-Mar 2027)
-
-**Focus:** Advanced Strategic Theme Initiatives  
-**Status:** ✅ **NEW - Theme-aligned initiatives**
 
 #### Initiative: Controls That Actually Work (Theme 4)
 - **Problem Statement:** Organizations implement controls that satisfy audits but don't prevent harm in real conditions. This creates moral injury for EHS professionals who know controls don't work but are accountable for preventing fatalities. Controls are often superficial (administrative controls for fatal risks) when engineering solutions are needed.
@@ -243,12 +361,37 @@ All initiatives are aligned with one or more strategic themes:
 - **Key Initiatives:** [Forwood One Platform Launch](../../02-initiatives/active/Forwood-One-platform-launch.md)
 
 **Key Deliverables:**
-- Control effectiveness verification tools
-- Engineering and design-focused risk elimination tools
-- Control verification in real field conditions
-- Systems that help identify and advocate for effective controls
-- Evidence-based control selection and verification
-- Front-end planning and design-out tools
+
+##### Control Effectiveness Monitoring & Erosion Tracking
+Real-time monitoring and reporting of control effectiveness across operations, sites, and critical risk areas. Key capabilities include:
+  - Control effectiveness verification and reporting
+  - Control erosion levels (current state of control degradation) tracked over time
+  - Control erosion rates (rate of change in control effectiveness) to identify trends
+  - Board-level and executive visibility into control health and trends
+  - Integration with governance tools for comprehensive control oversight
+
+##### Real-Time Control Visibility
+Clear, easy-to-understand visualizations of control health across operations, sites, and contractors. Key features include:
+  - View control effectiveness across any part of global operations
+  - Deep dive down to specific sites or critical controls to see verification status
+  - Visualize control hotspots (areas with degraded or failing controls)
+  - Filter and segment by company structure, operating resources, or control type
+  - **Dual Audience Support:**
+    - **Executive Level:** High-level view of control health trends for strategic oversight
+    - **Operational Level:** Detailed view for EHS professionals and supervisors managing control verification and maintenance
+
+##### Proactive Control Alerts
+Automated alerts that detect when controls are degrading or at risk of failure. Provides proactive notifications to relevant stakeholders when:
+  - Control effectiveness drops below acceptable thresholds
+  - Control erosion rates accelerate beyond normal patterns
+  - Critical controls are overdue for verification
+  - Control failures are detected in field conditions
+##### Control effectiveness verification tools
+##### Engineering and design-focused risk elimination tools
+##### Control verification in real field conditions
+##### Systems that help identify and advocate for effective controls
+##### Evidence-based control selection and verification
+##### Front-end planning and design-out tools
 
 ---
 
@@ -270,19 +413,37 @@ All initiatives are aligned with one or more strategic themes:
 - **Key Initiatives:** [Forwood One Platform Launch](../../02-initiatives/active/Forwood-One-platform-launch.md)
 
 **Key Deliverables:**
-- Shared critical risk frameworks across sites and contractors
-- Consistent language and control expectations
-- Tools that reduce context-switching for mobile workers
-- Standardization of what matters (fatal risks) without rigid procedures
-- Integration capabilities for shared systems across operations
-- Automated translation for consistent global standards
+
+##### Role-Based Standardization Dashboards
+Configurable dashboards that provide different views depending on user role (site manager, contractor, mobile worker, executive). Each role sees standardization metrics, consistency indicators, and framework adoption relevant to their context and responsibilities.
+##### Real-Time Standardization Visibility
+Clear, easy-to-understand visualizations of standardization and consistency across operations, sites, and contractors. Key features include:
+  - View consistency metrics across any part of global operations
+  - Deep dive down to specific sites or contractors to see framework adoption
+  - Visualize consistency gaps (areas with high variation or non-standard approaches)
+  - Filter and segment by company structure, operating resources, or framework type
+  - **Dual Audience Support:**
+    - **Executive Level:** High-level view of standardization adoption and consistency trends for strategic oversight
+    - **Operational Level:** Detailed view for site managers and contractors managing day-to-day standardization efforts
+##### Proactive Standardization Alerts
+Automated alerts that detect when standardization gaps emerge or consistency drops. Provides proactive notifications to relevant stakeholders when:
+  - Framework adoption rates drop below expected thresholds
+  - Consistency gaps emerge between sites or contractors
+  - Non-standard approaches are detected in critical risk areas
+  - Context-switching issues are identified for mobile workers
+##### Shared critical risk frameworks across sites and contractors
+##### Consistent language and control expectations
+##### Tools that reduce context-switching for mobile workers
+##### Standardization of what matters (fatal risks) without rigid procedures
+##### Integration capabilities for shared systems across operations
+##### Automated translation for consistent global standards
 
 ---
 
 ## Launch Moments
 
-### Q1 2026: Forwood One Platform Launch
-**Launch Date:** Q1 2026  
+### Q3 FY26: Forwood One Platform Launch
+**Launch Date:** Q3 FY26 (Jan-Mar 2026)  
 **Components:**
 - Forwood One MVP
 - Design system and UX foundation
@@ -296,8 +457,8 @@ All initiatives are aligned with one or more strategic themes:
 
 ---
 
-### Q2 2026: Native App and Enhanced Platform
-**Launch Date:** Q2 2026  
+### Q4 FY26: Native App and Enhanced Platform
+**Launch Date:** Q4 FY26 (Apr-Jun 2026)  
 **Components:**
 - Native mobile app MVP
 - Forwood One V2 and V3
@@ -311,8 +472,8 @@ All initiatives are aligned with one or more strategic themes:
 
 ---
 
-### Q3 2026: Fatal Risk Visibility & Governance
-**Launch Date:** Q3 2026  
+### Q1 FY27: Fatal Risk Visibility & Governance
+**Launch Date:** Q1 FY27 (Jul-Sep 2026)  
 **Components:**
 - Executive fatal risk dashboards
 - Real-time SIF risk visibility
@@ -326,8 +487,23 @@ All initiatives are aligned with one or more strategic themes:
 
 ---
 
-### Q3 2026: From Data Collection to Action
-**Launch Date:** Q3 2026  
+### Q1 FY27: Risk+ and Compliance+ Upgrade Pathway
+**Launch Date:** Q1 FY27 (Jul-Sep 2026)  
+**Components:**
+- Risk+ and Compliance+ upgrade pathway and tools
+- Risk+ iframe validation and integration
+- Data migration and validation tools
+- Upgrade playbooks and support processes
+
+**Target Audience:** Risk+ and Compliance+ customers  
+**Key Message:** Seamless upgrade pathway to Forwood One
+
+**Strategic Theme Alignment:** Themes 2, 3, 5 - Standardization, Credibility & Trust, Data to Action
+
+---
+
+### Q2 FY27+: From Data Collection to Action
+**Launch Date:** Q2 FY27+ (Oct 2026+)  
 **Components:**
 - AI-powered action recommendation engine
 - Visible action tracking and follow-through
@@ -341,8 +517,8 @@ All initiatives are aligned with one or more strategic themes:
 
 ---
 
-### Q3 2026: Credibility & Trust Through Systems
-**Launch Date:** Q3 2026  
+### Q2 FY27+: Credibility & Trust Through Systems
+**Launch Date:** Q2 FY27+ (Oct 2026+)  
 **Components:**
 - Non-blame reporting systems
 - Trust-building features
@@ -356,8 +532,8 @@ All initiatives are aligned with one or more strategic themes:
 
 ---
 
-### Q3 FY26: Controls That Actually Work
-**Launch Date:** Q3 FY26 (Jan-Mar 2027)  
+### Q2 FY27+: Controls That Actually Work
+**Launch Date:** Q2 FY27+ (Oct 2026+)  
 **Components:**
 - Control effectiveness verification
 - Field-verified controls
@@ -371,8 +547,8 @@ All initiatives are aligned with one or more strategic themes:
 
 ---
 
-### Q3 FY26: Standardization Without Rigidity
-**Launch Date:** Q3 FY26 (Jan-Mar 2027)  
+### Q2 FY27+: Standardization Without Rigidity
+**Launch Date:** Q2 FY27+ (Oct 2026+)  
 **Components:**
 - Shared critical risk frameworks
 - Consistent language tools
@@ -386,12 +562,27 @@ All initiatives are aligned with one or more strategic themes:
 
 ---
 
+### Q2 FY27+: CRM+ Upgrade Pathway
+**Launch Date:** Q2 FY27+ (Oct 2026+)  
+**Components:**
+- CRM+ upgrade pathway and tools
+- CRM+ data migration and validation tools
+- Upgrade playbooks and support processes
+- Forwood One platform readiness for CRM+ client upgrade
+
+**Target Audience:** CRM+ customers  
+**Key Message:** Seamless upgrade pathway to Forwood One
+
+**Strategic Theme Alignment:** Themes 2, 3, 5 - Standardization, Credibility & Trust, Data to Action
+
+---
+
 ## Dependencies & Constraints
 
 ### Dependencies
-- Product Designer onboarding (Q2 2025) - Required for design system
-- Sales pipeline development (Q2-Q3) - Required for customer acquisition
-- Customer readiness for migration (Q3) - Required for migration program
+- Product Designer onboarding (Q2 FY26 / Oct-Dec 2025) - Required for design system
+- Sales pipeline development (Q2-Q3 FY26 / Oct 2025 - Mar 2026) - Required for customer acquisition
+- Customer readiness for migration (Q1 FY27 / Jul-Sep 2026) - Required for migration program
 - Technical infrastructure for scale - Required for platform stability
 - Platform foundation (Q1-Q2) - Required for Q3+ theme-aligned initiatives
 
@@ -400,24 +591,24 @@ All initiatives are aligned with one or more strategic themes:
 - Quality vs. Speed: Need to maintain delivery quality while accelerating
 - Customer readiness: Migration depends on customer readiness and support
 - Team capacity: Balancing rapid customer acquisition with complex migration
-- Strategic theme alignment: Q3+ initiatives must align with problem-focused themes
+- Strategic theme alignment: Q1 FY27+ initiatives must align with problem-focused themes
 
 ---
 
 ## Resourcing Overview
 
 ### Team Allocation
-- **Product:** Senior Product Manager, Product Designer (Q2+)
+- **Product:** Senior Product Manager, Product Designer (Q2 FY26+)
 - **Engineering:** Engineering teams focused on platform launch, migration, native app, and theme-aligned initiatives
 - **Commercial:** Sales and customer success teams for pipeline and migration support
 - **Operations:** Solutions and support teams for migration execution
 
 ### Capacity Considerations
-- Onboard Product Designer in Q2
-- Embed agentic product processes in Q1
+- Onboard Product Designer in Q2 FY26 (Oct-Dec 2025)
+- Embed agentic product processes in Q3 FY26 (Jan-Mar 2026)
 - Build team capability throughout the year
 - Balance new customer acquisition with migration support
-- Plan for Q3+ theme-aligned initiative development
+- Plan for Q1 FY27+ theme-aligned initiative development
 
 ---
 
@@ -427,7 +618,9 @@ All initiatives are aligned with one or more strategic themes:
 |------------|--------|-----------------|-------------|
 | Forwood One Platform Launch | Building | Themes 2, 3, 5 | Monthly |
 | Design System and UX Foundation | Building | Theme 3 (primary) | Monthly |
-| Customer Migration Program | Validating | Themes 2, 3, 5 | Monthly |
+| Safety+ Upgrade Pathway | Validating | Themes 2, 3, 5 | Monthly |
+| Risk+ and Compliance+ Upgrade Pathway | Proposed | Themes 2, 3, 5 | Quarterly |
+| CRM+ Upgrade Pathway | Proposed | Themes 2, 3, 5 | Quarterly |
 | Native App Launch | Exploring | Themes 2, 3, 4, 5 | Monthly |
 | Fatal Risk Visibility & Governance | Exploring | Theme 1 | Quarterly |
 | From Data Collection to Action | Exploring | Theme 2 | Quarterly |
@@ -439,7 +632,7 @@ All initiatives are aligned with one or more strategic themes:
 
 ## Customer Engagement & Feedback
 
-### Early Adopter Engagement (December 2025)
+### Early Adopter Engagement (Q2 FY26 / December 2025)
 
 **Rossing Meeting (2025-12-16):**
 - **Customer:** Rossing (early adopter of SafetyPlus, long-term partner)

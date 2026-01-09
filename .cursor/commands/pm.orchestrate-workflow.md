@@ -485,6 +485,7 @@ After executing as many steps as possible:
    - List all commands executed
    - List all documents created/updated (with dates)
    - List all kanban board updates (with dates)
+   - List roadmap hierarchy updates (if any roadmap documents were updated)
    - List all human decision points reached
    - List any stages skipped (no items to process)
 
@@ -507,6 +508,9 @@ After executing as many steps as possible:
      - Step 5: [X] solutions assessed
      - Step 6: [X] experiments designed/analyzed
      - Step 7: [X] items scored for roadmap
+   - **Supporting Updates:**
+     - Canvas regeneration: [Status]
+     - Roadmap hierarchy update: [Status - updated/not needed]
    - **Items Waiting at Each Stage:**
      - List items at each stage with brief status
 
@@ -548,6 +552,71 @@ After completing all workflow steps and reporting results:
    - User should still see orchestrator results even if canvas update fails
 
 **Note:** Canvas regeneration happens automatically at the end of orchestration, ensuring the visual representation stays in sync with workflow changes.
+
+### Step 6: Regenerate Roadmap Hierarchy
+
+After completing all workflow steps and canvas regeneration:
+
+1. **Check Roadmap Document Updates:**
+   - **Read:** `01-strategy/roadmap/01-strategic-roadmap.md` - Check "Last Updated" date
+   - **Read:** `01-strategy/roadmap/02-portfolio-roadmap.md` - Check "Last Updated" date
+   - **Read:** `01-strategy/roadmap/03-delivery-roadmap.md` - Check "Last Updated" date
+   - **Read:** `01-strategy/roadmap/04-public-roadmap.md` - Check "Last Updated" date
+   - **Read:** `01-strategy/roadmap/roadmap-hierarchy.md` - Check "Last Updated" date
+   - **Compare:** If any roadmap document's "Last Updated" date is newer than roadmap-hierarchy.md's "Last Updated" date, regeneration is needed
+
+2. **If Regeneration Needed:**
+   - **Read All Roadmap Documents:**
+     - Parse strategic themes from `01-strategic-roadmap.md`
+     - Parse portfolio initiatives from `02-portfolio-roadmap.md`
+     - Parse delivery releases from `03-delivery-roadmap.md`
+     - Parse launch moments from `02-portfolio-roadmap.md`
+   
+   - **Extract Hierarchy Data:**
+     - **Strategic Themes:** Extract all 5 themes with their vision statements
+     - **Portfolio Initiatives:** Map each initiative to its strategic theme(s)
+     - **Delivery Releases:** Map each release to its supporting initiative(s) and theme(s)
+     - **Launch Moments:** Extract launch moments table with themes supported
+   
+   - **Generate Hierarchy Structure:**
+     - For each theme (1-5):
+       - Include theme vision statement (from strategic roadmap)
+       - List portfolio initiatives aligned to this theme (from portfolio roadmap)
+       - List delivery releases aligned to this theme (from delivery roadmap)
+     - Include Foundation Layer section (from portfolio roadmap)
+     - Include Launch Moments table (from portfolio roadmap)
+   
+   - **Update roadmap-hierarchy.md:**
+     - **Set "Last Updated" date:** Use current date (YYYY-MM-DD format)
+     - **Preserve:** Overview section, Related Documents section
+     - **Regenerate:** All theme sections, Foundation Layer, Launch Moments table
+     - **Ensure:** All initiatives and releases are correctly mapped to themes
+     - **Verify:** Launch moments table reflects current portfolio roadmap
+
+3. **Update Process:**
+   - Read current roadmap-hierarchy.md to preserve structure and formatting
+   - Extract strategic themes from strategic roadmap (Theme 1-5 with vision statements)
+   - Extract portfolio initiatives from portfolio roadmap and map to themes
+   - Extract delivery releases from delivery roadmap and map to themes/initiatives
+   - Extract launch moments from portfolio roadmap
+   - Rebuild hierarchy document with current data
+   - Update "Last Updated" date to current date
+   - Write updated roadmap-hierarchy.md
+
+4. **Error Handling:**
+   - If roadmap document parsing fails, log error but don't fail the orchestrator
+   - If hierarchy generation fails, log error but don't fail the orchestrator
+   - Roadmap hierarchy update is non-blocking
+   - User should still see orchestrator results even if hierarchy update fails
+   - Report any errors in the orchestration summary
+
+5. **Validation:**
+   - Verify all 5 themes are present in hierarchy
+   - Verify all portfolio initiatives are mapped to at least one theme
+   - Verify launch moments table is complete
+   - Verify "Last Updated" date matches current date
+
+**Note:** Roadmap hierarchy regeneration happens automatically whenever any roadmap document is updated, ensuring the hierarchy always reflects the current state of strategic themes, portfolio initiatives, and delivery releases.
 
 ## Decision Point Handling
 
@@ -1008,8 +1077,10 @@ The orchestrator will:
 3. Execute commands in sequence (Steps 3.1-3.7)
 4. Stop at human decision points (🔴)
 5. Update kanban boards after each stage (with current dates)
-6. Report progress and workflow state
-7. Report results and next steps
+6. Regenerate Ideas Kanban Canvas (Step 5)
+7. Regenerate Roadmap Hierarchy if roadmap documents were updated (Step 6)
+8. Report progress and workflow state
+9. Report results and next steps
 
 **Re-execution:**
 You can run it multiple times - it will pick up where it left off after you make decisions. The orchestrator detects:

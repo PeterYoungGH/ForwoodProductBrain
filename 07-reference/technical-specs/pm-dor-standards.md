@@ -293,3 +293,4 @@ Use this checklist for quick validation:
 - [PM-DoR Framework Research](../../03-discovery/research/process-research/pm-dor-framework-2026-01.md) - Full framework documentation
 
 
+

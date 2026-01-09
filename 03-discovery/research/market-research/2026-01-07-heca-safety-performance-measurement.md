@@ -198,3 +198,4 @@ This research represents industry thinking on safety performance measurement. It
 - Would HECA principles enhance Forwood's value proposition?
 - Is this research relevant to Forwood's product strategy?
 
+

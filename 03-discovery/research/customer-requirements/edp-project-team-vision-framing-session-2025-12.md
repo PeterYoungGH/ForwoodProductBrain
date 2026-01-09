@@ -244,3 +244,4 @@ This was a critical 3-hour executive vision framing session with EDP to reset ex
 The session captured both immediate operational concerns and strategic vision for Forwood One migration, providing a comprehensive view of EDP's requirements and expectations.
 
 
+

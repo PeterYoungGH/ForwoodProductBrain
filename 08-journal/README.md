@@ -39,3 +39,4 @@ Journal entries can be linked from:
 
 Use relative paths: `[[08-journal/2026-01-15.md|Journal Entry - 2026-01-15]]`
 
+

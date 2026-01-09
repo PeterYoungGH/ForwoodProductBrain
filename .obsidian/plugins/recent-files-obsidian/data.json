@@ -1,6 +1,38 @@
 {
   "recentFiles": [
     {
+      "basename": "strategic-roadmap",
+      "path": "01-strategy/roadmap/archive/strategic-roadmap.md"
+    },
+    {
+      "basename": "⬛ Inbox",
+      "path": "00-inbox/⬛ Inbox.md"
+    },
+    {
+      "basename": "2026-01-08-rebuilding-sif-prevention-in-2026-[INBOX]",
+      "path": "00-inbox/raw/2026-01-08-rebuilding-sif-prevention-in-2026-[INBOX].md"
+    },
+    {
+      "basename": "02-portfolio-roadmap",
+      "path": "01-strategy/roadmap/02-portfolio-roadmap.md"
+    },
+    {
+      "basename": "03-delivery-roadmap",
+      "path": "01-strategy/roadmap/03-delivery-roadmap.md"
+    },
+    {
+      "basename": "01-strategic-roadmap",
+      "path": "01-strategy/roadmap/01-strategic-roadmap.md"
+    },
+    {
+      "basename": "roadmap-hierarchy",
+      "path": "01-strategy/roadmap/roadmap-hierarchy.md"
+    },
+    {
+      "basename": "Roadmap Canvas",
+      "path": "01-strategy/roadmap/Roadmap Canvas.canvas"
+    },
+    {
       "basename": "2026-01-08-v2-product-dor-date-change-request",
       "path": "06-communications/stakeholder-updates/2026-01-08-v2-product-dor-date-change-request.md"
     },
@@ -21,10 +53,6 @@
       "path": "06-communications/stakeholder-updates/2026-01-07-v1-technical-release-impact-on-uat-and-v2-scoping.md"
     },
     {
-      "basename": "Roadmap Canvas",
-      "path": "01-strategy/roadmap/Roadmap Canvas.canvas"
-    },
-    {
       "basename": "04-public-roadmap",
       "path": "01-strategy/roadmap/04-public-roadmap.md"
     },
@@ -33,24 +61,12 @@
       "path": "Ideas Kanban Canvas.canvas"
     },
     {
-      "basename": "02-portfolio-roadmap",
-      "path": "01-strategy/roadmap/02-portfolio-roadmap.md"
-    },
-    {
       "basename": "tactical-roadmap",
       "path": "01-strategy/roadmap/archive/tactical-roadmap.md"
     },
     {
-      "basename": "strategic-roadmap",
-      "path": "01-strategy/roadmap/archive/strategic-roadmap.md"
-    },
-    {
       "basename": "⬛ Ideas Kanban",
       "path": "⬛ Ideas Kanban.md"
-    },
-    {
-      "basename": "01-strategic-roadmap",
-      "path": "01-strategy/roadmap/01-strategic-roadmap.md"
     },
     {
       "basename": "forwood-one-voice-of-customer-research-2026-01",
@@ -59,14 +75,6 @@
     {
       "basename": "roadmapping-framework",
       "path": "07-reference/methodology/roadmapping-framework.md"
-    },
-    {
-      "basename": "03-delivery-roadmap",
-      "path": "01-strategy/roadmap/03-delivery-roadmap.md"
-    },
-    {
-      "basename": "⬛ Inbox",
-      "path": "00-inbox/⬛ Inbox.md"
     },
     {
       "basename": "2026-01-03-pm-dor-definition-ready-review-criteria-[INBOX]",
@@ -191,14 +199,6 @@
     {
       "basename": "cross-reference-prompt",
       "path": "07-reference/prompts/content-synthesis/cross-reference-prompt.md"
-    },
-    {
-      "basename": "index",
-      "path": "07-reference/prompts/decision-frameworks/index.md"
-    },
-    {
-      "basename": "index",
-      "path": "07-reference/prompts/content-synthesis/index.md"
     }
   ],
   "omittedPaths": [],

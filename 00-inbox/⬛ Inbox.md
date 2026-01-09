@@ -6,6 +6,9 @@ kanban-plugin: board
 
 ## Inbox
 
+- [ ] [[00-inbox/raw/2026-01-08-aja-strategic-themes-recommendations-review-[INBOX].md|Aja Strategic Themes Recommendations Review]]
+- [ ] [[00-inbox/raw/2026-01-08-verdantix-green-quadrant-ehs-software-2025-report-[INBOX].md|Verdantix Green Quadrant EHS Software 2025 Report]]
+- [ ] [[00-inbox/raw/2026-01-08-rebuilding-sif-prevention-in-2026-[INBOX].md|Rebuilding SIF Prevention in 2026]]
 - [ ] *[Add new ideas here]*
 
 

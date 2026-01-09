@@ -11,22 +11,14 @@
             "id": "7b7c1d8458548080",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "00-inbox/⬛ Inbox.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false,
-                    false,
-                    false
-                  ]
-                }
+                "file": "01-strategy/roadmap/archive/strategic-roadmap.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-trello",
-              "title": "⬛ Inbox"
+              "icon": "lucide-file",
+              "title": "strategic-roadmap"
             }
           },
           {
@@ -35,16 +27,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06-communications/stakeholder-updates/2026-01-08-v2-product-dor-date-change-request.md",
+                "file": "00-inbox/raw/2026-01-08-rebuilding-sif-prevention-in-2026-[INBOX].md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-01-08-v2-product-dor-date-change-request"
+              "title": "2026-01-08-rebuilding-sif-prevention-in-2026-[INBOX]"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -111,7 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 470.5
+    "width": 289.5
   },
   "right": {
     "id": "a0cd58f19d945516",
@@ -189,13 +180,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "06-communications/stakeholder-updates/2026-01-08-v2-product-dor-date-change-request.md",
+                "file": "01-strategy/roadmap/archive/strategic-roadmap.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-01-08-v2-product-dor-date-change-request"
+              "title": "Outline of strategic-roadmap"
             }
           }
         ],
@@ -203,7 +194,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 528.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -217,47 +208,47 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "f1499288981bc172",
+  "active": "7b7c1d8458548080",
   "lastOpenFiles": [
-    "08-journal/2026-01-08.md",
-    "06-communications/stakeholder-updates/2026-01-08-v2-product-dor-date-change-request.md",
-    "08-journal/README.md",
-    "08-journal/2026-01-07.md",
-    "06-communications/stakeholder-updates/2026-01-07-v1-technical-release-impact-on-uat-and-v2-scoping.md",
-    "01-strategy/roadmap/Roadmap Canvas.canvas",
-    "08-journal",
-    "01-strategy/roadmap/archive/portfolio-roadmap-2026-01-07.md",
-    "00-inbox/raw/2026-01-08-qgn-35-integration-critical-controls-phmps-coal-mines-queensland-[INBOX].md",
-    "00-inbox/raw/2026-01-08-qgn-35-integration-critical-controls-phmps-coal-mines-queensland-[PROCESSING].md",
-    "03-discovery/research/market-research/2026-01-08-qgn-35-critical-controls-phmps-queensland-coal-mines.md",
-    "01-strategy/roadmap/recommendations/portfolio-roadmap-alignment-recommendations.md",
-    "Ideas Kanban Canvas.canvas",
+    "00-inbox/⬛ Inbox.md",
+    "00-inbox/raw/2026-01-08-rebuilding-sif-prevention-in-2026-[INBOX].md",
+    "08-journal/2026-01-09.md",
     "01-strategy/roadmap/02-portfolio-roadmap.md",
-    "01-strategy/roadmap/recommendations/strategic-themes-recommendations-voc-alignment.md",
-    "01-strategy/roadmap/recommendations",
-    "01-strategy/roadmap/archive/tactical-roadmap.md",
-    "01-strategy/roadmap/archive/strategic-roadmap.md",
-    "01-strategy/roadmap/strategic-themes-recommendations-voc-alignment.md",
-    "01-strategy/roadmap/archive/strategic-roadmap-2026-01-07.md",
-    "⬛ Ideas Kanban.md",
-    "01-strategy/roadmap/01-strategic-roadmap.md",
-    "03-discovery/research/market-research/2026-01-07-heca-safety-performance-measurement.md",
-    "00-inbox/raw/2026-01-07-heca-safety-performance-measurement.md",
-    "00-inbox/raw/2026-01-06-post-technical-release-bugs-[INBOX].md",
-    "03-discovery/research/user-research/forwood-one-voice-of-customer-research-2026-01.md",
-    "07-reference/methodology/roadmapping-framework.md",
+    "00-inbox/raw/2026-01-08-aja-strategic-themes-recommendations-review-[INBOX].md",
+    "00-inbox/raw/2026-01-08-verdantix-green-quadrant-ehs-software-2025-report-[INBOX].md",
     "01-strategy/roadmap/03-delivery-roadmap.md",
-    "00-inbox/raw/2025-11-28-2024-product-vision-[INBOX].md",
-    "00-inbox/raw/2025-11-28-product-operating-model-[INBOX].md",
-    "03-discovery/research/process-research",
-    "06-communications/reference",
+    "01-strategy/roadmap/01-strategic-roadmap.md",
+    "01-strategy/roadmap/roadmap-hierarchy.md",
+    "01-strategy/roadmap/presentation/figma-implementation-guide.md",
+    "01-strategy/roadmap/presentation/tsconfig.tsbuildinfo",
+    "01-strategy/roadmap/presentation/package-lock.json",
+    "01-strategy/roadmap/presentation/node_modules/next/dist/compiled/@vercel/og/yoga.wasm",
+    "01-strategy/roadmap/presentation/node_modules/next/dist/compiled/@vercel/og/resvg.wasm",
+    "01-strategy/roadmap/presentation/node_modules/next/dist/compiled/@vercel/og/noto-sans-v27-latin-regular.ttf",
+    "01-strategy/roadmap/presentation/node_modules/next/web-vitals.d.ts",
+    "01-strategy/roadmap/presentation/node_modules/next/dist/compiled/@vercel/og/types.d.ts",
+    "01-strategy/roadmap/presentation/node_modules/next/server.d.ts",
+    "01-strategy/roadmap/presentation/node_modules/next/script.d.ts",
+    "01-strategy/roadmap/presentation/node_modules/next/router.d.ts",
+    "01-strategy/roadmap/presentation/node_modules/next/README.md",
+    "01-strategy/roadmap/presentation/node_modules/next/dist/compiled/@babel/runtime/README.md",
+    "01-strategy/roadmap/presentation/node_modules/next/license.md",
+    "01-strategy/roadmap/presentation/node_modules/lucide-react/README.md",
+    "01-strategy/roadmap/presentation/node_modules/es-abstract/README.md",
+    "01-strategy/roadmap/presentation/node_modules/es-abstract/CHANGELOG.md",
+    "01-strategy/roadmap/presentation/node_modules/typescript/SECURITY.md",
+    "01-strategy/roadmap/presentation/node_modules/typescript/README.md",
+    "01-strategy/roadmap/presentation/node_modules/caniuse-lite/README.md",
+    "01-strategy/roadmap/presentation/node_modules/eslint/README.md",
+    "01-strategy/roadmap/presentation/node_modules/tailwindcss/src/value-parser/README.md",
+    "01-strategy/roadmap/presentation/node_modules/tailwindcss/README.md",
+    "01-strategy/roadmap/presentation/node_modules/tailwindcss/lib/value-parser/README.md",
+    "01-strategy/roadmap/presentation/node_modules/@esbuild/darwin-arm64/README.md",
+    "01-strategy/roadmap/presentation/node_modules/next/dist/compiled/regenerator-runtime/README.md",
+    "01-strategy/roadmap/presentation/node_modules/tailwindcss/src/postcss-plugins/nesting/README.md",
+    "01-strategy/roadmap/Roadmap Canvas.canvas",
+    "Ideas Kanban Canvas.canvas",
     "Untitled.canvas",
-    "07-reference/technical-specs",
-    "05-communications/reference",
-    "05-communications",
-    "Untitled 1.canvas",
-    "07-reference/prompts/decision-facilitation",
-    "05-research/sources/atlassian/JIRA/QA-UAT",
-    "07-reference/prompts/one-on-ones"
+    "Untitled 1.canvas"
   ]
 }

@@ -1,7 +1,7 @@
 # Strategic Roadmap
 
-**Last Updated:** 2026-01-07  
-**Roadmap Period:** Jan 2026 - Dec 2027 + Next 6-12 Months  
+**Last Updated:** 2026-01-09  
+**Roadmap Period:** Q3 FY26 - Future (Jan 2026+) + Next 6-12 Months  
 **Type:** Long-Term Vision & Strategy (2+ Year Horizon) + Strategic Roadmap (6-12 Month Horizon)  
 **Framework Layers:** Long-Term Vision (anchors all roadmap layers) + Strategic Roadmap  
 **Update Frequency:** Quarterly (lightly), plus mid-quarter check-ins  
@@ -13,7 +13,7 @@ This strategic roadmap outlines the long-term vision, themes, and major initiati
 
 **Note:** This roadmap serves as both the **Long-Term Vision & Strategy** (2+ years) and **Strategic Roadmap** (6-12 months) layers in Forwood's [4-layer roadmapping framework](../../07-reference/methodology/roadmapping-framework.md). It anchors the Portfolio Roadmap (3-6 months) and Delivery Roadmap (weekly releases).
 
-**Strategic Themes Update:** This roadmap has been restructured around industry problems and customer outcomes identified in Voice of Customer research, moving from technology-focused themes to problem-focused themes that directly address customer pain points and industry trends.
+**Strategic Foundation:** Our strategic themes are grounded in extensive Voice of Customer research, discovery interviewing, and industry analysis. This research highlighted the core industry problems and customer outcomes that drive safety challenges in high-risk industries. Each theme addresses these problems directly — organized around how customers actually experience and need to solve fatal risk, not simply around technology capabilities.
 
 ## Strategic Vision
 
@@ -21,7 +21,7 @@ Our mission is to eliminate workplace fatalities and serious injuries. Over the 
 
 ## Strategic Themes
 
-Our strategic themes are organized around **industry problems and customer outcomes** rather than technology capabilities. Each theme addresses core pain points identified in Voice of Customer research and aligns with how customers actually experience and solve safety challenges.
+Our strategic themes are organized around **industry problems and customer outcomes**. Each theme addresses core pain points identified in Voice of Customer research and aligns with how customers actually experience and solve safety challenges.
 
 ### Theme 1: Fatal Risk Visibility & Governance
 **Vision:** Make fatal risk as visible and actionable as production metrics, enabling executives to govern SIF prevention with the same clarity they manage business performance.
@@ -36,6 +36,7 @@ Our strategic themes are organized around **industry problems and customer outco
 - Executive dashboards that surface fatal risk signals (not just lagging indicators)
 - Real-time SIF risk visibility across operations, sites, and contractors
 - Governance tools that enable board-level oversight of critical controls
+- **Proactive SIF Potential:** Automated proactive alerts that run predictive models across verification data to detect high changes in risk exposure based on verification completion rates and verification compliance rates, providing alerts ahead of time when exposure/compliance rates peak abnormally, verification counts drop, or velocity changes occur
 - Predictive insights that highlight rising SIF potential before incidents occur
 - Integration with business systems to make safety risk visible alongside production metrics
 - AI-powered fatal risk identification and control gap detection
@@ -168,21 +169,21 @@ These capabilities support all strategic themes but are not themes themselves:
 
 ## High-Level Timeline: Now / Next / Later (6-12 Months)
 
-### Now (Next 3 Months)
+### Now (Next 3 Months) - Q3 FY26 (Jan-Mar 2026)
 - Forwood One platform launch and stability
 - Customer migration capability
 - Design system and UX foundation (supporting Theme 3: Credibility & Trust)
 - Core fatal risk visibility capabilities (Theme 1)
 - Foundation for action-oriented data systems (Theme 2)
 
-### Next (3-6 Months)
+### Next (3-6 Months) - Q4 FY26 (Apr-Jun 2026)
 - Native app launch (supporting Theme 3: Credibility & Trust)
 - Executive fatal risk dashboards (Theme 1: Fatal Risk Visibility)
 - Action recommendation engine (Theme 2: From Data to Action)
 - Enterprise integrations (Theme 5: Standardization)
 - Non-blame reporting systems (Theme 3: Credibility & Trust)
 
-### Later (6-12 Months)
+### Later (6+ Months) - Q1 FY27+ (Jul 2026+)
 - Advanced predictive fatal risk insights (Theme 1)
 - Control effectiveness verification tools (Theme 4)
 - Third-party marketplace (Theme 5)
@@ -225,13 +226,13 @@ Based on customer feedback and market analysis, our strategy is anchored in four
 Deliver an intuitive, decluttered experience that makes Forwood effortless for every user at every level — operators, supervisors, and managers. **Embedded in:** Theme 3 (Credibility & Trust Through Systems)
 
 ### 2. SIF Prevention
-Double down on CRM+; make our methodology and tools even more effective, useful, and powerful; sharpen our tools, workflows, and insights to directly reduce Serious Injuries and Fatalities. **Embedded in:** Theme 1 (Fatal Risk Visibility & Governance) + Theme 4 (Controls That Actually Work)
+Sharpen our methodology, tools, and insights to directly prevent Serious Injuries and Fatalities — making critical risk management more effective, useful, and powerful. **Embedded in:** Theme 1 (Fatal Risk Visibility & Governance) + Theme 4 (Controls That Actually Work)
 
 ### 3. Adoption & Engagement
-Accelerate user uptake through role-based design, gamification, smart onboarding, and in-product coaching. **Embedded in:** Theme 3 (Credibility & Trust Through Systems)
+Ensure users across all roles naturally adopt and engage with safety systems through experiences designed for their specific needs and work contexts. **Embedded in:** Theme 3 (Credibility & Trust Through Systems)
 
 ### 4. Data Insights
-Embed intelligence and analytics to turn data into proactive action, predict incidents before they happen, and measure and benchmark your maturity model. **Embedded in:** Theme 2 (From Data Collection to Action)
+Turn data into proactive action that prevents incidents before they happen, and help organizations understand and improve their safety maturity. **Embedded in:** Theme 2 (From Data Collection to Action)
 
 ---
 
@@ -339,14 +340,14 @@ What business outcomes are we driving toward over the next 2 years?
 - Customer migration complexity
 - Technology scalability challenges
 - Talent acquisition and retention
-- **New Risk:** Change management for problem-focused positioning vs. capability-focused messaging
+- Change management for problem-focused positioning across go-to-market teams
 
 ### Mitigation Strategies
 - Focus on product excellence and customer success
 - Phased migration approach with strong support
 - Cloud-native architecture and scalable design
 - Investment in team capability and culture
-- **New Strategy:** Align go-to-market messaging with problem-focused themes; train sales and marketing on industry problem positioning
+- Align go-to-market messaging with problem-focused themes; train sales and marketing on industry problem positioning
 
 ---
 
@@ -360,7 +361,7 @@ What business outcomes are we driving toward over the next 2 years?
 - [Vision](../vision/vision-statements.md)
 - [Business Outcomes](../../04-opportunities/01-business-outcomes/index.md)
 - [CRM Operational Pillars](../../07-reference/methodology/crm-operational-pillars.md)
-- [Strategic Themes Recommendations: VoC Alignment](./recommendations/strategic-themes-recommendations-voc-alignment.md) - Analysis and recommendations that informed this update
+- [Strategic Themes Recommendations: VoC Alignment](./recommendations/strategic-themes-recommendations-voc-alignment.md) - VoC analysis and strategic recommendations
 - [Voice of Customer Research](../../00-inbox/raw/2026-01-03-forwood-one-voice-of-customer-research-[INBOX].md) - Source VoC document
 - [Voice of Customer Insights](../../03-discovery/insights/2026-01-03-forwood-one-voice-of-customer-insights.md) - VoC insights
-- [Previous Strategic Roadmap (Archived)](./archive/strategic-roadmap-2026-01-07.md) - Previous technology-focused themes
+- [Strategic Roadmap Archive](./archive/strategic-roadmap-2026-01-07.md) - Historical version

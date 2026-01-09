@@ -169,3 +169,4 @@ python3 .cursor/scripts/regenerate_ideas_kanban_canvas.py
 - Regular regeneration ensures the canvas stays in sync with portfolio roadmap updates
 
 
+

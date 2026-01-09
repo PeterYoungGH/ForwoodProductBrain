@@ -1,6 +1,6 @@
 # Public Roadmap
 
-**Last Updated:** 2025-12-09  
+**Last Updated:** 2026-01-09  
 **Roadmap Period:** Ongoing  
 **Type:** Public Roadmap (External Communication)  
 **Framework Layer:** Public Roadmap  

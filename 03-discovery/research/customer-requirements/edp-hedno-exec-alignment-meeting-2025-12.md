@@ -184,3 +184,4 @@ Links to research artifacts:
 - Both clients are part of Macquarie portfolio, which provides strategic context
 
 
+
